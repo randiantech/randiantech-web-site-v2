@@ -1,6 +1,7 @@
 import React from 'react';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faBars} from '@fortawesome/free-solid-svg-icons';
+import {Link} from 'react-router-dom';
 import Logo from '../Logo/Logo';
 import './Header.css';
 
@@ -15,16 +16,17 @@ const DESKTOP_ITEMS = [
   'CONTACT',
 ];
 
-interface HeaderProps {
-  isMobile?: boolean;
+interface HeaderState {
+  isMobile: boolean;
+  hoveredItem: string;
 }
 
 const isMobileWidth = () => window.innerWidth <= MOBILE_WIDTH;
 
-export default class Header extends React.Component<HeaderProps> {
-  constructor(props: HeaderProps) {
+export default class Header extends React.Component<any, HeaderState> {
+  constructor(props: any) {
     super(props);
-    this.state = {isMobile: isMobileWidth()};
+    this.state = {isMobile: isMobileWidth(), hoveredItem: ''};
   }
 
   componentDidMount() {
@@ -48,27 +50,41 @@ export default class Header extends React.Component<HeaderProps> {
     );
   }
 
-  renderDesktopItems() {
+  renderDesktopItems(hoveredItem: string) {
     return (
       <div className="header-desktop-items-container">
         {DESKTOP_ITEMS.map(item => (
-          <div key={item} className="header-desktop-item">
-            {item}
-          </div>
+          <Link
+            key={item}
+            className="header-item-wrapper"
+            to={`${item.toLowerCase()}`}
+          >
+            <div
+              className={`header-desktop-item${
+                hoveredItem === item ? ' item-selected' : ''
+              }`}
+              onMouseOver={() => this.setState({hoveredItem: item})}
+              onMouseOut={() => this.setState({hoveredItem: ''})}
+            >
+              {item}
+            </div>
+          </Link>
         ))}
       </div>
     );
   }
 
   render() {
-    const {isMobile}: HeaderProps = this.state;
+    const {isMobile, hoveredItem}: HeaderState = this.state;
     return (
       <div className="header-container">
         <div className="header-logo-wrapper">
           <Logo />
         </div>
         <div>
-          {isMobile ? this.renderMobileItems() : this.renderDesktopItems()}
+          {isMobile
+            ? this.renderMobileItems()
+            : this.renderDesktopItems(hoveredItem)}
         </div>
       </div>
     );
