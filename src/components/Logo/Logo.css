@@ -1,0 +1,13 @@
+.header-logo-container {
+    color: var(--header-logo-color);
+    font-size: var(--header-logo-font-size);
+    text-align: left;
+}
+
+.header-logo-container-logo-left-side {
+    font-family: 'coco';
+}
+
+.header-logo-container-logo-right-side {
+    font-family: 'coco-light';
+}
