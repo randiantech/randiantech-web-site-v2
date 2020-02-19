@@ -27,31 +27,29 @@ export default class FrontImage extends React.Component<any, FrontImageState> {
     this.setState({isMobile: isMobileWidth()});
   }
 
-  renderDesktopContent() {
+  renderContent() {
+    const {isMobile} = this.state;
     return (
-      <div className="front-image-content-desktop">
+      <div
+        className={`${
+          isMobile
+            ? 'front-image-content-mobile'
+            : 'front-image-content-desktop'
+        }`}
+      >
         <span>
           <Logo />
           <span className="front-image-content-text">
             {' '}
-            is your partner <br /> in crafting{' '}
+            is your partner <br /> to craft{' '}
             <span className="front-image-instantly-loved-text">
               INSTANTLY LOVED
             </span>{' '}
             software.
           </span>
-          <FontAwesomeIcon
-            className="front-image-btn"
-            icon={faArrowCircleRight}
-            size="lg"
-          />
         </span>
       </div>
     );
-  }
-
-  renderMobileContent() {
-    return <div>something</div>;
   }
 
   render() {
@@ -62,7 +60,7 @@ export default class FrontImage extends React.Component<any, FrontImageState> {
           className="front-image-img"
           src={isMobile ? '/office-mobile.png' : '/office.png'}
         />
-        {isMobile ? this.renderMobileContent() : this.renderDesktopContent()}
+        {this.renderContent()}
       </div>
     );
   }

@@ -19,6 +19,7 @@ const DESKTOP_ITEMS = [
 interface HeaderState {
   isMobile: boolean;
   hoveredItem: string;
+  toggleMobileMenu: boolean;
 }
 
 const isMobileWidth = () => window.innerWidth <= MOBILE_WIDTH;
@@ -26,7 +27,11 @@ const isMobileWidth = () => window.innerWidth <= MOBILE_WIDTH;
 export default class Header extends React.Component<any, HeaderState> {
   constructor(props: any) {
     super(props);
-    this.state = {isMobile: isMobileWidth(), hoveredItem: ''};
+    this.state = {
+      isMobile: isMobileWidth(),
+      hoveredItem: '',
+      toggleMobileMenu: false,
+    };
   }
 
   componentDidMount() {
@@ -38,15 +43,49 @@ export default class Header extends React.Component<any, HeaderState> {
     this.setState({isMobile: isMobileWidth()});
   }
 
+  renderMobileMenu() {
+    const {hoveredItem, isMobile, toggleMobileMenu} = this.state;
+    return (
+      <div className="header-mobile-mobile-menu-container">
+        {DESKTOP_ITEMS.map(item => (
+          <Link
+            key={item}
+            className="header-item-wrapper"
+            to={`${item.toLowerCase()}`}
+            onClick={() => this.setState({toggleMobileMenu: false})}
+          >
+            <div
+              className={`header-mobile-item${
+                hoveredItem === item ? ` item-selected-mobile` : ''
+              }`}
+              onMouseOver={() => this.setState({hoveredItem: item})}
+              onMouseOut={() => this.setState({hoveredItem: ''})}
+            >
+              {item}
+            </div>
+          </Link>
+        ))}
+      </div>
+    );
+  }
+
   renderMobileItems() {
     return (
-      <div className="header-mobile-items-container">
-        <FontAwesomeIcon
-          className="header-mobile-item"
-          icon={faBars}
-          size="lg"
-        />
-      </div>
+      <>
+        <div
+          className="header-mobile-items-container"
+          onClick={() =>
+            this.setState({toggleMobileMenu: !this.state.toggleMobileMenu})
+          }
+        >
+          <FontAwesomeIcon
+            className="header-mobile-item"
+            icon={faBars}
+            size="lg"
+          />
+        </div>
+        {this.state.toggleMobileMenu && this.renderMobileMenu()}
+      </>
     );
   }
 
