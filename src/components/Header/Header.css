@@ -69,6 +69,7 @@
 .item-selected {
   border-radius: 50px;
   font-weight: bolder;
+  opacity: 0.9;
   background: linear-gradient(145deg, #ff3970, #db305f);
   box-shadow: 20px 20px 60px #cf2d59, -20px -20px 60px #ff3d79;
 }
