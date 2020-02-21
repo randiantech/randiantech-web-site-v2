@@ -1,21 +1,29 @@
 import React from 'react';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faArrowCircleRight} from '@fortawesome/free-solid-svg-icons';
+import {faBars} from '@fortawesome/free-solid-svg-icons';
+import {Link} from 'react-router-dom';
 import Logo from '../Logo/Logo';
 import './BrandCarousel.css';
 
 const MOBILE_WIDTH = 1200;
 
-interface CarouselState {
+const items = [1,2,3,4,5,6,7,8,9,10];
+
+interface BrandCarouselState {
   isMobile: boolean;
 }
 
 const isMobileWidth = () => window.innerWidth <= MOBILE_WIDTH;
 
-export default class BrandCarousel extends React.Component<any, CarouselState> {
+export default class BrandCarousel extends React.Component<
+  any,
+  BrandCarouselState
+> {
   constructor(props: any) {
     super(props);
-    this.state = {isMobile: isMobileWidth()};
+    this.state = {
+      isMobile: isMobileWidth(),
+    };
   }
 
   componentDidMount() {
@@ -28,11 +36,18 @@ export default class BrandCarousel extends React.Component<any, CarouselState> {
   }
 
   render() {
-    const {isMobile} = this.state;
+    const {isMobile}: BrandCarouselState = this.state;
     return (
-        <div>
-            CAROUSEL
+      <div className={`brand-carousel-container-${isMobile ? 'mobile' : 'desktop'}`}>
+        <div className={`brand-carousel-container-left-${isMobile ? 'mobile' : 'desktop'}`}>Clients</div>
+        <div className={`brand-carousel-container-right-${isMobile ? 'mobile' : 'desktop'}`}>
+          {items.map(item => (
+            <div key={item} className="brand-carousel-item">
+              <img className="brand-carousel-item-img" src={`/clients/c${item}.png`} />
+            </div>
+          ))}
         </div>
+      </div>
     );
   }
 }

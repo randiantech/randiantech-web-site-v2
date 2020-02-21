@@ -69,9 +69,10 @@ export default class ServicesGroup extends React.Component<
   render() {
     const {isMobile}: ServicesGroupState = this.state;
     return (
-      <div className="services-group-container">
-        <div className="services-group-container-left">Our Services</div>
-        <div className="services-group-container-right">
+      <div className="services-group-wrapper">
+      <div className={`services-group-container-${isMobile ? 'mobile' : 'desktop'}`}>
+        <div className={`services-group-container-left-${isMobile ? 'mobile' : 'desktop'}`}>Our Services</div>
+        <div className={`services-group-container-right-${isMobile ? 'mobile' : 'desktop'}`}>
           {ITEMS.map(item => (
             <Link to={`${item.link}`} key={item.text} className="services-group-item">
               <img className="services-group-item-img" src={item.img} />
@@ -79,6 +80,7 @@ export default class ServicesGroup extends React.Component<
             </Link>
           ))}
         </div>
+      </div>
       </div>
     );
   }

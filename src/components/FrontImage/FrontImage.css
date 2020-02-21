@@ -25,11 +25,17 @@
   border-radius: 5px;
   background: linear-gradient(145deg, #ff4970, #d63d5f);
   box-shadow: 20px 20px 60px #ca3a59, -20px -20px 60px #ff4e79;
+  transition: transform 200ms ease-in-out;
+  transform-origin: center;
+}
+
+.front-image-content-desktop:hover {
+  transform: scale(1.05);
 }
 
 .front-image-content-mobile {
   position: absolute;
-  bottom: 150px;
+  bottom: 250px;
   padding-top: 50px;
   padding-bottom: 50px;
   width: 100%;
