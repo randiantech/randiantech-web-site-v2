@@ -15,7 +15,6 @@
 .brand-carousel-container-left-desktop {
   display: grid;
   background: linear-gradient(145deg, #ff4970, #d63d5f);
-  box-shadow: 20px 20px 60px #ca3a59, -20px -20px 60px #ff4e79;
   align-items: center;
   color: white;
   font-size: 35px;
