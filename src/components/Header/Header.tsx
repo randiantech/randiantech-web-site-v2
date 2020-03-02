@@ -50,7 +50,7 @@ export default class Header extends React.Component<any, HeaderState> {
         {DESKTOP_ITEMS.map(item => (
           <Link
             key={item}
-            className="header-item-wrapper"
+            className={`header-item-wrapper ${item === 'CONTACT' ? 'item-is-contact' : ''}`}
             to={`${item.toLowerCase()}`}
             onClick={() => this.setState({toggleMobileMenu: false})}
           >
