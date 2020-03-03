@@ -31,8 +31,19 @@
 }
 
 .contact-us-item-label {
+  display: grid;
+  grid-template-columns: fit-content(120px) 1fr;
+  grid-column-gap: 15px;
   width: 300px;
   font-weight: bolder;
+}
+
+.contact-us-item-label-error {
+  display: grid;
+  width: 15px;
+  text-align: left;
+  filter: invert(27%) sepia(85%) saturate(1985%) hue-rotate(327deg)
+    brightness(86%) contrast(82%);
 }
 
 .contact-us-item-input {
@@ -44,10 +55,10 @@
 }
 
 .contact-us-send-btn-container {
-    margin: auto;
-    margin-right: 20px;
-    width: 200px;
-    padding-top: 20px;
+  margin: auto;
+  margin-right: 20px;
+  width: 200px;
+  padding-top: 20px;
 }
 
 .contact-us-send-btn {
@@ -64,4 +75,16 @@
 .contact-us-send-btn:hover {
   font-weight: bolder;
   box-shadow: 10px 10px 60px #ca3a59, -10px -10px 60px #ff4e79;
+}
+
+.contact-us-item-label-error-label {
+    color: #ff4970;
+    font-size: smaller;
+}
+
+.contact-us-item-label-error-container {
+    display: grid;
+    grid-column-gap: 5px;
+    grid-template-columns: fit-content(120px) 1fr;
+    align-items: center;
 }
