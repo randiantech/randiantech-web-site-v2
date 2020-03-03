@@ -1,3 +1,67 @@
 .contact-us-container {
-    display:grid;
+  display: grid;
+  grid-template-columns: 5fr 1fr 1fr;
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+
+.contact-us-container-title {
+  display: grid;
+  background: linear-gradient(145deg, #ff4970, #d63d5f);
+  align-items: center;
+  color: white;
+  font-size: 35px;
+  font-weight: bolder;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding: 50px;
+  text-align: center;
+}
+
+.contact-us-container-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.contact-us-item {
+  padding: 30px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.contact-us-item-label {
+  width: 300px;
+  font-weight: bolder;
+}
+
+.contact-us-item-input {
+  font-size: 20px;
+  margin-top: 10px;
+  height: 30px;
+  width: 300px;
+  border-radius: 5px;
+}
+
+.contact-us-send-btn-container {
+    margin: auto;
+    margin-right: 20px;
+    width: 200px;
+    padding-top: 20px;
+}
+
+.contact-us-send-btn {
+  display: grid;
+  text-align: center;
+  align-items: center;
+  background: #ff4970;
+  color: white;
+  border-radius: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.contact-us-send-btn:hover {
+  font-weight: bolder;
+  box-shadow: 10px 10px 60px #ca3a59, -10px -10px 60px #ff4e79;
 }
