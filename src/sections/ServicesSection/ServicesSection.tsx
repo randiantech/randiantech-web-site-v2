@@ -2,12 +2,12 @@ import React from 'react';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faBars} from '@fortawesome/free-solid-svg-icons';
 import {Link} from 'react-router-dom';
-import Logo from '../Logo/Logo';
-import './ServicesGroup.css';
+import Logo from '../../components/Logo/Logo';
+import './ServicesSection.css';
 
 const MOBILE_WIDTH = 1200;
 
-interface ServicesGroupState {
+interface ServicesSectionState {
   isMobile: boolean;
 }
 
@@ -46,9 +46,9 @@ const ITEMS = [
   },
 ];
 
-export default class ServicesGroup extends React.Component<
+export default class ServicesSection extends React.Component<
   any,
-  ServicesGroupState
+  ServicesSectionState
 > {
   constructor(props: any) {
     super(props);
@@ -67,7 +67,7 @@ export default class ServicesGroup extends React.Component<
   }
 
   render() {
-    const {isMobile}: ServicesGroupState = this.state;
+    const {isMobile}: ServicesSectionState = this.state;
     return (
       <div className="services-group-wrapper">
       <div className={`services-group-container-${isMobile ? 'mobile' : 'desktop'}`}>

@@ -2,8 +2,8 @@ import React from 'react';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faBars} from '@fortawesome/free-solid-svg-icons';
 import {Link} from 'react-router-dom';
-import Logo from '../Logo/Logo';
-import './BlogGroup.css';
+import Logo from '../../components/Logo/Logo';
+import './BlogSection.css';
 
 const MOBILE_WIDTH = 1200;
 
@@ -73,25 +73,25 @@ export default class BlogGroup extends React.Component<any, BlogGroupState> {
     const {isMobile}: BlogGroupState = this.state;
     return (
       <div
-        className={`blog-group-container-${isMobile ? 'mobile' : 'desktop'}`}
+        className={`blog-section-container-${isMobile ? 'mobile' : 'desktop'}`}
       >
         {ITEMS.map((item, index) => {
           const {url, title, description, img} = item;
           if (index === 0) {
             return (
-              <div className="blog-group-first-item">News and Articles</div>
+              <div className="blog-section-first-item">News and Articles</div>
             );
           }
           return (
-            <a className="blog-group-item-desktop" href={url}>
+            <a className="blog-section-item-desktop" href={url}>
               <div>
-                <img src={img} className="blog-group-item-img-desktop" />
+                <img src={img} className="blog-section-item-img-desktop" />
               </div>
-              <div className="blog-group-item-details">
-                <div className="blog-group-item-title-desktop">
+              <div className="blog-section-item-details">
+                <div className="blog-section-item-title-desktop">
                   {title}
                 </div>
-                <div className="blog-group-item-description-desktop">
+                <div className="blog-section-item-description-desktop">
                   {description}
                 </div>
               </div>

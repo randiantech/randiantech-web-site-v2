@@ -1,4 +1,5 @@
-.front-image-container {
+.front-image-section-container {
+  background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -9,44 +10,44 @@
   overflow: hidden;
 }
 
-.front-image-img {
+.front-image-section-img {
   height: 100%;
   min-width: 100%;
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
 }
 
-.front-image-content-desktop {
+.front-image-section-content-desktop {
   position: absolute;
   bottom: 20%;
   left: 20%;
   padding: 50px;
   padding-left: 5%;
   border-radius: 5px;
-  background: linear-gradient(145deg, #ff4970, #d63d5f);
+  background: linear-gradient(145deg, var(--main-app-color), var(--main-deg-app-color));
   transition: transform 200ms ease-in-out;
   transform-origin: center;
   cursor: pointer;
 }
 
-.front-image-content-desktop:hover {
+.front-image-section-content-desktop:hover {
   transform: scale(1.05);
-  box-shadow: 20px 20px 60px #ca3a59, -20px -20px 60px #ff4e79;
+  box-shadow: 20px 20px 60px var(--main-deg-app-color), -20px -20px 60px #ff4e79;
 }
 
-.front-image-content-mobile {
+.front-image-section-content-mobile {
   position: absolute;
   bottom: 250px;
   padding-top: 50px;
   padding-bottom: 50px;
   width: 100%;
   color: black;
-  background: linear-gradient(145deg, #ff4970, #d63d5f);
+  background: linear-gradient(145deg, var(--main-app-color), #d63d5f);
   opacity: 0.9;
   text-align: center;
 }
 
-.front-image-btn {
+.front-image-section-btn {
   position: absolute;
   left: 99%;
   bottom: 0%;
@@ -54,14 +55,14 @@
   color: white;
   border-radius: 5px;
   padding: 10px;
-  background: #d63d5f;
+  background: var(--main-deg-app-color);
 }
 
-.front-image-content-text {
+.front-image-section-content-text {
   font-size: 35px;
   color: white;
 }
 
-.front-image-instantly-loved-text {
+.front-image-section-instantly-loved-text {
   font-weight: bolder;
 }

@@ -1,11 +1,11 @@
-.brand-carousel-container-desktop {
+.brand-section-container-desktop {
   display: grid;
   padding-top: 50px;
   grid-template-columns: 200px 1fr;
   text-align: center;
 }
 
-.brand-carousel-container-mobile {
+.brand-section-container-mobile {
   position: relative;
   display: grid;
   grid-template-rows: 1fr;
@@ -13,9 +13,9 @@
   align-items: center;
 }
 
-.brand-carousel-container-left-desktop {
+.brand-section-container-left-desktop {
   display: grid;
-  background: linear-gradient(145deg, #ff4970, #d63d5f);
+  background: linear-gradient(145deg, var(--main-app-color), #d63d5f);
   align-items: center;
   color: white;
   font-size: 35px;
@@ -24,9 +24,9 @@
   border-bottom-right-radius: 5px;
 }
 
-.brand-carousel-container-left-mobile {
-  background: linear-gradient(145deg, #ff4970, #d63d5f);
-  box-shadow: 20px 20px 60px #ca3a59, -20px -20px 60px #ff4e79;
+.brand-section-container-left-mobile {
+  background: linear-gradient(145deg, var(--main-app-color), #d63d5f);
+  box-shadow: 20px 20px 60px var(--main-deg-app-color), -20px -20px 60px #ff4e79;
   padding-top: 50px;
   padding-bottom: 50px;
   color: white;
@@ -34,7 +34,7 @@
   opacity: 0.9;
 }
 
-.brand-carousel-container-right-desktop {
+.brand-section-container-right-desktop {
   display: grid;
   padding-top: 50px;
   padding-bottom: 50px;
@@ -42,7 +42,7 @@
   grid-template-rows: 1fr 1fr;
 }
 
-.brand-carousel-container-right-mobile {
+.brand-section-container-right-mobile {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-row-gap: 20px;
@@ -52,7 +52,7 @@
   padding-top: 50px;
 }
 
-.brand-carousel-item {
+.brand-section-item {
   display: grid;
   grid-template-rows: 1fr;
   align-items: center;
@@ -63,11 +63,11 @@
   text-decoration: dashed;
 }
 
-.brand-carousel-item:hover {
+.brand-section-item:hover {
   color: #ca3a59;
 }
 
-.brand-carousel-item-img {
+.brand-section-item-img {
   width: 180px;
   display: block;
   margin-left: auto;
@@ -78,6 +78,6 @@
   filter: grayscale(100%);
 }
 
-.brand-carousel-item-img:hover {
+.brand-section-item-img:hover {
   transform: scale(1.5);
 }

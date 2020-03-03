@@ -70,21 +70,21 @@
   border-radius: 50px;
   font-weight: bolder;
   opacity: 0.9;
-  background: linear-gradient(145deg, #ff3970, #db305f);
+  background: linear-gradient(145deg, var(--main-deg-app-color), var(--main-app-color));
 }
 
 .item-selected-mobile {
   font-weight: bolder;
-  background: linear-gradient(145deg, #ff3970, #db305f);
-  box-shadow: 20px 20px 60px #cf2d59, -20px -20px 60px #ff3d79;
+  background: linear-gradient(145deg, var(--main-deg-app-color), var(--main-app-color));
+  box-shadow: 20px 20px 60px #cf2d59, -20px -20px 60px var(--main-deg-app-color);
 }
 
 .item-selected-mobile {
   font-weight: bolder;
-  background: linear-gradient(145deg, #ff3970, #db305f);
-  box-shadow: 20px 20px 60px #cf2d59, -20px -20px 60px #ff3d79;
+  background: linear-gradient(145deg, var(--main-deg-app-color), var(--main-app-color));
+  box-shadow: 20px 20px 60px #cf2d59, -20px -20px 60px var(--main-deg-app-color);
 }
 
 .item-is-contact {
-  color: #ff4970;
+  color: var(--main-app-color);
 }

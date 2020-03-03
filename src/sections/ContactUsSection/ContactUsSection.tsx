@@ -1,8 +1,8 @@
 import React from 'react';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faArrowCircleRight} from '@fortawesome/free-solid-svg-icons';
-import Logo from '../Logo/Logo';
-import './ContactUs.css';
+import Logo from '../../components/Logo/Logo';
+import './ContactUsSection.css';
 
 const MOBILE_WIDTH = 1200;
 
@@ -35,7 +35,7 @@ const ITEMS = [
   },
 ];
 
-export default class ContactUs extends React.Component<any, any> {
+export default class ContactUsSection extends React.Component<any, any> {
   constructor(props: any) {
     super(props);
     this.state = {
@@ -92,31 +92,30 @@ export default class ContactUs extends React.Component<any, any> {
       errorEmail,
     } = this.state;
     return (
-      <div className="contact-us-container">
-        <div className="contact-us-container-title">Contact Us</div>
-        <div className="contact-us-container-form">
+      <div className="contact-us-section-container">
+        <div className="contact-us-section-container-title">Contact Us</div>
+        <div className="contact-us-section-container-form">
           {ITEMS.map(item => (
-            <div key={`key-${item.label}`} className="contact-us-item">
-              <div className="contact-us-item-label">
+            <div key={`key-${item.label}`} className="contact-us-section-item">
+              <div className="contact-us-section-item-label">
                 <div>{item.label}</div>
                 {this.state[
                   `error${item.id.charAt(0).toUpperCase() +
                     item.id.substring(1)}`
                 ] && (
-                  <div className="contact-us-item-label-error-container">
+                  <div className="contact-us-section-item-label-error-container">
                     <img
                       src="./alert-circle.png"
-                      className="contact-us-item-label-error"
+                      className="contact-us-section-item-label-error"
                     />
-                    <span className="contact-us-item-label-error-label">
+                    <span className="contact-us-section-item-label-error-label">
                       Required
                     </span>
                   </div>
                 )}
               </div>
               <input
-                defaultValue=""
-                className="contact-us-item-input"
+                className="contact-us-section-item-input"
                 type="text"
                 name={`randiantech-${item.id}`}
                 onChange={e => {
@@ -128,9 +127,9 @@ export default class ContactUs extends React.Component<any, any> {
             </div>
           ))}
         </div>
-        <div className="contact-us-send-btn-container">
+        <div className="contact-us-section-send-btn-container">
           <div
-            className="contact-us-send-btn"
+            className="contact-us-section-send-btn"
             onClick={() => this.validateInput()}
           >
             Send

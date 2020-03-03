@@ -1,8 +1,8 @@
 import React from 'react';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faArrowCircleRight} from '@fortawesome/free-solid-svg-icons';
-import Logo from '../Logo/Logo';
-import './FrontImage.css';
+import Logo from '../../components/Logo/Logo';
+import './FrontImageSection.css';
 
 const MOBILE_WIDTH = 1200;
 
@@ -12,7 +12,10 @@ interface FrontImageState {
 
 const isMobileWidth = () => window.innerWidth <= MOBILE_WIDTH;
 
-export default class FrontImage extends React.Component<any, FrontImageState> {
+export default class FrontImageSection extends React.Component<
+  any,
+  FrontImageState
+> {
   constructor(props: any) {
     super(props);
     this.state = {isMobile: isMobileWidth()};
@@ -33,16 +36,16 @@ export default class FrontImage extends React.Component<any, FrontImageState> {
       <div
         className={`${
           isMobile
-            ? 'front-image-content-mobile'
-            : 'front-image-content-desktop'
+            ? 'front-image-section-content-mobile'
+            : 'front-image-section-content-desktop'
         }`}
       >
         <span>
           <Logo />
-          <span className="front-image-content-text">
+          <span className="front-image-section-content-text">
             {' '}
             is your partner <br /> to craft{' '}
-            <span className="front-image-instantly-loved-text">
+            <span className="front-image-section-instantly-loved-text">
               INSTANTLY LOVED
             </span>{' '}
             software.
@@ -55,9 +58,9 @@ export default class FrontImage extends React.Component<any, FrontImageState> {
   render() {
     const {isMobile} = this.state;
     return (
-      <div className="front-image-container">
+      <div className="front-image-section-container">
         <img
-          className="front-image-img"
+          className="front-image-section-img"
           src={isMobile ? '/office-mobile.png' : '/office.png'}
         />
         {this.renderContent()}
