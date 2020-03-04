@@ -36,6 +36,7 @@
 .contact-us-section-container-form {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 4fr;
 }
 
 .contact-us-section-item {
@@ -67,6 +68,12 @@
   height: 30px;
   width: 300px;
   border-radius: 5px;
+}
+
+.contact-us-section-item-input-details {
+  padding: 20px;
+  margin: 30px;
+  width: 100%;
 }
 
 .contact-us-section-send-btn-container {

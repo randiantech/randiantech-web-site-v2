@@ -79,6 +79,43 @@ export default class ContactUsSection extends React.Component<any, any> {
     this.setState({errorEmail: !isValidEmail.test(email)});
   }
 
+  renderFormItems() {
+    return (
+      <>
+        {ITEMS.map(item => (
+          <div key={`key-${item.label}`} className="contact-us-section-item">
+            <div className="contact-us-section-item-label">
+              <div>{item.label}</div>
+              {this.state[
+                `error${item.id.charAt(0).toUpperCase() + item.id.substring(1)}`
+              ] && (
+                <div className="contact-us-section-item-label-error-container">
+                  <img
+                    src="./alert-circle.png"
+                    className="contact-us-section-item-label-error"
+                  />
+                  <span className="contact-us-section-item-label-error-label">
+                    Required
+                  </span>
+                </div>
+              )}
+            </div>
+            <input
+              className="contact-us-section-item-input"
+              type="text"
+              name={`randiantech-${item.id}`}
+              onChange={e => {
+                this.setState({[item.id]: e.target.value});
+                this.validateInput();
+              }}
+              onFocus={() => this.validateInput()}
+            />
+          </div>
+        ))}
+      </>
+    );
+  }
+
   render() {
     const {
       isMobile,
@@ -95,37 +132,16 @@ export default class ContactUsSection extends React.Component<any, any> {
       <div className="contact-us-section-container">
         <div className="contact-us-section-container-title">Contact Us</div>
         <div className="contact-us-section-container-form">
-          {ITEMS.map(item => (
-            <div key={`key-${item.label}`} className="contact-us-section-item">
-              <div className="contact-us-section-item-label">
-                <div>{item.label}</div>
-                {this.state[
-                  `error${item.id.charAt(0).toUpperCase() +
-                    item.id.substring(1)}`
-                ] && (
-                  <div className="contact-us-section-item-label-error-container">
-                    <img
-                      src="./alert-circle.png"
-                      className="contact-us-section-item-label-error"
-                    />
-                    <span className="contact-us-section-item-label-error-label">
-                      Required
-                    </span>
-                  </div>
-                )}
-              </div>
-              <input
-                className="contact-us-section-item-input"
-                type="text"
-                name={`randiantech-${item.id}`}
-                onChange={e => {
-                  this.setState({[item.id]: e.target.value});
-                  this.validateInput();
-                }}
-                onFocus={() => this.validateInput()}
-              />
-            </div>
-          ))}
+          {this.renderFormItems()}
+          <input
+            className="contact-us-section-item-input-details"
+            type="text"
+            name={`randiantech-test`}
+            onChange={e => {
+              this.validateInput();
+            }}
+            onFocus={() => this.validateInput()}
+          />
         </div>
         <div className="contact-us-section-send-btn-container">
           <div
