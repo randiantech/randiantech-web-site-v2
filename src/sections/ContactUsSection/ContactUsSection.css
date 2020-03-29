@@ -8,7 +8,7 @@
 
 .contact-us-section-container-title {
   display: grid;
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, var(--main-deg-app-color), var(--main-app-color));
+  background: linear-gradient(-45deg, var(--main-deg-app-color), var(--main-app-color), var(--main-deg-app-color), var(--main-app-color));
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
   align-items: center;

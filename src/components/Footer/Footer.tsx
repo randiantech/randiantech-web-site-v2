@@ -1,27 +1,15 @@
 import React from 'react';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faBars} from '@fortawesome/free-solid-svg-icons';
 import {Link} from 'react-router-dom';
 import Logo from '../Logo/Logo';
+import {DESKTOP_ITEMS} from '../../constants';
+import {isMobileWidth} from '../../utils';
 import './Footer.css';
-
-const MOBILE_WIDTH = 1200;
-
-const DESKTOP_ITEMS = [
-  'ABOUT',
-  'SERVICES',
-  'TEAM',
-  'CAREERS',
-  'CLIENTS',
-  'CONTACT',
-];
 
 interface FooterState {
   isMobile: boolean;
   toggleMobileMenu: boolean;
 }
-
-const isMobileWidth = () => window.innerWidth <= MOBILE_WIDTH;
 
 export default class Footer extends React.Component<any, FooterState> {
   constructor(props: any) {

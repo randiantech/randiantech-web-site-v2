@@ -34,7 +34,7 @@
 
 .services-group-container-left-desktop {
   display: grid;
-  background: linear-gradient(145deg, var(--main-app-color), #d63d5f);
+  background: linear-gradient(145deg, var(--main-app-color), var(--main-deg-app-color));
   text-align: center;
   align-items: center;
   border-radius: 5px;
@@ -46,8 +46,8 @@
 }
 
 .services-group-container-left-mobile {
-  background: linear-gradient(145deg, var(--main-app-color), #d63d5f);
-  box-shadow: 20px 20px 60px var(--main-deg-app-color), -20px -20px 60px #ff4e79;
+  background: linear-gradient(145deg, var(--main-app-color), var(--main-deg-app-color));
+  box-shadow: 20px 20px 60px var(--main-deg-app-color), -20px -20px 60px var(--main-app-color);
   padding-top: 50px;
   padding-bottom: 50px;
   color: white;

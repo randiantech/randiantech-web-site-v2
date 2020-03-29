@@ -19,6 +19,12 @@
   font-style: normal;
 }
 
+* {
+  --main-bg-color: #414042;
+  --main-app-color: #ff4970;
+  --main-deg-app-color: #ff3970;
+}
+
 body {
   user-select: none;
   margin: 0;
@@ -27,11 +33,12 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  --main-bg-color: #414042;
-  --main-app-color: #ff4970;
-  --main-deg-app-color: #ff3970;
 }
 
 code {
   font-family: 'coco'
+}
+
+.app-container {
+  padding-top: 100px;
 }

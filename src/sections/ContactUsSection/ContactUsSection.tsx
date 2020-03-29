@@ -1,10 +1,7 @@
 import React from 'react';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faArrowCircleRight} from '@fortawesome/free-solid-svg-icons';
-import Logo from '../../components/Logo/Logo';
+import {isMobileWidth} from '../../utils';
+import {CONTACT_US_ITEMS} from '../../constants';
 import './ContactUsSection.css';
-
-const MOBILE_WIDTH = 1200;
 
 interface ContactUsState {
   isMobile: boolean;
@@ -13,27 +10,6 @@ interface ContactUsState {
   email: string;
   phone: string;
 }
-
-const isMobileWidth = () => window.innerWidth <= MOBILE_WIDTH;
-
-const ITEMS = [
-  {
-    label: 'First Name',
-    id: 'firstName',
-  },
-  {
-    label: 'Last Name',
-    id: 'lastName',
-  },
-  {
-    label: 'Email',
-    id: 'email',
-  },
-  {
-    label: 'Phone',
-    id: 'phone',
-  },
-];
 
 export default class ContactUsSection extends React.Component<any, any> {
   constructor(props: any) {
@@ -82,7 +58,7 @@ export default class ContactUsSection extends React.Component<any, any> {
   renderFormItems() {
     return (
       <>
-        {ITEMS.map(item => (
+        {CONTACT_US_ITEMS.map(item => (
           <div key={`key-${item.label}`} className="contact-us-section-item">
             <div className="contact-us-section-item-label">
               <div>{item.label}</div>
@@ -91,8 +67,9 @@ export default class ContactUsSection extends React.Component<any, any> {
               ] && (
                 <div className="contact-us-section-item-label-error-container">
                   <img
-                    src="./alert-circle.png"
+                    src="./images/icons/alert-circle.png"
                     className="contact-us-section-item-label-error"
+                    alt="error"
                   />
                   <span className="contact-us-section-item-label-error-label">
                     Required
@@ -117,17 +94,6 @@ export default class ContactUsSection extends React.Component<any, any> {
   }
 
   render() {
-    const {
-      isMobile,
-      firstName,
-      lastName,
-      phone,
-      email,
-      errorFirstName,
-      errorLastName,
-      errorPhone,
-      errorEmail,
-    } = this.state;
     return (
       <div className="contact-us-section-container">
         <div className="contact-us-section-container-title">Contact Us</div>

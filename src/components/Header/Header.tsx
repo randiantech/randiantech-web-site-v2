@@ -3,26 +3,15 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faBars} from '@fortawesome/free-solid-svg-icons';
 import {Link} from 'react-router-dom';
 import Logo from '../Logo/Logo';
+import {DESKTOP_ITEMS} from '../../constants';
+import {isMobileWidth} from '../../utils';
 import './Header.css';
-
-const MOBILE_WIDTH = 1200;
-
-const DESKTOP_ITEMS = [
-  'ABOUT',
-  'SERVICES',
-  'TEAM',
-  'CAREERS',
-  'CLIENTS',
-  'CONTACT',
-];
 
 interface HeaderState {
   isMobile: boolean;
   hoveredItem: string;
   toggleMobileMenu: boolean;
 }
-
-const isMobileWidth = () => window.innerWidth <= MOBILE_WIDTH;
 
 export default class Header extends React.Component<any, HeaderState> {
   constructor(props: any) {
@@ -44,13 +33,15 @@ export default class Header extends React.Component<any, HeaderState> {
   }
 
   renderMobileMenu() {
-    const {hoveredItem, isMobile, toggleMobileMenu} = this.state;
+    const {hoveredItem} = this.state;
     return (
       <div className="header-mobile-mobile-menu-container">
         {DESKTOP_ITEMS.map(item => (
           <Link
             key={item}
-            className={`header-item-wrapper ${item === 'CONTACT' ? 'item-is-contact' : ''}`}
+            className={`header-item-wrapper ${
+              item === 'CONTACT' ? 'item-is-contact' : ''
+            }`}
             to={`${item.toLowerCase()}`}
             onClick={() => this.setState({toggleMobileMenu: false})}
           >

@@ -2,15 +2,12 @@ import React from 'react';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faArrowCircleRight} from '@fortawesome/free-solid-svg-icons';
 import Logo from '../../components/Logo/Logo';
+import {isMobileWidth} from '../../utils';
 import './FrontImageSection.css';
-
-const MOBILE_WIDTH = 1200;
 
 interface FrontImageState {
   isMobile: boolean;
 }
-
-const isMobileWidth = () => window.innerWidth <= MOBILE_WIDTH;
 
 export default class FrontImageSection extends React.Component<
   any,
@@ -61,7 +58,7 @@ export default class FrontImageSection extends React.Component<
       <div className="front-image-section-container">
         <img
           className="front-image-section-img"
-          src={isMobile ? '/office-mobile.png' : '/office.png'}
+          src={isMobile ? '/images/front/office-mobile.png' : '/images/front/office-desktop.png'}
         />
         {this.renderContent()}
       </div>

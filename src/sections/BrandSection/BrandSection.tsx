@@ -1,19 +1,15 @@
 import React from 'react';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faBars} from '@fortawesome/free-solid-svg-icons';
 import {Link} from 'react-router-dom';
 import Logo from '../../components/Logo/Logo';
+import {isMobileWidth} from '../../utils';
 import './BrandSection.css';
-
-const MOBILE_WIDTH = 1200;
 
 const items = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 interface BrandCarouselState {
   isMobile: boolean;
 }
-
-const isMobileWidth = () => window.innerWidth <= MOBILE_WIDTH;
 
 export default class BrandSection extends React.Component<
   any,
@@ -59,7 +55,7 @@ export default class BrandSection extends React.Component<
             <div key={item} className="brand-section-item">
               <img
                 className="brand-section-item-img"
-                src={`/clients/c${item}.png`}
+                src={`/images/clients/c${item}.png`}
               />
             </div>
           ))}
