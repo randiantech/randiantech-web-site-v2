@@ -1,7 +1,4 @@
 import React from 'react';
-import {faBars} from '@fortawesome/free-solid-svg-icons';
-import {Link} from 'react-router-dom';
-import Logo from '../../components/Logo/Logo';
 import {isMobileWidth} from '../../utils';
 import './BrandSection.css';
 
@@ -54,6 +51,7 @@ export default class BrandSection extends React.Component<
           {items.map(item => (
             <div key={item} className="brand-section-item">
               <img
+                alt="Randiantech"
                 className="brand-section-item-img"
                 src={`/images/clients/c${item}.png`}
               />

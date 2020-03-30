@@ -1,7 +1,6 @@
+/*eslint-disable jsx-a11y/alt-text*/
+
 import React from 'react';
-import {faBars} from '@fortawesome/free-solid-svg-icons';
-import {Link} from 'react-router-dom';
-import Logo from '../../components/Logo/Logo';
 import {isMobileWidth} from '../../utils';
 import {BLOG_ITEMS} from '../../data';
 import './BlogSection.css';
@@ -37,11 +36,20 @@ export default class BlogGroup extends React.Component<any, BlogGroupState> {
           const {url, title, description, img} = item;
           if (index === 0) {
             return (
-              <div className="blog-section-first-item">News and Articles</div>
+              <div
+                key={`blog-setion-item-first`}
+                className="blog-section-first-item"
+              >
+                News and Articles
+              </div>
             );
           }
           return (
-            <a className="blog-section-item-desktop" href={url}>
+            <a
+              key={`blog-setion-item-${index}`}
+              className="blog-section-item-desktop"
+              href={url}
+            >
               <div>
                 <img src={img} className="blog-section-item-img-desktop" />
               </div>

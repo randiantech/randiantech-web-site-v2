@@ -1,6 +1,6 @@
+/*eslint-disable jsx-a11y/alt-text*/
+
 import React from 'react';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faArrowCircleRight} from '@fortawesome/free-solid-svg-icons';
 import Logo from '../../components/Logo/Logo';
 import {isMobileWidth} from '../../utils';
 import './FrontImageSection.css';

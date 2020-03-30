@@ -1,7 +1,5 @@
 import React from 'react';
-import {faBars} from '@fortawesome/free-solid-svg-icons';
 import {Link} from 'react-router-dom';
-import Logo from '../Logo/Logo';
 import {DESKTOP_ITEMS} from '../../constants';
 import {isMobileWidth} from '../../utils';
 import './Footer.css';
@@ -51,7 +49,7 @@ export default class Footer extends React.Component<any, FooterState> {
     return (
       <div className="footer-container">
         <div className="footer-logo-wrapper">
-          <img src="./logo.png" className="footer-logo-img" />
+          <img src="./logo.png" alt="Randiantech" className="footer-logo-img" />
         </div>
         <div>{this.renderItems()}</div>
       </div>

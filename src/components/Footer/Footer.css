@@ -10,7 +10,7 @@
   display: grid;
   width: 100%;
   grid-template-columns: 100px 1fr;
-  height: var(--footer-container-height);
+  min-height: var(--footer-container-height);
   align-items: center;
   text-align: center;
   background-color: var(--main-bg-color);

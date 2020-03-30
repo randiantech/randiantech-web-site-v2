@@ -1,7 +1,7 @@
+/*eslint-disable jsx-a11y/alt-text*/
+
 import React from 'react';
-import {faBars} from '@fortawesome/free-solid-svg-icons';
 import {Link} from 'react-router-dom';
-import Logo from '../../components/Logo/Logo';
 import {isMobileWidth} from '../../utils';
 import {SERVICES_ITEMS} from '../../data';
 import './ServicesSection.css';
