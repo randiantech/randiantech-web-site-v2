@@ -16,10 +16,11 @@
   align-items: center;
   color: white;
   font-size: 40px;
-  color: var(--main-app-color);
-  border-right: 1px solid var(--main-app-color);
-  border-top: 1px solid var(--main-app-color);
+  background-color: var(--main-app-color);
+  color: white;
   font-weight: bolder;
+  border: 1px solid white;
+  border-radius: 5px;
 }
 
 .blog-section-item-desktop {
