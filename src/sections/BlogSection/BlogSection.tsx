@@ -38,7 +38,11 @@ export default class BlogGroup extends React.Component<any, BlogGroupState> {
             return (
               <div
                 key={`blog-setion-item-first`}
-                className="blog-section-first-item"
+                className={`${
+                  isMobile
+                    ? 'blog-section-first-item-mobile'
+                    : 'blog-section-first-item-desktop'
+                }`}
               >
                 News and Articles
               </div>

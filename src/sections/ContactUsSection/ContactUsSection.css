@@ -1,12 +1,19 @@
-.contact-us-section-container {
+.contact-us-section-container-desktop {
   display: grid;
-  grid-template-columns: 5fr 1fr 150px;
+  grid-template-columns: 4fr 2fr 150px;
   padding-top: 40px;
   padding-bottom: 50px;
   padding-right: 30px;
 }
 
-.contact-us-section-container-title {
+.contact-us-section-container-mobile {
+  display: grid;
+  grid-template-rows: fit-content(200px) 1fr;
+  padding-top: 40px;
+  padding-bottom: 30px;
+}
+
+.contact-us-section-container-title-desktop {
   display: grid;
   background: linear-gradient(-45deg, var(--main-deg-app-color), var(--main-app-color), var(--main-deg-app-color), var(--main-app-color));
 	background-size: 400% 400%;
@@ -22,6 +29,23 @@
   border-left: 1px solid white;
 }
 
+.contact-us-section-container-title-mobile {
+  background: linear-gradient(
+    145deg,
+    var(--main-app-color),
+    var(--main-deg-app-color)
+  );
+  box-shadow: 20px 20px 60px var(--main-deg-app-color),
+    -20px -20px 60px var(--main-deg-app-color);
+  padding-top: 50px;
+  padding-bottom: 50px;
+  color: white;
+  font-size: 35px;
+  opacity: 0.9;
+  font-weight: bolder;
+  text-align: center;
+}
+
 @keyframes gradient {
 	0% {
 		background-position: 0% 50%;
@@ -34,10 +58,17 @@
 	}
 }
 
-.contact-us-section-container-form {
+.contact-us-section-container-form-desktop {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 4fr;
+  padding-right: 10px;
+  grid-template-rows: 1fr 1fr 1fr 1fr 250px;
+}
+
+.contact-us-section-container-form-mobile {
+  display: grid;
+  padding-right: 10px;
+  padding-top: 50px;
+  grid-template-rows: 1fr 1fr 1fr 1fr 250px;
 }
 
 .contact-us-section-item {
@@ -67,8 +98,14 @@
   font-size: 20px;
   margin-top: 10px;
   height: 30px;
-  width: 300px;
-  border-radius: 5px;
+  width: 100%;
+}
+
+.contact-us-section-item-input-free-text {
+  font-size: 20px;
+  margin-top: 10px;
+  height: 200px;
+  width: 100%;
 }
 
 .contact-us-section-send-btn-container {
@@ -83,16 +120,14 @@
   display: grid;
   text-align: center;
   align-items: center;
+  font-weight: bolder;
   background: var(--main-app-color);
   color: white;
   border-radius: 50px;
   height: 50px;
   cursor: pointer;
-}
-
-.contact-us-section-send-btn:hover {
-  font-weight: bolder;
-  box-shadow: 10px 10px 60px var(--main-deg-app-color), -10px -10px 60px var(--main-app-color);
+  min-width: 100px;
+  margin: auto;
 }
 
 .contact-us-section-item-label-error-label {

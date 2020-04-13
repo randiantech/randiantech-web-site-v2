@@ -10,7 +10,7 @@ export default class ContactUsSection extends React.Component<any, any> {
   constructor(props: any) {
     super(props);
     let initialState: any = {};
-    CONTACT_US_ITEMS.forEach(item => {
+    CONTACT_US_ITEMS.forEach((item) => {
       initialState[item.id] = item.initialValue;
       initialState[itemErrorKey(item.id)] = false;
     });
@@ -30,13 +30,17 @@ export default class ContactUsSection extends React.Component<any, any> {
   }
 
   validateInput(item: any, value: any) {
-    this.setState({[itemErrorKey(item.id)]: !item.isValid(value)});
+    this.setState({
+      [itemErrorKey(item.id)]: item.isValid && !item.isValid(value),
+    });
   }
 
   validateAllInputs() {
-    CONTACT_US_ITEMS.forEach(item => {
+    CONTACT_US_ITEMS.forEach((item) => {
       const value = this.state[item.id];
-      this.setState({[itemErrorKey(item.id)]: !item.isValid(value)});
+      this.setState({
+        [itemErrorKey(item.id)]: item.isValid && !item.isValid(value),
+      });
     });
   }
 
@@ -69,20 +73,31 @@ export default class ContactUsSection extends React.Component<any, any> {
   }
 
   renderContactUsLabel() {
-    return <div className="contact-us-section-container-title">Contact Us</div>;
+    const {isMobile} = this.state;
+    return (
+      <div
+        className={`${
+          isMobile
+            ? 'contact-us-section-container-title-mobile'
+            : 'contact-us-section-container-title-desktop'
+        }`}
+      >
+        Contact Us
+      </div>
+    );
   }
 
   renderFormItems() {
+    const {isMobile} = this.state;
     return (
-      <div className="contact-us-section-container-form">
-        {CONTACT_US_ITEMS.map(item => {
-          console.log(
-            `item = ${item.id} | itemErrorKey(item.id) => ${itemErrorKey(
-              item.id
-            )} | this.state[itemErrorKey(item.id)] => ${
-              this.state[itemErrorKey(item.id)]
-            }`
-          );
+      <div
+        className={
+          isMobile
+            ? 'contact-us-section-container-form-mobile'
+            : 'contact-us-section-container-form-desktop'
+        }
+      >
+        {CONTACT_US_ITEMS.map((item) => {
           const isErrorInItem =
             this.state[itemErrorKey(item.id)] && item.isRequired;
           return (
@@ -94,16 +109,28 @@ export default class ContactUsSection extends React.Component<any, any> {
                 <div>{item.label}</div>
                 {isErrorInItem && this.renderErrorLabel()}
               </div>
-              <input
-                className="contact-us-section-item-input"
-                type="text"
-                name={`randiantech-${item.id}`}
-                onChange={e => {
-                  this.setState({[item.id]: e.target.value});
-                  this.validateInput(item, e.target.value);
-                }}
-                onFocus={e => this.validateInput(item, e.target.value)}
-              />
+              {item.style === 'free-text' ? (
+                <textarea
+                  className="contact-us-section-item-input-free-text"
+                  name={`randiantech-${item.id}`}
+                  onChange={(e) => {
+                    this.setState({[item.id]: e.target.value});
+                    this.validateInput(item, e.target.value);
+                  }}
+                  onFocus={(e) => this.validateInput(item, e.target.value)}
+                />
+              ) : (
+                <input
+                  className="contact-us-section-item-input"
+                  type="text"
+                  name={`randiantech-${item.id}`}
+                  onChange={(e) => {
+                    this.setState({[item.id]: e.target.value});
+                    this.validateInput(item, e.target.value);
+                  }}
+                  onFocus={(e) => this.validateInput(item, e.target.value)}
+                />
+              )}
             </div>
           );
         })}
@@ -112,8 +139,15 @@ export default class ContactUsSection extends React.Component<any, any> {
   }
 
   render() {
+    const {isMobile} = this.state;
     return (
-      <div className="contact-us-section-container">
+      <div
+        className={`${
+          isMobile
+            ? 'contact-us-section-container-mobile'
+            : 'contact-us-section-container-desktop'
+        }`}
+      >
         {this.renderContactUsLabel()}
         {this.renderFormItems()}
         {this.renderSendButton()}

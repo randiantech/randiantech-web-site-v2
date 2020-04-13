@@ -49,4 +49,11 @@ export const CONTACT_US_ITEMS = [
       return isValidPhone.test(value);
     }
   },
+  {
+    label: 'Comments',
+    id: 'comments',
+    isRequired: true,
+    initialValue: '',
+    style: 'free-text'
+  },
 ];

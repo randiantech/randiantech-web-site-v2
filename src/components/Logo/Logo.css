@@ -12,11 +12,6 @@
   font-family: 'coco-light';
 }
 
-.header-logo-container-logo-right-side:hover {
-  color: var(--main-app-color);
-  font-weight: bolder;
-}
-
 .header-logo-item-wrapper {
   color: white;
   text-decoration: none;

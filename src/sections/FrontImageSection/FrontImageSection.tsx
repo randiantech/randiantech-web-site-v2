@@ -58,7 +58,7 @@ export default class FrontImageSection extends React.Component<
       <div className="front-image-section-container">
         <img
           className="front-image-section-img"
-          src={isMobile ? '/images/front/office-mobile.png' : '/images/front/office-desktop.png'}
+          src={isMobile ? '/images/front/office-mobile.jpg' : '/images/front/office-desktop.png'}
         />
         {this.renderContent()}
       </div>

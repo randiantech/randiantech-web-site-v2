@@ -11,6 +11,7 @@
   grid-template-rows: 1fr;
   text-align: center;
   align-items: center;
+  padding-bottom: 50px;
 }
 
 .brand-section-container-left-desktop {
@@ -33,6 +34,7 @@
   color: white;
   font-size: 35px;
   opacity: 0.9;
+  font-weight: bolder;
 }
 
 .brand-section-container-right-desktop {
