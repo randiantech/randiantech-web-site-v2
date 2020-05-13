@@ -71,3 +71,26 @@ export const SERVICES_ITEMS = [
     link: '/services/on-site-training'
   },
 ];
+
+export const ABOUT_PAGE = {
+  header: {
+    title: 'Company',
+    subtitle: 'Innovating with a Digital Market',
+    desc: 'For nearly 20 years, GlobalLogic has partnered with businesses across every major industry to make amazing products and connect the dots between people, products, and business opportunities. Now, in an increasingly digital world, we place the consumer at the center of every interaction. We show businesses how they can better engage their consumers, innovate within predictable budgets, and bring the next generation of digital products and services to market in the shortest possible time.'
+  },
+  body: {
+    title: 'How We Can Help',
+    desc: 'GlobalLogic helps brands create value across the entire product lifecycle — not just by developing cutting-edge technology, but also by helping make mature products more relevant to digitally-savvy consumers. By using human-centered design practices, superior engineering skills, and agile delivery -- we help customers re-imagine their business, consumer interactions, and develop innovative products and services, with an accelerated time-to-market.',
+    list: {
+      title: 'GlobalLogic Company Facts At-A-Glance',
+      items: [
+        'item1',
+        'item2',
+        'item3'
+      ]
+    }
+  },
+  footer: {
+    image: 'URL'
+  }
+}
