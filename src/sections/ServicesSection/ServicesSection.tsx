@@ -10,10 +10,7 @@ interface ServicesSectionState {
   isMobile: boolean;
 }
 
-export default class ServicesSection extends React.Component<
-  any,
-  ServicesSectionState
-> {
+export default class ServicesSection extends React.Component<any,ServicesSectionState> {
   constructor(props: any) {
     super(props);
     this.state = {
@@ -32,34 +29,19 @@ export default class ServicesSection extends React.Component<
 
   render() {
     const {isMobile}: ServicesSectionState = this.state;
+    const device = isMobile ? 'mobile' : 'desktop';
     return (
       <div className="services-group-wrapper">
-        <div
-          className={`services-group-container-${
-            isMobile ? 'mobile' : 'desktop'
-          }`}
-        >
-          <div
-            className={`services-group-container-left-${
-              isMobile ? 'mobile' : 'desktop'
-            }`}
-          >
+        <div className={`services-group-container-${device}`}>
+          <div className={`services-group-container-left-${device}`}>
             Our Services
           </div>
-          <div
-            className={`services-group-container-right-${
-              isMobile ? 'mobile' : 'desktop'
-            }`}
-          >
+          <div className={`services-group-container-right-${device}`}>
             {SERVICES_ITEMS.map(item => (
-              <Link
-                to={`${item.link}`}
-                key={item.text}
-                className="services-group-item"
-              >
+              <div className="services-group-item">
                 <img className="services-group-item-img" src={item.img} />
                 <div className="services-group-item-text">{item.text}</div>
-              </Link>
+              </div>
             ))}
           </div>
         </div>

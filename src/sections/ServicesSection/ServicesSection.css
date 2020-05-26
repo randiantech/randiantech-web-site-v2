@@ -5,7 +5,7 @@
     transparent,
     transparent 10px,
     rgb(236, 234, 234) 10px,
-    rgb(236, 234, 234) 20px
+    rgb(236, 234, 234) 150px
   ),
   linear-gradient(
     to bottom,
@@ -16,12 +16,12 @@
 
 .services-group-container-desktop {
   display: grid;
-  grid-template-columns: 40% 1fr;
+  grid-template-columns: 50% 1fr;
   padding-top: 100px;
   padding-bottom: 100px;
   text-align: center;
   margin: auto;
-  width: 70%;
+  padding-left: 60px;
 }
 
 .services-group-container-mobile {
@@ -87,6 +87,7 @@
   font-weight: bold;
   color: black;
   text-decoration: dashed;
+  cursor: default;
 }
 
 .services-group-item:hover {
