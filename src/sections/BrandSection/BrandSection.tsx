@@ -2,7 +2,7 @@ import React from 'react';
 import {isMobileWidth} from '../../utils';
 import './BrandSection.css';
 
-const items = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const items = [1, 2, 4, 6, 10];
 
 interface BrandCarouselState {
   isMobile: boolean;
@@ -32,9 +32,7 @@ export default class BrandSection extends React.Component<
     const {isMobile}: BrandCarouselState = this.state;
     return (
       <div
-        className={`brand-section-container-${
-          isMobile ? 'mobile' : 'desktop'
-        }`}
+        className={`brand-section-container-${isMobile ? 'mobile' : 'desktop'}`}
       >
         <div
           className={`brand-section-container-left-${
@@ -48,7 +46,7 @@ export default class BrandSection extends React.Component<
             isMobile ? 'mobile' : 'desktop'
           }`}
         >
-          {items.map(item => (
+          {items.map((item) => (
             <div key={item} className="brand-section-item">
               <img
                 alt="Randiantech"

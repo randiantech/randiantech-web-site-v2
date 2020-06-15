@@ -51,7 +51,7 @@ export default class ServicesSection extends React.Component<
               isMobile ? 'mobile' : 'desktop'
             }`}
           >
-            {SERVICES_ITEMS.map(item => (
+            {SERVICES_ITEMS.map((item) => (
               <Link
                 to={`${item.link}`}
                 key={item.text}

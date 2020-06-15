@@ -2,6 +2,7 @@ import React from 'react';
 import {isMobileWidth} from '../../utils';
 import {CONTACT_US_ITEMS} from '../../constants';
 import './ContactUsSection.css';
+import circuitImage from '../../../public/circuit.png';
 
 const itemErrorKey = (id: string) =>
   `error${id.charAt(0).toUpperCase() + id.substring(1)}`;
@@ -66,7 +67,7 @@ export default class ContactUsSection extends React.Component<any, any> {
           className="contact-us-section-send-btn"
           onClick={() => this.validateAllInputs()}
         >
-          Send
+          Send Message
         </div>
       </div>
     );
@@ -81,9 +82,7 @@ export default class ContactUsSection extends React.Component<any, any> {
             ? 'contact-us-section-container-title-mobile'
             : 'contact-us-section-container-title-desktop'
         }`}
-      >
-        Contact Us
-      </div>
+      ></div>
     );
   }
 
@@ -93,47 +92,56 @@ export default class ContactUsSection extends React.Component<any, any> {
       <div
         className={
           isMobile
-            ? 'contact-us-section-container-form-mobile'
-            : 'contact-us-section-container-form-desktop'
+            ? 'contact-us-section-container-form-wrapper-mobile'
+            : 'contact-us-section-container-form-wrapper-desktop'
         }
       >
-        {CONTACT_US_ITEMS.map((item) => {
-          const isErrorInItem =
-            this.state[itemErrorKey(item.id)] && item.isRequired;
-          return (
-            <div
-              key={`randiantech-key-${item.label}`}
-              className="contact-us-section-item"
-            >
-              <div className="contact-us-section-item-label">
-                <div>{item.label}</div>
-                {isErrorInItem && this.renderErrorLabel()}
+        <div
+          className={
+            isMobile
+              ? 'contact-us-section-container-form-mobile'
+              : 'contact-us-section-container-form-desktop'
+          }
+        >
+          {CONTACT_US_ITEMS.map((item) => {
+            const isErrorInItem =
+              this.state[itemErrorKey(item.id)] && item.isRequired;
+            return (
+              <div
+                key={`randiantech-key-${item.label}`}
+                className="contact-us-section-item"
+              >
+                <div className="contact-us-section-item-label">
+                  <div>{item.label}</div>
+                  {isErrorInItem && this.renderErrorLabel()}
+                </div>
+                {item.style === 'free-text' ? (
+                  <textarea
+                    className="contact-us-section-item-input-free-text"
+                    name={`randiantech-${item.id}`}
+                    onChange={(e) => {
+                      this.setState({[item.id]: e.target.value});
+                      this.validateInput(item, e.target.value);
+                    }}
+                    onFocus={(e) => this.validateInput(item, e.target.value)}
+                  />
+                ) : (
+                  <input
+                    className="contact-us-section-item-input"
+                    type="text"
+                    name={`randiantech-${item.id}`}
+                    onChange={(e) => {
+                      this.setState({[item.id]: e.target.value});
+                      this.validateInput(item, e.target.value);
+                    }}
+                    onFocus={(e) => this.validateInput(item, e.target.value)}
+                  />
+                )}
               </div>
-              {item.style === 'free-text' ? (
-                <textarea
-                  className="contact-us-section-item-input-free-text"
-                  name={`randiantech-${item.id}`}
-                  onChange={(e) => {
-                    this.setState({[item.id]: e.target.value});
-                    this.validateInput(item, e.target.value);
-                  }}
-                  onFocus={(e) => this.validateInput(item, e.target.value)}
-                />
-              ) : (
-                <input
-                  className="contact-us-section-item-input"
-                  type="text"
-                  name={`randiantech-${item.id}`}
-                  onChange={(e) => {
-                    this.setState({[item.id]: e.target.value});
-                    this.validateInput(item, e.target.value);
-                  }}
-                  onFocus={(e) => this.validateInput(item, e.target.value)}
-                />
-              )}
-            </div>
-          );
-        })}
+            );
+          })}
+        </div>
+        <div>{this.renderSendButton()}</div>
       </div>
     );
   }
@@ -150,7 +158,6 @@ export default class ContactUsSection extends React.Component<any, any> {
       >
         {this.renderContactUsLabel()}
         {this.renderFormItems()}
-        {this.renderSendButton()}
       </div>
     );
   }

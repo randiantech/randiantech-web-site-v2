@@ -22,8 +22,14 @@
   bottom: 9%;
   left: 3%;
   padding: 50px;
-  border-radius: 5px;
-  background: linear-gradient(145deg, var(--main-app-color), var(--main-deg-app-color));
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  background: linear-gradient(
+    145deg,
+    var(--main-app-color),
+    var(--main-deg-app-color)
+  );
   transition: transform 200ms ease-in-out;
   transform-origin: center;
   cursor: pointer;
@@ -33,7 +39,8 @@
 
 .front-image-section-content-desktop:hover {
   transform: scale(1.05);
-  box-shadow: 20px 20px 60px var(--main-deg-app-color), -20px -20px 60px var(--main-deg-app-color);
+  box-shadow: 20px 20px 60px var(--main-deg-app-color),
+    -20px -20px 60px var(--main-deg-app-color);
 }
 
 .front-image-section-content-mobile {
@@ -43,7 +50,11 @@
   padding-bottom: 50px;
   width: 100%;
   color: black;
-  background: linear-gradient(145deg, var(--main-app-color), var(--main-deg-app-color));
+  background: linear-gradient(
+    145deg,
+    var(--main-app-color),
+    var(--main-deg-app-color)
+  );
   opacity: 0.9;
   text-align: center;
 }
@@ -54,7 +65,9 @@
   bottom: 0%;
   font-size: xx-large;
   color: white;
-  border-radius: 5px;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
   padding: 10px;
   background: var(--main-deg-app-color);
 }

@@ -41,34 +41,34 @@ export const BLOG_ITEMS = [
 
 export const SERVICES_ITEMS = [
   {
-    img: '/images/technologies-groups/tg-staff-augmentation.png',
+    img: '/images/technologies-groups/tg-staff-augmentation.svg',
     text: 'Staff Augmentation',
-    link: '/services/staff-augmentation'
+    link: '/services#staff-augmentation',
   },
   {
-    img: '/images/technologies-groups/tg-fixed-price-project.png',
+    img: '/images/technologies-groups/tg-fixed-price-project.svg',
     text: 'Fixed Price Projects',
-    link: '/services/fixed-price'
+    link: '/services#fixed-price',
   },
   {
-    img: '/images/technologies-groups/tg-managed-agile-teams.png',
+    img: '/images/technologies-groups/tg-managed-agile-teams.svg',
     text: 'Managed Agile Teams',
-    link: '/services/managed-agile-teams'
+    link: '/services#managed-agile-teams',
   },
   {
     img: '/images/technologies-groups/tg-field-agent-management.png',
     text: 'Field Agent Management',
-    link: '/services/field-agent-management'
+    link: '/services#field-agent-management',
   },
   {
     img: '/images/technologies-groups/tg-technical-mentoring.png',
     text: 'Technical Mentoring',
-    link: '/services/technical-mentoring'
+    link: '/services#technical-mentoring',
   },
   {
-    img: '/images/technologies-groups/tg-on-site-training.png',
+    img: '/images/technologies-groups/tg-on-site-training.svg',
     text: 'On Site Training',
-    link: '/services/on-site-training'
+    link: '/services#on-site-training',
   },
 ];
 
@@ -76,21 +76,19 @@ export const ABOUT_PAGE = {
   header: {
     title: 'Company',
     subtitle: 'Innovating with a Digital Market',
-    desc: 'For nearly 20 years, GlobalLogic has partnered with businesses across every major industry to make amazing products and connect the dots between people, products, and business opportunities. Now, in an increasingly digital world, we place the consumer at the center of every interaction. We show businesses how they can better engage their consumers, innovate within predictable budgets, and bring the next generation of digital products and services to market in the shortest possible time.'
+    desc:
+      'For nearly 20 years, GlobalLogic has partnered with businesses across every major industry to make amazing products and connect the dots between people, products, and business opportunities. Now, in an increasingly digital world, we place the consumer at the center of every interaction. We show businesses how they can better engage their consumers, innovate within predictable budgets, and bring the next generation of digital products and services to market in the shortest possible time.',
   },
   body: {
     title: 'How We Can Help',
-    desc: 'GlobalLogic helps brands create value across the entire product lifecycle — not just by developing cutting-edge technology, but also by helping make mature products more relevant to digitally-savvy consumers. By using human-centered design practices, superior engineering skills, and agile delivery -- we help customers re-imagine their business, consumer interactions, and develop innovative products and services, with an accelerated time-to-market.',
+    desc:
+      'GlobalLogic helps brands create value across the entire product lifecycle — not just by developing cutting-edge technology, but also by helping make mature products more relevant to digitally-savvy consumers. By using human-centered design practices, superior engineering skills, and agile delivery -- we help customers re-imagine their business, consumer interactions, and develop innovative products and services, with an accelerated time-to-market.',
     list: {
       title: 'GlobalLogic Company Facts At-A-Glance',
-      items: [
-        'item1',
-        'item2',
-        'item3'
-      ]
-    }
+      items: ['item1', 'item2', 'item3'],
+    },
   },
   footer: {
-    image: 'URL'
-  }
-}
+    image: 'URL',
+  },
+};
