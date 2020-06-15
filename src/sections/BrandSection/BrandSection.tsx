@@ -39,7 +39,7 @@ export default class BrandSection extends React.Component<
             isMobile ? 'mobile' : 'desktop'
           }`}
         >
-          Clients
+          Trusting Us
         </div>
         <div
           className={`brand-section-container-right-${

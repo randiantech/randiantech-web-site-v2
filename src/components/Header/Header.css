@@ -12,11 +12,14 @@
   top: 0;
   z-index: 9999;
   width: 100%;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 200px;
   height: var(--header-container-height);
   align-items: center;
   text-align: center;
   background-color: var(--main-bg-color);
+  -webkit-box-shadow: 0px 15px 33px -9px rgba(17, 8, 25, 1);
+  -moz-box-shadow: 0px 15px 33px -9px rgba(17, 8, 25, 1);
+  box-shadow: 0px 15px 33px -9px rgba(17, 8, 25, 1);
 }
 
 .header-desktop-items-container {
@@ -99,4 +102,24 @@
 
 .item-is-contact {
   color: var(--main-app-color);
+}
+
+.header-login-rts-btn {
+  display: grid;
+  background-color: #110819;
+  color: var(--main-app-color);
+  font-size: 18px;
+  font-weight: bolder;
+  height: 50px;
+  align-items: center;
+  border: 5px solid var(--main-app-color);
+  margin-right: 50px;
+  cursor: pointer;
+  border-bottom-right-radius: 50px;
+  border-top-right-radius: 50px;
+}
+
+.header-login-rts-btn:hover {
+  box-shadow: 20px 20px 60px var(--main-deg-app-color),
+    -20px -20px 60px var(--main-deg-app-color);
 }

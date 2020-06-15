@@ -36,7 +36,7 @@ export default class Header extends React.Component<any, HeaderState> {
     const {hoveredItem} = this.state;
     return (
       <div className="header-mobile-mobile-menu-container">
-        {DESKTOP_ITEMS.map(item => (
+        {DESKTOP_ITEMS.map((item) => (
           <Link
             key={item}
             className={`header-item-wrapper ${
@@ -83,7 +83,7 @@ export default class Header extends React.Component<any, HeaderState> {
   renderDesktopItems(hoveredItem: string) {
     return (
       <div className="header-desktop-items-container">
-        {DESKTOP_ITEMS.map(item => (
+        {DESKTOP_ITEMS.map((item) => (
           <Link
             key={item}
             className="header-item-wrapper"
@@ -116,6 +116,7 @@ export default class Header extends React.Component<any, HeaderState> {
             ? this.renderMobileItems()
             : this.renderDesktopItems(hoveredItem)}
         </div>
+        <div className="header-login-rts-btn">RTS Login</div>
       </div>
     );
   }

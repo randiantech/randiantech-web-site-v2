@@ -67,7 +67,7 @@ export default class ContactUsSection extends React.Component<any, any> {
           className="contact-us-section-send-btn"
           onClick={() => this.validateAllInputs()}
         >
-          Send Message
+          Submit
         </div>
       </div>
     );
