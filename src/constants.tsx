@@ -7,7 +7,6 @@ export const DESKTOP_ITEMS = [
   'SERVICES',
   'TEAM',
   'CAREERS',
-  'CLIENTS',
   'CONTACT',
 ];
 
@@ -32,9 +31,11 @@ export const CONTACT_US_ITEMS = [
     initialValue: '',
     isRequired: true,
     isValid: (value: any) => {
-      const isValidEmail = new RegExp(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/);
+      const isValidEmail = new RegExp(
+        /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+      );
       return isValidEmail.test(value);
-    }
+    },
   },
   {
     label: 'Phone',
@@ -42,18 +43,18 @@ export const CONTACT_US_ITEMS = [
     isRequired: false,
     initialValue: '',
     isValid: (value: any) => {
-      if(!value) return false;
+      if (!value) return false;
       const isValidPhone = new RegExp(
         /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im
       );
       return isValidPhone.test(value);
-    }
+    },
   },
   {
     label: 'Comments',
     id: 'comments',
     isRequired: true,
     initialValue: '',
-    style: 'free-text'
+    style: 'free-text',
   },
 ];

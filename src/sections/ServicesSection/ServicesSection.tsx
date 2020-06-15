@@ -10,7 +10,10 @@ interface ServicesSectionState {
   isMobile: boolean;
 }
 
-export default class ServicesSection extends React.Component<any,ServicesSectionState> {
+export default class ServicesSection extends React.Component<
+  any,
+  ServicesSectionState
+> {
   constructor(props: any) {
     super(props);
     this.state = {
@@ -49,7 +52,7 @@ export default class ServicesSection extends React.Component<any,ServicesSection
               >
                 <img className="services-group-item-img" src={item.img} />
                 <div className="services-group-item-text">{item.text}</div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
