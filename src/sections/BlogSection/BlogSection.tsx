@@ -53,6 +53,7 @@ export default class BlogGroup extends React.Component<any, BlogGroupState> {
               key={`blog-setion-item-${index}`}
               className="blog-section-item-desktop"
               href={url}
+              target="_blank"
             >
               <div>
                 <img src={img} className="blog-section-item-img-desktop" />
