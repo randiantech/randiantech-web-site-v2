@@ -1,8 +1,7 @@
 .contact-us-section-container-desktop {
   display: grid;
   grid-template-columns: 1fr 500px;
-  padding-top: 50px;
-  padding-right: 50px;
+  padding-top: var(--main-item-distance);
   border-left: 10px solid var(--main-app-color);
   border-bottom: none;
   border-top: none;
@@ -25,12 +24,7 @@
   animation: gradient 140s ease infinite;
   font-size: 24px;
   font-weight: bolder;
-  border-top-right-radius: 50px;
-  border-bottom-right-radius: 50px;
   text-align: center;
-  border-right: 10px solid var(--main-app-color);
-  border-top: 10px solid var(--main-app-color);
-  border-bottom: 10px solid var(--main-app-color);
 }
 
 .contact-us-section-container-title-mobile {
@@ -41,8 +35,6 @@
   );
   box-shadow: 20px 20px 60px var(--main-deg-app-color),
     -20px -20px 60px var(--main-deg-app-color);
-  padding-top: 50px;
-  padding-bottom: 50px;
   color: white;
   font-size: 35px;
   opacity: 0.9;
@@ -70,12 +62,11 @@
 .contact-us-section-container-form-mobile {
   display: grid;
   padding-right: 10px;
-  padding-top: 50px;
+  padding-top: var(--main-item-distance);
   grid-template-rows: 1fr 1fr 1fr 1fr 250px;
 }
 
 .contact-us-section-item {
-  padding-left: 50px;
   padding-right: 20px;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -116,7 +107,6 @@
   float: left;
   padding-top: 25px;
   padding-right: 15px;
-  padding-left: 50px;
 }
 
 .contact-us-section-send-btn {

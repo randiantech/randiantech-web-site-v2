@@ -34,14 +34,26 @@ export default class ServicesSection extends React.Component<
     const {isMobile}: ServicesSectionState = this.state;
     const device = isMobile ? 'mobile' : 'desktop';
     return (
-      <div className="services-group-wrapper">
-        <div className={`services-group-container-${device}`}>
-          <div className={`services-group-container-left-${device}`}>
+      <div className="services-group-wrapper rt-std-top-padding">
+        <div
+          className={`services-group-container-${
+            isMobile ? 'mobile' : 'desktop rt-std-bottom-padding'
+          }`}
+        >
+          <div
+            className={`services-group-container-left-${
+              isMobile
+                ? 'mobile rt-std-top-padding rt-std-bottom-padding'
+                : 'desktop rt-std-bottom-padding rt-rounded'
+            }`}
+          >
             Our Services
           </div>
           <div
             className={`services-group-container-right-${
-              isMobile ? 'mobile' : 'desktop'
+              isMobile
+                ? 'mobile rt-std-top-padding rt-std-bottom-padding'
+                : 'desktop'
             }`}
           >
             {SERVICES_ITEMS.map((item) => (

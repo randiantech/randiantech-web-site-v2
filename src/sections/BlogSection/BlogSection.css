@@ -2,14 +2,12 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  row-gap: 50px;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  row-gap: var(--main-item-distance);
+  padding-top: var(--main-item-distance);
   border: 10px solid var(--main-app-color);
   border-bottom: none;
   border-top: none;
   border-right: none;
-  padding-right: 50px;
 }
 
 .blog-section-first-item-desktop {
@@ -18,14 +16,9 @@
   text-align: center;
   align-items: center;
   font-size: 40px;
-  background-color: #110819;
+  background-color: var(--main-sec-app-color);
   color: var(--main-app-color);
   font-weight: bolder;
-  border-top-right-radius: 50px;
-  border-bottom-right-radius: 50px;
-  border-right: 10px solid var(--main-app-color);
-  border-top: 10px solid var(--main-app-color);
-  border-bottom: 10px solid var(--main-app-color);
 }
 
 .blog-section-first-item-mobile {
@@ -36,8 +29,6 @@
   );
   box-shadow: 20px 20px 60px var(--main-deg-app-color),
     -20px -20px 60px var(--main-deg-app-color);
-  padding-top: 50px;
-  padding-bottom: 50px;
   color: white;
   font-size: 35px;
   opacity: 0.9;
@@ -49,7 +40,6 @@
   display: grid;
   grid-template-rows: 1fr 200px;
   padding-bottom: 0;
-  padding-left: 50px;
   padding-right: 0;
   text-align: center;
   cursor: pointer;
@@ -82,9 +72,6 @@
 
 .blog-section-item-img-desktop {
   width: 100%;
-  border-top-right-radius: 50px;
-  border-bottom-right-radius: 50px;
-  border-top-left-radius: 50px;
 }
 
 .blog-section-item-details {

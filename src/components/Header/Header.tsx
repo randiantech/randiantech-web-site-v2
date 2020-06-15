@@ -64,7 +64,7 @@ export default class Header extends React.Component<any, HeaderState> {
     return (
       <>
         <div
-          className="header-mobile-items-container"
+          className="header-mobile-items-container rt-std-right-padding"
           onClick={() =>
             this.setState({toggleMobileMenu: !this.state.toggleMobileMenu})
           }
@@ -82,7 +82,7 @@ export default class Header extends React.Component<any, HeaderState> {
 
   renderDesktopItems(hoveredItem: string) {
     return (
-      <div className="header-desktop-items-container">
+      <div className="header-desktop-items-container rt-std-right-padding">
         {DESKTOP_ITEMS.map((item) => (
           <Link
             key={item}
@@ -108,7 +108,7 @@ export default class Header extends React.Component<any, HeaderState> {
     const {isMobile, hoveredItem}: HeaderState = this.state;
     return (
       <div className="header-container">
-        <div className="header-logo-wrapper">
+        <div className="header-logo-wrapper rt-std-left-padding">
           <Logo />
         </div>
         <div>
@@ -116,7 +116,7 @@ export default class Header extends React.Component<any, HeaderState> {
             ? this.renderMobileItems()
             : this.renderDesktopItems(hoveredItem)}
         </div>
-        <div className="header-login-rts-btn">RTS Login</div>
+        <div className="rt-access-btn rt-rounded">RTS Login</div>
       </div>
     );
   }

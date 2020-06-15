@@ -23,6 +23,8 @@
   --main-bg-color: #414042;
   --main-app-color: #ff4970;
   --main-deg-app-color: #ff3970;
+  --main-sec-app-color: #110819;
+  --main-item-distance: 50px;
 }
 
 body {
@@ -35,7 +37,12 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: linear-gradient(135deg, #7b4da5, #110819 60%, grey);
+  background: linear-gradient(
+    135deg,
+    #7b4da5,
+    var(--main-sec-app-color) 60%,
+    grey
+  );
 }
 
 code {
@@ -44,4 +51,70 @@ code {
 
 .app-container {
   padding-top: 100px;
+}
+
+/* Shared Styles */
+.rt-rounded {
+  border-right: 10px solid var(--main-app-color);
+  border-top: 10px solid var(--main-app-color);
+  border-bottom: 10px solid var(--main-app-color);
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+.rt-centered-txt {
+  align-items: center;
+  text-align: center;
+}
+
+/* Spacing */
+.rt-std-left-padding {
+  padding-left: var(--main-item-distance);
+}
+
+.rt-std-right-padding {
+  padding-right: var(--main-item-distance);
+}
+
+.rt-std-bottom-padding {
+  padding-bottom: var(--main-item-distance);
+}
+
+.rt-std-top-padding {
+  padding-top: var(--main-item-distance);
+}
+
+.rt-std-left-margin {
+  margin-left: var(--main-item-distance);
+}
+
+.rt-std-right-margin {
+  margin-right: var(--main-item-distance);
+}
+
+.rt-std-bottom-margin {
+  margin-bottom: var(--main-item-distance);
+}
+
+.rt-std-top-margin {
+  margin-top: var(--main-item-distance);
+}
+
+/* Buttons */
+.rt-access-btn {
+  display: grid;
+  background-color: var(--main-sec-app-color);
+  color: var(--main-app-color);
+  font-size: 18px;
+  font-weight: bolder;
+  height: 50px;
+  align-items: center;
+  border: 5px solid var(--main-app-color);
+  margin-right: var(--main-item-distance);
+  cursor: pointer;
+}
+
+.rt-access-btn:hover {
+  box-shadow: 20px 20px 60px var(--main-deg-app-color),
+    -20px -20px 60px var(--main-deg-app-color);
 }

@@ -62,7 +62,7 @@ export default class ContactUsSection extends React.Component<any, any> {
 
   renderSendButton() {
     return (
-      <div className="contact-us-section-send-btn-container">
+      <div className="contact-us-section-send-btn-container rt-std-left-padding">
         <div
           className="contact-us-section-send-btn"
           onClick={() => this.validateAllInputs()}
@@ -79,8 +79,8 @@ export default class ContactUsSection extends React.Component<any, any> {
       <div
         className={`${
           isMobile
-            ? 'contact-us-section-container-title-mobile'
-            : 'contact-us-section-container-title-desktop'
+            ? 'contact-us-section-container-title-mobile rt-std-top-padding rt-std-bottom-padding'
+            : 'contact-us-section-container-title-desktop rt-rounded rt-std-right-padding'
         }`}
       ></div>
     );
@@ -109,7 +109,7 @@ export default class ContactUsSection extends React.Component<any, any> {
             return (
               <div
                 key={`randiantech-key-${item.label}`}
-                className="contact-us-section-item"
+                className="contact-us-section-item rt-std-left-padding"
               >
                 <div className="contact-us-section-item-label">
                   <div>{item.label}</div>

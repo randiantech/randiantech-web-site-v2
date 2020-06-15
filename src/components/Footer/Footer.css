@@ -21,7 +21,6 @@
   color: var(--footer-options-color);
   font-weight: bolder;
   text-align: center;
-  padding-left: 50px;
   grid-template-columns: repeat(6, 100px);
 }
 
@@ -36,7 +35,6 @@
 }
 
 .footer-logo-wrapper {
-  padding-left: 50px;
   text-align: left;
 }
 

@@ -33,7 +33,7 @@ export default class FrontImageSection extends React.Component<
       <div
         className={`${
           isMobile
-            ? 'front-image-section-content-mobile'
+            ? 'front-image-section-content-mobile rt-std-top-padding rt-std-bottom-padding'
             : 'front-image-section-content-desktop'
         }`}
       >
@@ -58,7 +58,11 @@ export default class FrontImageSection extends React.Component<
       <div className="front-image-section-container">
         <img
           className="front-image-section-img"
-          src={isMobile ? '/images/front/office-mobile.jpg' : '/images/front/office-desktop.png'}
+          src={
+            isMobile
+              ? '/images/front/office-mobile.jpg'
+              : '/images/front/office-desktop.png'
+          }
         />
         {this.renderContent()}
       </div>

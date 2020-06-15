@@ -29,8 +29,8 @@ export default class Footer extends React.Component<any, FooterState> {
 
   renderItems() {
     return (
-      <div className="footer-desktop-items-container">
-        {DESKTOP_ITEMS.map(item => (
+      <div className="footer-desktop-items-container rt-std-left-padding">
+        {DESKTOP_ITEMS.map((item) => (
           <Link
             key={item}
             className="footer-item-wrapper"
@@ -48,7 +48,7 @@ export default class Footer extends React.Component<any, FooterState> {
     if (isMobile) return <></>;
     return (
       <div className="footer-container">
-        <div className="footer-logo-wrapper">
+        <div className="footer-logo-wrapper rt-std-left-padding">
           <img src="./logo.png" alt="Randiantech" className="footer-logo-img" />
         </div>
         <div>{this.renderItems()}</div>

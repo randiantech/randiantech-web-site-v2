@@ -30,7 +30,11 @@ export default class BlogGroup extends React.Component<any, BlogGroupState> {
     const {isMobile}: BlogGroupState = this.state;
     return (
       <div
-        className={`blog-section-container-${isMobile ? 'mobile' : 'desktop'}`}
+        className={`blog-section-container-${
+          isMobile
+            ? 'mobile'
+            : 'desktop rt-std-right-padding rt-std-bottom-padding'
+        }`}
       >
         {BLOG_ITEMS.map((item, index) => {
           const {url, title, description, img} = item;
@@ -40,8 +44,8 @@ export default class BlogGroup extends React.Component<any, BlogGroupState> {
                 key={`blog-setion-item-first`}
                 className={`${
                   isMobile
-                    ? 'blog-section-first-item-mobile'
-                    : 'blog-section-first-item-desktop'
+                    ? 'blog-section-first-item-mobile rt-std-bottom-padding rt-std-top-padding'
+                    : 'blog-section-first-item-desktop rt-rounded'
                 }`}
               >
                 News and Articles
@@ -51,12 +55,15 @@ export default class BlogGroup extends React.Component<any, BlogGroupState> {
           return (
             <a
               key={`blog-setion-item-${index}`}
-              className="blog-section-item-desktop"
+              className="blog-section-item-desktop rt-std-left-padding"
               href={url}
               target="_blank"
             >
               <div>
-                <img src={img} className="blog-section-item-img-desktop" />
+                <img
+                  src={img}
+                  className="blog-section-item-img-desktop rt-rounded"
+                />
               </div>
               <div className="blog-section-item-details">
                 <div className="blog-section-item-title-desktop">{title}</div>
