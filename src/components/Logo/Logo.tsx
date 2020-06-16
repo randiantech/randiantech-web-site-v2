@@ -1,15 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import './Logo.css';
-
-const h = 'header';
-const l = 'logo';
-const c = 'container';
-const i = 'item';
-const w = 'wrapper';
-const lf = 'left';
-const rg = 'right';
-const s = 'side';
+import {c, h, l, i, w, lf, rg, s} from '../../meta';
 
 export default class Logo extends React.Component {
   render() {

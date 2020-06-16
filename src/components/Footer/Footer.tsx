@@ -2,15 +2,8 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import {DESKTOP_ITEMS} from '../../constants';
 import {isMobileWidth} from '../../utils';
+import {c, f, d, m, i, l, w} from '../../meta';
 import './Footer.css';
-
-const c = 'container';
-const f = 'footer';
-const d = 'desktop';
-const m = 'mobile';
-const i = 'item';
-const l = 'logo';
-const w = 'wrapper';
 
 interface FooterState {
   isMobile: boolean;

@@ -5,6 +5,7 @@ import {Link} from 'react-router-dom';
 import Logo from '../Logo/Logo';
 import {DESKTOP_ITEMS} from '../../constants';
 import {isMobileWidth} from '../../utils';
+import {h, m, c, i, sel, w, d, l} from '../../meta';
 import './Header.css';
 
 interface HeaderState {
@@ -35,20 +36,20 @@ export default class Header extends React.Component<any, HeaderState> {
   renderMobileMenu() {
     const {hoveredItem} = this.state;
     return (
-      <div className="header-mobile-mobile-menu-container">
+      <div className={`${h}-${m}-menu-${c}`}>
         {DESKTOP_ITEMS.map((item) => (
           <Link
             key={item}
-            className={`header-item-wrapper ${
-              item === 'CONTACT' ? 'item-is-contact' : ''
+            className={`${h}-${i}-${w} ${
+              item === 'CONTACT' ? `${i}-is-contact` : ''
             }`}
             to={`${item.toLowerCase()}`}
             onClick={() => this.setState({toggleMobileMenu: false})}
           >
             <div
-              className={`header-mobile-item${
+              className={`${h}-${m}-${i}${
                 hoveredItem === item
-                  ? ` item-selected-mobile rt-glow-effect rt-linear-grad-bg`
+                  ? ` ${i}-${sel}-${m} rt-glow-effect rt-linear-grad-bg`
                   : ''
               }`}
               onMouseOver={() => this.setState({hoveredItem: item})}
@@ -66,13 +67,13 @@ export default class Header extends React.Component<any, HeaderState> {
     return (
       <>
         <div
-          className="header-mobile-items-container rt-std-right-padding"
+          className={`${h}-${m}-${i}s-${c} rt-std-right-padding`}
           onClick={() =>
             this.setState({toggleMobileMenu: !this.state.toggleMobileMenu})
           }
         >
           <FontAwesomeIcon
-            className="header-mobile-item"
+            className={`${h}-${m}-${i}`}
             icon={faBars}
             size="lg"
           />
@@ -84,16 +85,16 @@ export default class Header extends React.Component<any, HeaderState> {
 
   renderDesktopItems(hoveredItem: string) {
     return (
-      <div className="header-desktop-items-container rt-std-right-padding">
+      <div className={`${h}-${d}-${i}s-${c} rt-std-right-padding`}>
         {DESKTOP_ITEMS.map((item) => (
           <Link
             key={item}
-            className="header-item-wrapper"
+            className={`${h}-${i}-${w}`}
             to={`${item.toLowerCase()}`}
           >
             <div
-              className={`header-desktop-item${
-                hoveredItem === item ? ' item-selected' : ''
+              className={`${h}-${d}-${i}${
+                hoveredItem === item ? ` ${i}-${sel}` : ''
               }`}
               onMouseOver={() => this.setState({hoveredItem: item})}
               onMouseOut={() => this.setState({hoveredItem: ''})}
@@ -109,8 +110,8 @@ export default class Header extends React.Component<any, HeaderState> {
   render() {
     const {isMobile, hoveredItem}: HeaderState = this.state;
     return (
-      <div className="header-container">
-        <div className="header-logo-wrapper rt-std-left-padding">
+      <div className={`${h}-${c}`}>
+        <div className={`${h}-${l}-${w} rt-std-left-padding`}>
           <Logo />
         </div>
         <div>

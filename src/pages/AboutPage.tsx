@@ -16,7 +16,12 @@ export default class AboutPage extends React.Component {
           <div className="about-page-body-desc">{body.desc}</div>
           <div className="about-page-body-title">{body.list.title}</div>
           {body.list.items.map((item, idx) => (
-            <div className="about-page-body-list-item" key={`rt-page-item-${idx}`}>{item}</div>
+            <div
+              className="about-page-body-list-item"
+              key={`rt-page-item-${idx}`}
+            >
+              {item}
+            </div>
           ))}
         </div>
         <div className="about-page-footer-container">

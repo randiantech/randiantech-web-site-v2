@@ -8,6 +8,7 @@ const m = 'mobile';
 const d = 'desktop';
 const c = 'container';
 const i = 'item';
+const rg = 'right';
 
 interface ImageGalleryState {
   isMobile: boolean;
@@ -68,7 +69,7 @@ export default class ImageGallery extends React.Component<
           {title}
         </div>
         <div
-          className={`brand-section-container-right-${
+          className={`${b}-${s}-${c}-${rg}-${
             isMobile
               ? `${m} rt-centered-txt`
               : `${d} rt-std-top-padding rt-std-bottom-padding`

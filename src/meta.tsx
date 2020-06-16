@@ -1,0 +1,12 @@
+export const c = 'container';
+export const h = 'header';
+export const l = 'logo';
+export const i = 'item';
+export const w = 'wrapper';
+export const lf = 'left';
+export const rg = 'right';
+export const s = 'side';
+export const f = 'footer';
+export const d = 'desktop';
+export const m = 'mobile';
+export const sel = 'selected';

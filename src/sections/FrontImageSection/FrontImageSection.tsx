@@ -34,7 +34,7 @@ export default class FrontImageSection extends React.Component<
         className={`${
           isMobile
             ? 'front-image-section-content-mobile rt-std-top-padding rt-std-bottom-padding rt-linear-grad-bg rt-linear-grad-bg'
-            : 'front-image-section-content-desktop rt-rounded rt-glow-effect rt-linear-grad-bg'
+            : 'front-image-section-content-desktop rt-glow-effect rt-linear-grad-bg'
         }`}
       >
         <span>
@@ -61,7 +61,7 @@ export default class FrontImageSection extends React.Component<
           src={
             isMobile
               ? '/images/front/office-mobile.jpg'
-              : '/images/front/office-desktop.png'
+              : '/images/front/office-desktop.jpg'
           }
         />
         {this.renderContent()}
