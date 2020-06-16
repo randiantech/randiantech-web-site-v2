@@ -22,13 +22,6 @@
 }
 
 .blog-section-first-item-mobile {
-  background: linear-gradient(
-    145deg,
-    var(--main-app-color),
-    var(--main-deg-app-color)
-  );
-  box-shadow: 20px 20px 60px var(--main-deg-app-color),
-    -20px -20px 60px var(--main-deg-app-color);
   color: white;
   font-size: 35px;
   opacity: 0.9;

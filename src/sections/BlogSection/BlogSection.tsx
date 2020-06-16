@@ -44,7 +44,7 @@ export default class BlogGroup extends React.Component<any, BlogGroupState> {
                 key={`blog-setion-item-first`}
                 className={`${
                   isMobile
-                    ? 'blog-section-first-item-mobile rt-std-bottom-padding rt-std-top-padding'
+                    ? 'blog-section-first-item-mobile rt-std-bottom-padding rt-std-top-padding rt-glow-effect rt-linear-grad-bg'
                     : 'blog-section-first-item-desktop rt-rounded'
                 }`}
               >

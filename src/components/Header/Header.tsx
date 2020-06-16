@@ -47,7 +47,9 @@ export default class Header extends React.Component<any, HeaderState> {
           >
             <div
               className={`header-mobile-item${
-                hoveredItem === item ? ` item-selected-mobile` : ''
+                hoveredItem === item
+                  ? ` item-selected-mobile rt-glow-effect rt-linear-grad-bg`
+                  : ''
               }`}
               onMouseOver={() => this.setState({hoveredItem: item})}
               onMouseOut={() => this.setState({hoveredItem: ''})}

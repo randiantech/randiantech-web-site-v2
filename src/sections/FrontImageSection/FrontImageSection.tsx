@@ -33,8 +33,8 @@ export default class FrontImageSection extends React.Component<
       <div
         className={`${
           isMobile
-            ? 'front-image-section-content-mobile rt-std-top-padding rt-std-bottom-padding'
-            : 'front-image-section-content-desktop'
+            ? 'front-image-section-content-mobile rt-std-top-padding rt-std-bottom-padding rt-linear-grad-bg rt-linear-grad-bg'
+            : 'front-image-section-content-desktop rt-rounded rt-glow-effect rt-linear-grad-bg'
         }`}
       >
         <span>

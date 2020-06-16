@@ -1,3 +1,4 @@
+/* Start of Fonts */
 @font-face {
   font-family: 'coco';
   src: url('/fonts/coco-pro.ttf') format('truetype');
@@ -26,6 +27,7 @@
   --main-sec-app-color: #110819;
   --main-item-distance: 50px;
 }
+/* End of Fonts */
 
 body {
   user-select: none;
@@ -45,15 +47,7 @@ body {
   );
 }
 
-code {
-  font-family: 'coco';
-}
-
-.app-container {
-  padding-top: 100px;
-}
-
-/* Shared Styles */
+/* Start of Shared Styles */
 .rt-rounded {
   border-right: 10px solid var(--main-app-color);
   border-top: 10px solid var(--main-app-color);
@@ -67,7 +61,21 @@ code {
   text-align: center;
 }
 
-/* Spacing */
+.rt-glow-effect {
+  box-shadow: 20px 20px 60px var(--main-deg-app-color),
+    -20px -20px 60px var(--main-app-color);
+}
+
+.rt-linear-grad-bg {
+  background: linear-gradient(
+    145deg,
+    var(--main-deg-app-color),
+    var(--main-app-color)
+  );
+}
+/* End of Shared Styles */
+
+/* Start of Spacing */
 .rt-std-left-padding {
   padding-left: var(--main-item-distance);
 }
@@ -99,8 +107,9 @@ code {
 .rt-std-top-margin {
   margin-top: var(--main-item-distance);
 }
+/* End of Spacing */
 
-/* Buttons */
+/* Start of buttons */
 .rt-access-btn {
   display: grid;
   background-color: var(--main-sec-app-color);
@@ -118,3 +127,14 @@ code {
   box-shadow: 20px 20px 60px var(--main-deg-app-color),
     -20px -20px 60px var(--main-deg-app-color);
 }
+/* End of buttons */
+
+/* Start of Workarounds */
+code {
+  font-family: 'coco';
+}
+
+.app-container {
+  padding-top: 100px;
+}
+/* End of Workarounds */

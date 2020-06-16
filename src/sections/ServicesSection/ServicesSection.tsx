@@ -34,23 +34,23 @@ export default class ServicesSection extends React.Component<
     const {isMobile}: ServicesSectionState = this.state;
     const device = isMobile ? 'mobile' : 'desktop';
     return (
-      <div className="services-group-wrapper rt-std-top-padding">
+      <div className="services-section-wrapper rt-std-top-padding rt-std-bottom-padding">
         <div
-          className={`services-group-container-${
-            isMobile ? 'mobile' : 'desktop rt-std-bottom-padding'
-          }`}
+          className={`services-section-container-${
+            isMobile ? 'mobile' : 'desktop'
+          } rt-centered-txt`}
         >
           <div
-            className={`services-group-container-left-${
+            className={`services-section-container-left-${
               isMobile
-                ? 'mobile rt-std-top-padding rt-std-bottom-padding'
-                : 'desktop rt-std-bottom-padding rt-rounded'
+                ? 'mobile rt-std-top-padding'
+                : 'desktop rt-rounded rt-centered-txt'
             }`}
           >
             Our Services
           </div>
           <div
-            className={`services-group-container-right-${
+            className={`services-section-container-right-${
               isMobile
                 ? 'mobile rt-std-top-padding rt-std-bottom-padding'
                 : 'desktop'
@@ -60,10 +60,10 @@ export default class ServicesSection extends React.Component<
               <Link
                 to={`${item.link}`}
                 key={item.text}
-                className="services-group-item"
+                className="services-section-item"
               >
-                <img className="services-group-item-img" src={item.img} />
-                <div className="services-group-item-text">{item.text}</div>
+                <img className="services-section-item-img" src={item.img} />
+                <div className="services-section-item-text">{item.text}</div>
               </Link>
             ))}
           </div>

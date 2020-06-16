@@ -79,7 +79,7 @@ export default class ContactUsSection extends React.Component<any, any> {
       <div
         className={`${
           isMobile
-            ? 'contact-us-section-container-title-mobile rt-std-top-padding rt-std-bottom-padding'
+            ? 'contact-us-section-container-title-mobile rt-std-top-padding rt-std-bottom-padding rt-glow-effect rt-linear-grad-bg'
             : 'contact-us-section-container-title-desktop rt-rounded rt-std-right-padding'
         }`}
       ></div>

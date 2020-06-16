@@ -39,7 +39,7 @@ export default class BrandSection extends React.Component<
         <div
           className={`brand-section-container-left-${
             isMobile
-              ? 'mobile rt-std-top-padding rt-std-bottom-padding rt-centered-txt'
+              ? 'mobile rt-std-top-padding rt-std-bottom-padding rt-centered-txt rt-glow-effect rt-linear-grad-bg'
               : 'desktop rt-rounded rt-centered-txt'
           }`}
         >
