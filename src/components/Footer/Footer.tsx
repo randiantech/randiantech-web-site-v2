@@ -4,6 +4,14 @@ import {DESKTOP_ITEMS} from '../../constants';
 import {isMobileWidth} from '../../utils';
 import './Footer.css';
 
+const c = 'container';
+const f = 'footer';
+const d = 'desktop';
+const m = 'mobile';
+const i = 'item';
+const l = 'logo';
+const w = 'wrapper';
+
 interface FooterState {
   isMobile: boolean;
   toggleMobileMenu: boolean;
@@ -29,14 +37,14 @@ export default class Footer extends React.Component<any, FooterState> {
 
   renderItems() {
     return (
-      <div className="footer-desktop-items-container rt-std-left-padding">
+      <div className={`${f}-${d}-${i}s-${c} rt-std-left-padding`}>
         {DESKTOP_ITEMS.map((item) => (
           <Link
             key={item}
-            className="footer-item-wrapper"
+            className={`${f}-${i}-${w}`}
             to={`${item.toLowerCase()}`}
           >
-            <div className="footer-desktop-item">{item}</div>
+            <div className={`${f}-${d}-${i}`}>{item}</div>
           </Link>
         ))}
       </div>
@@ -47,9 +55,9 @@ export default class Footer extends React.Component<any, FooterState> {
     const {isMobile}: FooterState = this.state;
     if (isMobile) return <></>;
     return (
-      <div className="footer-container rt-centered-txt">
-        <div className="footer-logo-wrapper rt-std-left-padding">
-          <img src="./logo.png" alt="Randiantech" className="footer-logo-img" />
+      <div className={`${f}-${c} rt-centered-txt`}>
+        <div className={`${f}-${l}-${w} rt-std-left-padding`}>
+          <img src="./logo.png" alt="Randiantech" className={`${f}-${l}-img`} />
         </div>
         <div>{this.renderItems()}</div>
       </div>
