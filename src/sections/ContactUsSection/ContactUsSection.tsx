@@ -37,12 +37,24 @@ export default class ContactUsSection extends React.Component<any, any> {
   }
 
   validateAllInputs() {
+    let errors = 0;
     CONTACT_US_ITEMS.forEach((item) => {
       const value = this.state[item.id];
+      let itemIsInvalid = item.isValid && !item.isValid(value);
+      if (itemIsInvalid && item.isRequired) ++errors;
       this.setState({
-        [itemErrorKey(item.id)]: item.isValid && !item.isValid(value),
+        [itemErrorKey(item.id)]: itemIsInvalid,
       });
     });
+    return errors === 0;
+  }
+
+  submitMessage() {
+    if (this.validateAllInputs()) {
+      fetch('https://jsonplaceholder.typicode.com/todos/1')
+        .then((response) => response.json())
+        .then((data) => console.log(data));
+    }
   }
 
   renderErrorLabel() {
@@ -64,8 +76,8 @@ export default class ContactUsSection extends React.Component<any, any> {
     return (
       <div className="contact-us-section-send-btn-container rt-std-left-padding">
         <div
-          className="contact-us-section-send-btn"
-          onClick={() => this.validateAllInputs()}
+          className="contact-us-section-send-btn rt-rounded"
+          onClick={() => this.submitMessage()}
         >
           Submit
         </div>
@@ -82,7 +94,11 @@ export default class ContactUsSection extends React.Component<any, any> {
             ? 'contact-us-section-container-title-mobile rt-std-top-padding rt-std-bottom-padding rt-glow-effect rt-linear-grad-bg'
             : 'contact-us-section-container-title-desktop rt-rounded rt-std-right-padding'
         }`}
-      ></div>
+      >
+        <div className="contact-us-section-container-title-inner-message">
+          Let's craft it together.
+        </div>
+      </div>
     );
   }
 

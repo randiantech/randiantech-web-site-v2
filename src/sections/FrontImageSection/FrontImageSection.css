@@ -8,6 +8,7 @@
   width: 100%;
   background-color: var(--main-bg-color);
   overflow: hidden;
+  border-right: 5px solid var(--main-app-color);
 }
 
 .front-image-section-img {
@@ -15,6 +16,15 @@
   min-width: 100%;
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
+}
+
+@keyframes shrink {
+  0% {
+    background-size: 110% 110%;
+  }
+  100% {
+    background-size: 100% 100%;
+  }
 }
 
 .front-image-section-content-desktop {
@@ -54,4 +64,25 @@
 
 .front-image-section-instantly-loved-text {
   font-weight: bolder;
+}
+
+.front-image-section-right-panel-container {
+  position: absolute;
+  right: 0;
+  top: 20px;
+}
+
+.front-image-section-right-panel-container-item {
+  display: grid;
+  text-align: center;
+  align-items: center;
+  height: 50px;
+  background-color: red;
+  padding: 10px;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+.front-image-section-right-panel-container-item:hover {
+  transform: scale(1.05);
 }

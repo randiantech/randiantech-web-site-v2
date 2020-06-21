@@ -29,10 +29,24 @@
   font-weight: bolder;
 }
 
-.brand-section-container-right-desktop {
+.brand-section-container-right-desktop-1l {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr;
+  max-width: 100%;
+}
+
+.brand-section-container-right-desktop-2l {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  max-width: 100%;
+}
+
+.brand-section-container-right-desktop-3l {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
   max-width: 100%;
 }
 

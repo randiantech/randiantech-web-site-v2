@@ -17,6 +17,7 @@ interface ImageGalleryState {
   imgFilenamePrefix: string;
   imageType: string;
   title: string;
+  rows: number;
 }
 
 export default class ImageGallery extends React.Component<
@@ -32,6 +33,7 @@ export default class ImageGallery extends React.Component<
       imgFilenamePrefix: props.imgFilenamePrefix || '',
       imageType: props.imageType || 'jpg',
       title: props.title || '',
+      rows: props.rows || 1,
     };
   }
 
@@ -52,6 +54,7 @@ export default class ImageGallery extends React.Component<
       imgFilenamePrefix,
       imageType,
       title,
+      rows,
     }: ImageGalleryState = this.state;
     return (
       <div
@@ -72,7 +75,7 @@ export default class ImageGallery extends React.Component<
           className={`${b}-${s}-${c}-${rg}-${
             isMobile
               ? `${m} rt-centered-txt`
-              : `${d} rt-std-top-padding rt-std-bottom-padding`
+              : `${d}-${rows}l rt-std-top-padding rt-std-bottom-padding`
           }`}
         >
           {items.map((item) => (
