@@ -119,7 +119,7 @@ export default class Header extends React.Component<any, HeaderState> {
             ? this.renderMobileItems()
             : this.renderDesktopItems(hoveredItem)}
         </div>
-        <div className="rt-access-btn rt-rounded">RTS Login</div>
+        <Link to="/rts/login" className="rt-access-btn rt-rounded">RTS Login</Link>
       </div>
     );
   }

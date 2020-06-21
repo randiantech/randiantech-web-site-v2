@@ -27,14 +27,15 @@
   border-bottom-right-radius: 50px;
   transition: transform 200ms ease-in-out;
   transform-origin: center;
-  cursor: pointer;
+  cursor: default;
   opacity: 0.9;
   text-align: center;
 }
 
 .front-image-section-content-desktop:hover {
   transform: scale(1.05);
-  box-shadow: 20px 20px 60px var(--main-deg-app-color), -20px -20px 60px var(--main-app-color);
+  box-shadow: 20px 20px 60px var(--main-deg-app-color),
+    -20px -20px 60px var(--main-app-color);
 }
 
 .front-image-section-content-mobile {

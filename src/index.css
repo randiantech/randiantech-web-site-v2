@@ -121,6 +121,7 @@ body {
   border: 5px solid var(--main-app-color);
   margin-right: var(--main-item-distance);
   cursor: pointer;
+  text-decoration: none;
 }
 
 .rt-access-btn:hover {
