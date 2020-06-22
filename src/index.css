@@ -1,21 +1,21 @@
 /* Start of Fonts */
 @font-face {
-  font-family: 'coco';
-  src: url('/fonts/coco-pro.ttf') format('truetype');
+  font-family: "coco";
+  src: url("/fonts/coco-pro.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'coco-thin';
-  src: url('/fonts/coco-pro-thin.ttf') format('truetype');
+  font-family: "coco-thin";
+  src: url("/fonts/coco-pro-thin.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'coco-light';
-  src: url('/fonts/coco-pro-light.ttf') format('truetype');
+  font-family: "coco-light";
+  src: url("/fonts/coco-pro-light.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -34,8 +34,8 @@ body {
   margin: 0;
   border-bottom: none;
   border-top: none;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -132,7 +132,7 @@ body {
 
 /* Start of Workarounds */
 code {
-  font-family: 'coco';
+  font-family: "coco";
 }
 
 .app-container {

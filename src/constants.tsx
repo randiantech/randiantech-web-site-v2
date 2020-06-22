@@ -3,67 +3,67 @@
 export const MOBILE_WIDTH = 1200;
 
 export const DESKTOP_ITEMS = [
-  'ABOUT',
-  'SERVICES',
-  'TEAM',
-  'CAREERS',
-  'CONTACT',
+  "ABOUT",
+  "SERVICES",
+  "TEAM",
+  "CAREERS",
+  "CONTACT",
 ];
 
 export const FOOTER_ITEMS = [
   {
-    name: 'About',
-    url: '/about',
+    name: "About",
+    url: "/about",
   },
   {
-    name: 'Services',
-    url: '/services',
+    name: "Services",
+    url: "/services",
   },
   {
-    name: 'Careers',
-    url: '/careers',
+    name: "Careers",
+    url: "/careers",
   },
   {
-    name: 'Privacy',
-    url: '/privacy',
+    name: "Privacy",
+    url: "/privacy",
   },
   {
-    name: 'Company Brochure',
-    url: '/brochure',
+    name: "Company Brochure",
+    url: "/brochure",
   },
   {
-    name: 'Terms of Services',
-    url: '/tos',
+    name: "Terms of Services",
+    url: "/tos",
   },
   {
-    name: 'Media',
-    url: '/media',
+    name: "Media",
+    url: "/media",
   },
   {
-    name: 'Information',
-    url: '/info',
+    name: "Information",
+    url: "/info",
   },
 ];
 
 export const CONTACT_US_ITEMS = [
   {
-    label: 'First Name',
-    id: 'firstName',
-    initialValue: '',
+    label: "First Name",
+    id: "firstName",
+    initialValue: "",
     isRequired: true,
     isValid: (value: string) => value.length > 1,
   },
   {
-    label: 'Last Name',
-    id: 'lastName',
-    initialValue: '',
+    label: "Last Name",
+    id: "lastName",
+    initialValue: "",
     isRequired: true,
     isValid: (value: any) => value.length > 1,
   },
   {
-    label: 'Email',
-    id: 'email',
-    initialValue: '',
+    label: "Email",
+    id: "email",
+    initialValue: "",
     isRequired: true,
     isValid: (value: any) => {
       const isValidEmail = new RegExp(
@@ -73,10 +73,10 @@ export const CONTACT_US_ITEMS = [
     },
   },
   {
-    label: 'Phone',
-    id: 'phone',
+    label: "Phone",
+    id: "phone",
     isRequired: false,
-    initialValue: '',
+    initialValue: "",
     isValid: (value: any) => {
       if (!value) return false;
       const isValidPhone = new RegExp(
@@ -86,38 +86,38 @@ export const CONTACT_US_ITEMS = [
     },
   },
   {
-    label: 'Comments',
-    id: 'comments',
+    label: "Comments",
+    id: "comments",
     isRequired: true,
-    initialValue: '',
-    style: 'free-text',
+    initialValue: "",
+    style: "free-text",
   },
 ];
 
 export const SOCIAL_NETWORKS = [
   {
-    img: '/images/icons/facebook.png',
-    name: 'Facebook',
-    url: 'https://www.facebook.com/randiantech/',
+    img: "/images/icons/facebook.png",
+    name: "Facebook",
+    url: "https://www.facebook.com/randiantech/",
   },
   {
-    img: '/images/icons/linkedin.png',
-    name: 'Linkedin',
-    url: 'https://www.linkedin.com/company/randiantech',
+    img: "/images/icons/linkedin.png",
+    name: "Linkedin",
+    url: "https://www.linkedin.com/company/randiantech",
   },
   {
-    img: '/images/icons/twitter.png',
-    name: 'Twitter',
-    url: 'https://twitter.com/randiantech',
+    img: "/images/icons/twitter.png",
+    name: "Twitter",
+    url: "https://twitter.com/randiantech",
   },
   {
-    img: '/images/icons/youtube.png',
-    name: 'Youtube',
-    url: 'https://www.youtube.com/',
+    img: "/images/icons/youtube.png",
+    name: "Youtube",
+    url: "https://www.youtube.com/",
   },
   {
-    img: '/images/icons/github.png',
-    name: 'Github',
-    url: 'https://www.linkedin.com/company/randiantech',
+    img: "/images/icons/github.png",
+    name: "Github",
+    url: "https://www.linkedin.com/company/randiantech",
   },
 ];

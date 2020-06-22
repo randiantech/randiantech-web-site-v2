@@ -1,0 +1,25 @@
+.about-page-header-container {
+  display: grid;
+  grid-template-rows: 75px 75px 200px;
+  padding: 50px;
+  color: white;
+  font-size: 18px;
+}
+
+.about-page-body-container {
+  display: grid;
+  padding: 50px;
+  color: white;
+  font-size: 18px;
+}
+
+.about-page-footer-container {
+  display: grid;
+  padding: 50px;
+  color: white;
+  font-size: 18px;
+}
+
+.about-page-header-title {
+  font-size: 24px;
+}

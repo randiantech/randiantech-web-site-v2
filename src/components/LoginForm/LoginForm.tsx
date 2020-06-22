@@ -1,10 +1,7 @@
-import React from 'react';
-import {Link} from 'react-router-dom';
-import ReactLoading from 'react-loading';
-import {DESKTOP_ITEMS} from '../../constants';
-import {isMobileWidth} from '../../utils';
-import './LoginForm.css';
-import loginImg from '../../../public/login.jpg';
+import React from "react";
+import ReactLoading from "react-loading";
+import { isMobileWidth } from "../../utils";
+import "./LoginForm.css";
 
 interface LoginFormState {
   isMobile: boolean;
@@ -20,33 +17,33 @@ export default class LoginForm extends React.Component<any, LoginFormState> {
       isMobile: isMobileWidth(),
       isError: false,
       isLoading: false,
-      error: '',
+      error: "",
     };
   }
 
   componentDidMount() {
-    window.addEventListener('resize', this.resize.bind(this));
+    window.addEventListener("resize", this.resize.bind(this));
     this.resize();
   }
 
   resize() {
-    this.setState({isMobile: isMobileWidth()});
+    this.setState({ isMobile: isMobileWidth() });
   }
 
   handleSignIn() {
-    setTimeout(() => this.setState({isLoading: true}), 300);
+    setTimeout(() => this.setState({ isLoading: true }), 300);
 
     setTimeout(() => {
-      this.setState({error: 'Invalid Credentials.'});
-      this.setState({isError: true});
-      this.setState({isLoading: false});
+      this.setState({ error: "Invalid Credentials." });
+      this.setState({ isError: true });
+      this.setState({ isLoading: false });
     }, 2500);
 
-    setTimeout(() => this.setState({isError: false}), 6000);
+    setTimeout(() => this.setState({ isError: false }), 6000);
   }
 
   render() {
-    const {isMobile, isError, error, isLoading}: LoginFormState = this.state;
+    const { isMobile, isError, error, isLoading }: LoginFormState = this.state;
     return (
       <>
         <div className="rts-page-container">

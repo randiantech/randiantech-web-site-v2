@@ -99,6 +99,7 @@
   width: 140px;
   float: left;
   padding-top: 25px;
+  font-size: 18px;
 }
 
 .contact-us-section-send-btn {
@@ -153,4 +154,13 @@
   transform: scale(1.05);
   box-shadow: 20px 20px 60px var(--main-deg-app-color),
     -20px -20px 60px var(--main-app-color);
+}
+
+.rts-page-loading {
+  margin: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
 }

@@ -1,7 +1,9 @@
 import React from 'react';
 
-export default class ServicesSection extends React.Component {
+class ServicesPage extends React.Component {
   render() {
-    return <div>Services Section</div>;
+    return <div>Services Page</div>;
   }
 }
+
+export default React.memo(ServicesPage);

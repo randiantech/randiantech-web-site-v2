@@ -36,7 +36,11 @@ export default class Footer extends React.Component<any, FooterState> {
           <Logo />
           <div className="footer-left-pane-container-list">
             {FOOTER_ITEMS.map((i) => (
-              <Link key={`footer-item-${i}`} to={i.url} className="footer-item">
+              <Link
+                key={`footer-item-${i.name}`}
+                to={i.url}
+                className="footer-item"
+              >
                 {i.name}
               </Link>
             ))}
@@ -51,7 +55,7 @@ export default class Footer extends React.Component<any, FooterState> {
                     <img width="30px" src={i.img} />
                   </div>
                   <div
-                    key={`footer-item-sn-${i}`}
+                    key={`footer-item-sn-${i.name}`}
                     className="footer-right-pane-item-link"
                   >
                     {i.name}

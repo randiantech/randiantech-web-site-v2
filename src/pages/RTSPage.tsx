@@ -1,8 +1,10 @@
 import React from 'react';
 import LoginForm from '../components/LoginForm/LoginForm';
 
-export default class RTSPage extends React.Component {
+class RTSPage extends React.Component {
   render() {
-    return <LoginForm />
+    return <LoginForm />;
   }
 }
+
+export default React.memo(RTSPage);

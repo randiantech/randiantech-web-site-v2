@@ -1,8 +1,8 @@
-import React from 'react';
-import {isMobileWidth} from '../../utils';
-import {CONTACT_US_ITEMS} from '../../constants';
-import './ContactUsSection.css';
-import circuitImage from '../../../public/circuit.png';
+import React from "react";
+import { isMobileWidth } from "../../utils";
+import { CONTACT_US_ITEMS } from "../../constants";
+import "./ContactUsSection.css";
+import ReactLoading from "react-loading";
 
 const itemErrorKey = (id: string) =>
   `error${id.charAt(0).toUpperCase() + id.substring(1)}`;
@@ -10,7 +10,9 @@ const itemErrorKey = (id: string) =>
 export default class ContactUsSection extends React.Component<any, any> {
   constructor(props: any) {
     super(props);
-    let initialState: any = {};
+    let initialState: any = {
+      isLoading: false,
+    };
     CONTACT_US_ITEMS.forEach((item) => {
       initialState[item.id] = item.initialValue;
       initialState[itemErrorKey(item.id)] = false;
@@ -22,12 +24,12 @@ export default class ContactUsSection extends React.Component<any, any> {
   }
 
   componentDidMount() {
-    window.addEventListener('resize', this.resize.bind(this));
+    window.addEventListener("resize", this.resize.bind(this));
     this.resize();
   }
 
   resize() {
-    this.setState({isMobile: isMobileWidth()});
+    this.setState({ isMobile: isMobileWidth() });
   }
 
   validateInput(item: any, value: any) {
@@ -49,11 +51,26 @@ export default class ContactUsSection extends React.Component<any, any> {
     return errors === 0;
   }
 
-  submitMessage() {
+  submitMessage(e: any) {
+    e.preventDefault();
+    this.setState({ isLoading: true });
     if (this.validateAllInputs()) {
-      fetch('https://jsonplaceholder.typicode.com/todos/1')
-        .then((response) => response.json())
-        .then((data) => console.log(data));
+      fetch("http://localhost:3005/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(this.state),
+      }).then(() => {
+        this.setState({
+          firstName: "",
+          lastName: "",
+          email: "",
+          phone: "",
+          comments: "",
+          isLoading: false,
+        });
+      });
     }
   }
 
@@ -77,7 +94,7 @@ export default class ContactUsSection extends React.Component<any, any> {
       <div className="contact-us-section-send-btn-container rt-std-left-padding">
         <div
           className="contact-us-section-send-btn rt-rounded"
-          onClick={() => this.submitMessage()}
+          onClick={(e) => this.submitMessage(e)}
         >
           Submit
         </div>
@@ -86,13 +103,13 @@ export default class ContactUsSection extends React.Component<any, any> {
   }
 
   renderContactUsLabel() {
-    const {isMobile} = this.state;
+    const { isMobile } = this.state;
     return (
       <div
         className={`${
           isMobile
-            ? 'contact-us-section-container-title-mobile rt-std-top-padding rt-std-bottom-padding rt-glow-effect rt-linear-grad-bg'
-            : 'contact-us-section-container-title-desktop rt-rounded rt-std-right-padding'
+            ? "contact-us-section-container-title-mobile rt-std-top-padding rt-std-bottom-padding rt-glow-effect rt-linear-grad-bg"
+            : "contact-us-section-container-title-desktop rt-rounded rt-std-right-padding"
         }`}
       >
         <div className="contact-us-section-container-title-inner-message">
@@ -103,20 +120,20 @@ export default class ContactUsSection extends React.Component<any, any> {
   }
 
   renderFormItems() {
-    const {isMobile} = this.state;
+    const { isMobile } = this.state;
     return (
       <div
         className={
           isMobile
-            ? 'contact-us-section-container-form-wrapper-mobile'
-            : 'contact-us-section-container-form-wrapper-desktop'
+            ? "contact-us-section-container-form-wrapper-mobile"
+            : "contact-us-section-container-form-wrapper-desktop"
         }
       >
         <div
           className={
             isMobile
-              ? 'contact-us-section-container-form-mobile'
-              : 'contact-us-section-container-form-desktop'
+              ? "contact-us-section-container-form-mobile"
+              : "contact-us-section-container-form-desktop"
           }
         >
           {CONTACT_US_ITEMS.map((item) => {
@@ -131,25 +148,28 @@ export default class ContactUsSection extends React.Component<any, any> {
                   <div>{item.label}</div>
                   {isErrorInItem && this.renderErrorLabel()}
                 </div>
-                {item.style === 'free-text' ? (
+                {item.style === "free-text" ? (
                   <textarea
                     className="contact-us-section-item-input-free-text"
                     name={`randiantech-${item.id}`}
                     onChange={(e) => {
-                      this.setState({[item.id]: e.target.value});
+                      this.setState({ [item.id]: e.target.value });
                       this.validateInput(item, e.target.value);
                     }}
                     onFocus={(e) => this.validateInput(item, e.target.value)}
+                    value={this.state[item.id]}
                   />
                 ) : (
                   <input
+                    id={item.id}
                     className="contact-us-section-item-input"
                     type="text"
                     name={`randiantech-${item.id}`}
                     onChange={(e) => {
-                      this.setState({[item.id]: e.target.value});
+                      this.setState({ [item.id]: e.target.value });
                       this.validateInput(item, e.target.value);
                     }}
+                    value={this.state[item.id]}
                     onFocus={(e) => this.validateInput(item, e.target.value)}
                   />
                 )}
@@ -163,18 +183,25 @@ export default class ContactUsSection extends React.Component<any, any> {
   }
 
   render() {
-    const {isMobile} = this.state;
+    const { isMobile, isLoading } = this.state;
     return (
-      <div
-        className={`${
-          isMobile
-            ? 'contact-us-section-container-mobile'
-            : 'contact-us-section-container-desktop'
-        }`}
-      >
-        {this.renderContactUsLabel()}
-        {this.renderFormItems()}
-      </div>
+      <>
+        {isLoading && (
+          <div className="rts-page-loading">
+            <ReactLoading type="spin" color="#ff4970" />
+          </div>
+        )}
+        <div
+          className={`${
+            isMobile
+              ? "contact-us-section-container-mobile"
+              : "contact-us-section-container-desktop"
+          }`}
+        >
+          {this.renderContactUsLabel()}
+          {this.renderFormItems()}
+        </div>
+      </>
     );
   }
 }
