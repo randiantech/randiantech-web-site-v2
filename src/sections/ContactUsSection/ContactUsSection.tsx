@@ -55,7 +55,7 @@ export default class ContactUsSection extends React.Component<any, any> {
     e.preventDefault();
     this.setState({ isLoading: true });
     if (this.validateAllInputs()) {
-      fetch("http://http://192.241.136.96:3005/", {
+      fetch("http://192.241.136.96:3005/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
