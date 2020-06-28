@@ -3,6 +3,7 @@ import { isMobileWidth } from "../../utils";
 import { CONTACT_US_ITEMS } from "../../constants";
 import "./ContactUsSection.css";
 import ReactLoading from "react-loading";
+import { SimpleButton } from "../../components/Button/SimpleButton";
 
 const itemErrorKey = (id: string) =>
   `error${id.charAt(0).toUpperCase() + id.substring(1)}`;
@@ -92,12 +93,7 @@ export default class ContactUsSection extends React.Component<any, any> {
   renderSendButton() {
     return (
       <div className="contact-us-section-send-btn-container rt-std-left-padding">
-        <div
-          className="contact-us-section-send-btn rt-rounded"
-          onClick={(e) => this.submitMessage(e)}
-        >
-          Submit
-        </div>
+        <SimpleButton text="Submit" onClick={(e) => this.submitMessage(e)} />
       </div>
     );
   }
