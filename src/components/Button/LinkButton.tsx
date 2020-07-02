@@ -1,6 +1,5 @@
 import React from "react";
 import { Wrapper, LinkWrapper } from "./Styles";
-import { Link } from "react-router-dom";
 
 interface LinkProps {
   color?: string;

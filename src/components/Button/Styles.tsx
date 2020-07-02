@@ -18,7 +18,12 @@ export const Wrapper = styled.div`
   border: ${size.defaultBorder};
   background-color: ${color.defaultSecondaryAppColor};
   font-size: ${size.defaultFontSize};
-  ${(props: any) => override(props)}
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 20px 20px 60px var(--main-deg-app-color);
+    -20px -20px 60px var(--main-app-color);
+  }
+  ${(props: any) => override(props)};
 `;
 
 export const LinkWrapper = styled(Link)`

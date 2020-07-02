@@ -45,6 +45,9 @@ body {
     var(--main-sec-app-color) 60%,
     grey
   );
+  max-width: 100%;
+  overflow-x: hidden;
+  scrollbar-color: var(--main-app-color);
 }
 
 /* Start of Shared Styles */
