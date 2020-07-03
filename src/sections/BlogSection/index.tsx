@@ -1,11 +1,11 @@
 /*eslint-disable jsx-a11y/alt-text*/
 
-import React, { useEffect, useState } from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
-import { isMobileWidth } from "../../utils";
 import { BLOG_ITEMS } from "../../data";
 import { BlogItem } from "../../components/BlogItem";
 import { FirstBlogItem } from "../../components/FirstBlogItem";
+import { AppContext } from "../../AppContext";
 
 const WrapperDesktop = styled.div`
   display: grid;
@@ -19,14 +19,9 @@ const WrapperDesktop = styled.div`
   border-right: none;
 `;
 
-const BlogSection = () => {
-  const [isMobile, setIsMobile] = useState(isMobileWidth());
-  const resize = () => setIsMobile(isMobileWidth());
-
-  useEffect(() => {
-    window.addEventListener("resize", resize);
-    resize();
-  }, []);
+export const BlogSection = React.memo(() => {
+  const { state } = useContext(AppContext);
+  const { isMobile } = state;
 
   return (
     <WrapperDesktop>
@@ -39,6 +34,4 @@ const BlogSection = () => {
       )}
     </WrapperDesktop>
   );
-};
-
-export default React.memo(BlogSection);
+});

@@ -1,5 +1,5 @@
 import React from "react";
-import AboutSection from "../sections/AboutSection/AboutSection";
+import AboutSection from "../sections/AboutSection";
 
 class AboutPage extends React.Component {
   render() {
