@@ -15,10 +15,10 @@ const Wrapper = styled.div`
   color: ${color.defAppColor};
   padding-left: ${dist.defTextPaddingLeft};
   padding-right: ${dist.defTextPaddingRight};
-  border-top-right-radius: ${size.defaultRadius};
-  border-bottom-right-radius: ${size.defaultRadius};
+  border-top-right-radius: ${size.defRadius};
+  border-bottom-right-radius: ${size.defRadius};
   border: ${size.defBorder};
-  background-color: ${color.defSecondaryAppColor};
+  background-color: ${color.defSecAppColor};
   font-size: ${size.defFontSize};
   ${(props: any) => override(props)};
 `;

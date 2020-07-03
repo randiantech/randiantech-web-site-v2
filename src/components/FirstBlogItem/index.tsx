@@ -8,8 +8,8 @@ export const WrapperDesktop = styled.div`
   text-align: center;
   align-items: center;
   font-size: 40px;
-  background-color: var(--main-sec-app-color);
-  color: var(--main-app-color);
+  background-color: ${color.defSecAppColor};
+  color: ${color.defAppColor};
   font-weight: bolder;
   ${(props: any) => override(props)};
 `;

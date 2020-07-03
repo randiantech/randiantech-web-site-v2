@@ -2,13 +2,7 @@
 
 export const MOBILE_WIDTH = 1200;
 
-export const DESKTOP_ITEMS = [
-  "ABOUT",
-  "SERVICES",
-  "TEAM",
-  "CAREERS",
-  "CONTACT",
-];
+export const MENU_ITEMS = ["ABOUT", "SERVICES", "TEAM", "CAREERS", "CONTACT"];
 
 export const FOOTER_ITEMS = [
   {

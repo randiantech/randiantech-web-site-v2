@@ -131,9 +131,6 @@
   align-items: center;
 }
 
-.contact-us-section-container-form-wrapper-mobile {
-}
-
 .contact-us-section-container-form-wrapper-desktop {
   display: grid;
   grid-template-rows: 1fr 100px;

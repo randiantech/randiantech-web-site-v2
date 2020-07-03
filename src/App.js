@@ -1,5 +1,5 @@
 import React from "react";
-import Header from "./components/Header/Header";
+import { Header } from "./components/Header";
 import Footer from "./components/Footer";
 
 class App extends React.Component {
@@ -7,7 +7,7 @@ class App extends React.Component {
     const { children } = this.props;
     return (
       <>
-        <Header />
+        <Header linkBtnText="RTS Login" linkBtnPath="/rts/login" />
         <div className="app-container">{children}</div>
         <Footer />
       </>

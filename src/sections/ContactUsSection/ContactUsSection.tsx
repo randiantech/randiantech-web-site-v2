@@ -3,7 +3,7 @@ import { isMobileWidth } from "../../utils";
 import { CONTACT_US_ITEMS } from "../../constants";
 import "./ContactUsSection.css";
 import ReactLoading from "react-loading";
-import { SimpleButton } from "../../components/Button/SimpleButton";
+import { SimpleButton } from "../../components/SimpleButton";
 
 const itemErrorKey = (id: string) =>
   `error${id.charAt(0).toUpperCase() + id.substring(1)}`;
