@@ -1,10 +1,10 @@
 /*eslint-disable jsx-a11y/alt-text*/
 
-import React from 'react';
-import {Link} from 'react-router-dom';
-import {isMobileWidth} from '../../utils';
-import {SERVICES_ITEMS} from '../../data';
-import './ServicesSection.css';
+import React from "react";
+import { Link } from "react-router-dom";
+import { isMobileWidth } from "../../utils";
+import { SERVICES_ITEMS } from "../../data";
+import "./ServicesSection.css";
 
 interface ServicesSectionState {
   isMobile: boolean;
@@ -22,29 +22,28 @@ export default class ServicesSection extends React.Component<
   }
 
   componentDidMount() {
-    window.addEventListener('resize', this.resize.bind(this));
+    window.addEventListener("resize", this.resize.bind(this));
     this.resize();
   }
 
   resize() {
-    this.setState({isMobile: isMobileWidth()});
+    this.setState({ isMobile: isMobileWidth() });
   }
 
   render() {
-    const {isMobile}: ServicesSectionState = this.state;
-    const device = isMobile ? 'mobile' : 'desktop';
+    const { isMobile }: ServicesSectionState = this.state;
     return (
       <div className="services-section-wrapper rt-std-top-padding rt-std-bottom-padding">
         <div
           className={`services-section-container-${
-            isMobile ? 'mobile' : 'desktop'
+            isMobile ? "mobile" : "desktop"
           } rt-centered-txt`}
         >
           <div
             className={`services-section-container-left-${
               isMobile
-                ? 'mobile rt-std-top-padding'
-                : 'desktop rt-rounded rt-centered-txt'
+                ? "mobile rt-std-top-padding"
+                : "desktop rt-rounded rt-centered-txt"
             }`}
           >
             Our Services
@@ -52,8 +51,8 @@ export default class ServicesSection extends React.Component<
           <div
             className={`services-section-container-right-${
               isMobile
-                ? 'mobile rt-std-top-padding rt-std-bottom-padding'
-                : 'desktop'
+                ? "mobile rt-std-top-padding rt-std-bottom-padding"
+                : "desktop"
             }`}
           >
             {SERVICES_ITEMS.map((item) => (

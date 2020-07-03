@@ -1,7 +1,34 @@
 import React from "react";
-import { Wrapper, LinkWrapper } from "./Styles";
+import styled from "styled-components";
+import { Styleable } from "../../utils";
+import { size, color, dist } from "../../theme";
+import { override } from "../../utils";
+import { Link } from "react-router-dom";
 
-interface LinkProps {
+const Wrapper = styled.div`
+  display: grid;
+  cursor: pointer;
+  font-weight: bolder;
+  height: ${dist.defItemDistance};
+  align-items: center;
+  width: fit-content;
+  color: ${color.defAppColor};
+  padding-left: ${dist.defTextPaddingLeft};
+  padding-right: ${dist.defTextPaddingRight};
+  border-top-right-radius: ${size.defaultRadius};
+  border-bottom-right-radius: ${size.defaultRadius};
+  border: ${size.defBorder};
+  background-color: ${color.defSecondaryAppColor};
+  font-size: ${size.defFontSize};
+  ${(props: any) => override(props)};
+`;
+
+const LinkWrapper = styled(Link)`
+  color: ${color.defAppColor};
+  text-decoration: none;
+`;
+
+interface LinkProps extends Styleable {
   color?: string;
   width?: string;
   text: string;

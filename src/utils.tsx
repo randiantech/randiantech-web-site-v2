@@ -12,3 +12,18 @@ export const override = (props: any) => {
 export interface Clickable {
   onClick: (e: any) => void;
 }
+
+export interface Styleable {
+  display?: string;
+  padding?: string;
+  color?: string;
+  width?: string;
+  "padding-right"?: string;
+  "padding-left"?: string;
+  "padding-top"?: string;
+  "padding-bottom"?: string;
+  "margin-right"?: string;
+  "margin-left"?: string;
+  "margin-top"?: string;
+  "margin-bottom"?: string;
+}

@@ -1,6 +1,7 @@
+import React from "react";
 import styled from "styled-components";
 import { size, color, dist } from "../../theme";
-import { override } from "../../utils";
+import { Clickable, Styleable, override } from "../../utils";
 
 export const WrapperDesktop = styled.div`
   display: grid;
@@ -21,3 +22,21 @@ export const WrapperMobile = styled.div`
   text-align: center;
   ${(props: any) => override(props)};
 `;
+
+interface FirstBlogItemProps {}
+
+export const FirstBlogItem = (props: FirstBlogItemProps) => {
+  const isMobile = false;
+  return (
+    <WrapperDesktop
+      key="blog-setion-item-first"
+      className={`${
+        isMobile
+          ? "rt-std-bottom-padding rt-std-top-padding rt-glow-effect rt-linear-grad-bg"
+          : "rt-rounded"
+      }`}
+    >
+      News and Articles
+    </WrapperDesktop>
+  );
+};

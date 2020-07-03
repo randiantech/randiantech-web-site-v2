@@ -5,8 +5,8 @@ export const Header = styled.div`
   display: grid;
   grid-template-rows: 75px 75px 200px;
   color: white;
-  padding: ${dist.defaultItemDistance};
-  font-size: ${size.defaultFontSize};
+  padding: ${dist.defItemDistance};
+  font-size: ${size.defFontSize};
 
   .title {
     font-size: ${size.titleFontSize};
@@ -22,8 +22,8 @@ export const Header = styled.div`
 export const Body = styled.div`
   display: grid;
   color: white;
-  padding: ${dist.defaultItemDistance};
-  font-size: ${size.defaultFontSize};
+  padding: ${dist.defItemDistance};
+  font-size: ${size.defFontSize};
 
   .title {
   }
@@ -43,6 +43,6 @@ export const Body = styled.div`
 export const Footer = styled.div`
   display: grid;
   color: white;
-  padding: ${dist.defaultItemDistance};
-  font-size: ${size.defaultFontSize};
+  padding: ${dist.defItemDistance};
+  font-size: ${size.defFontSize};
 `;

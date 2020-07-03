@@ -5,7 +5,7 @@ import styled from "styled-components";
 import { isMobileWidth } from "../../utils";
 import { BLOG_ITEMS } from "../../data";
 import { BlogItem } from "../../components/BlogItem";
-import { FirstBlogItem } from "../../components/FirstBlogItem/FirstBlogItem";
+import { FirstBlogItem } from "../../components/FirstBlogItem";
 
 const WrapperDesktop = styled.div`
   display: grid;
