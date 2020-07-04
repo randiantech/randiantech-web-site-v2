@@ -8,7 +8,7 @@ import { SimpleButton } from "../../components/SimpleButton";
 const itemErrorKey = (id: string) =>
   `error${id.charAt(0).toUpperCase() + id.substring(1)}`;
 
-export default class ContactUsSection extends React.Component<any, any> {
+export class ContactUsSection extends React.Component<any, any> {
   constructor(props: any) {
     super(props);
     let initialState: any = {

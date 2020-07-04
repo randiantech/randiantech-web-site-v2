@@ -15,10 +15,10 @@ const AppContextProvider = ({ children }: any) => {
     setIsMobile(isMobileWidth());
   };
 
-  useEffect(() => {
-    window.addEventListener("resize", () => handleOnResize());
-    console.log("lala");
-  }, []);
+  useEffect(
+    () => window.addEventListener("resize", () => handleOnResize()),
+    []
+  );
 
   const setIsMobile = (isMobile: boolean) => {
     setState((prevState) => ({

@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import { LinkButton } from "../LinkButton";
 import styled from "styled-components";
-import Logo from "../Logo/Logo";
+import { Logo } from "../Logo";
 import { AppContext } from "../../AppContext";
 import { size, color, dist } from "../../theme";
 import { HeaderDesktopItems } from "./HeaderDesktopItems";
