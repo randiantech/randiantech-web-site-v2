@@ -1,9 +1,3 @@
-import React from 'react';
+import React from "react";
 
-class CareersPage extends React.Component {
-  render() {
-    return <div>Careers Page</div>;
-  }
-}
-
-export default React.memo(CareersPage);
+export const CareersPage = React.memo(() => <div>Careers Page</div>);

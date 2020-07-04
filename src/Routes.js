@@ -1,14 +1,14 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
 import App from "./App";
-import HomePage from "./pages/HomePage";
-import AboutPage from "./pages/AboutPage";
-import ServicesPage from "./pages/ServicesPage";
-import TeamPage from "./pages/TeamPage";
-import CareersPage from "./pages/CareersPage";
-import ClientsPage from "./pages/ClientsPage";
-import ContactPage from "./pages/ContactPage";
-import RTSPage from "./pages/RTSPage";
+import { HomePage } from "./pages/HomePage";
+import { AboutPage } from "./pages/AboutPage";
+import { ServicesPage } from "./pages/ServicesPage";
+import { TeamPage } from "./pages/TeamPage";
+import { CareersPage } from "./pages/CareersPage";
+import { ClientsPage } from "./pages/ClientsPage";
+import { ContactPage } from "./pages/ContactPage";
+import { RTSPage } from "./pages/RTSPage";
 import { AppContextProvider } from "./AppContext";
 
 const Routes = () => (

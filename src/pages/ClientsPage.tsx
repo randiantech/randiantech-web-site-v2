@@ -1,9 +1,3 @@
-import React from 'react';
+import React from "react";
 
-class ClientsPage extends React.Component {
-  render() {
-    return <div>Clients Page</div>;
-  }
-}
-
-export default React.memo(ClientsPage);
+export const ClientsPage = React.memo(() => <div>Clients Page</div>);

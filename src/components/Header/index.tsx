@@ -3,6 +3,7 @@ import { LinkButton } from "../LinkButton";
 import styled from "styled-components";
 import Logo from "../Logo/Logo";
 import { AppContext } from "../../AppContext";
+import { size, color, dist } from "../../theme";
 import { HeaderDesktopItems } from "./HeaderDesktopItems";
 import { HeaderMobileItems } from "./HeaderMobileItems";
 
@@ -21,7 +22,7 @@ const HeaderWrapperDesktop = styled.div`
   height: 100px;
   align-items: center;
   text-align: center;
-  background-color: var(--main-bg-color);
+  background-color: ${color.defBgColor};
   -webkit-box-shadow: 0px 15px 33px -9px rgba(17, 8, 25, 1);
   -moz-box-shadow: 0px 15px 33px -9px rgba(17, 8, 25, 1);
   box-shadow: 0px 15px 33px -9px rgba(17, 8, 25, 1);
@@ -37,7 +38,7 @@ const HeaderWrapperMobile = styled.div`
   height: 100px;
   align-items: center;
   text-align: center;
-  background-color: var(--main-bg-color);
+  background-color: ${color.defBgColor};
   -webkit-box-shadow: 0px 15px 33px -9px rgba(17, 8, 25, 1);
   -moz-box-shadow: 0px 15px 33px -9px rgba(17, 8, 25, 1);
   box-shadow: 0px 15px 33px -9px rgba(17, 8, 25, 1);

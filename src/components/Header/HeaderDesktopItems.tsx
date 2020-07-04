@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { MENU_ITEMS } from "../../constants";
 import { Styleable } from "../../utils";
+import { size, color, dist } from "../../theme";
 
 interface HeaderDesktopProps extends Styleable {
   hoveredItem: any;
@@ -18,16 +19,16 @@ const HeaderWrapper = styled.div`
   .item {
     color: white;
     text-decoration: none;
-    line-height: 50px;
+    line-height: ${dist.defItemDistance};
     cursor: pointer;
 
     &:hover {
-      background-color: var(--main-app-color);
-      border-radius: 50px;
+      background-color: ${color.defAppColor};
+      border-radius: ${size.defRadius};
     }
 
     .selected {
-      border-radius: 50px;
+      border-radius: ${size.defRadius};
       font-weight: 900;
       opacity: 0.9;
     }

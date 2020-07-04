@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import { size, color, dist } from "../../theme";
 import { FOOTER_ITEMS, SOCIAL_NETWORKS } from "../../constants";
 import Logo from "../Logo/Logo";
 
@@ -17,7 +18,7 @@ const Wrapper = styled.div`
 
   .left-pane-container {
     display: grid;
-    padding: 50px;
+    padding: ${dist.defItemDistance};
     grid-template-rows: 100px 1fr;
 
     .list {
@@ -29,11 +30,11 @@ const Wrapper = styled.div`
       .item {
         text-decoration: none;
         color: white;
-        font-size: 18px;
+        font-size: ${size.defFontSize};
         font-weight: bold;
 
         &:hover {
-          color: var(--main-app-color);
+          color: ${color.defAppColor};
         }
       }
     }

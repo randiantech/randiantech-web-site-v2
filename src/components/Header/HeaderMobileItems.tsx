@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import { MENU_ITEMS } from "../../constants";
+import { size, color, dist } from "../../theme";
 
 const MenuWrapper = styled.div`
   position: absolute;
@@ -21,7 +22,7 @@ const MenuWrapper = styled.div`
     line-height: 50px;
 
     .is-contact {
-      color: var(--main-app-color);
+      color: ${color.defAppColor};
     }
 
     .content {

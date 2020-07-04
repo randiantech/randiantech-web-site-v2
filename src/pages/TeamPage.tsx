@@ -1,9 +1,3 @@
-import React from 'react';
+import React from "react";
 
-class TeamPage extends React.Component {
-  render() {
-    return <div>Team Page</div>;
-  }
-}
-
-export default React.memo(TeamPage);
+export const TeamPage = React.memo(() => <div>Team Page</div>);

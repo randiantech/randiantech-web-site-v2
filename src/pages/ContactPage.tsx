@@ -1,9 +1,3 @@
-import React from 'react';
+import React from "react";
 
-class ContactPage extends React.Component {
-  render() {
-    return <div>Contact Page</div>;
-  }
-}
-
-export default React.memo(ContactPage);
+export const ContactPage = React.memo(() => <div>Contact Page</div>);

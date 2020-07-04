@@ -3,8 +3,8 @@
 import React, { useContext } from "react";
 import styled from "styled-components";
 import { BLOG_ITEMS } from "../../data";
-import { BlogItem } from "../../components/BlogItem";
-import { FirstBlogItem } from "../../components/FirstBlogItem";
+import { ArticleCard } from "../../components/ArticleCard";
+import { TabulatedItem } from "../../components/TabulatedItem";
 import { AppContext } from "../../AppContext";
 
 const WrapperDesktop = styled.div`
@@ -27,9 +27,9 @@ export const BlogSection = React.memo(() => {
     <WrapperDesktop>
       {BLOG_ITEMS.map((i, idx) =>
         idx === 0 ? (
-          <FirstBlogItem />
+          <TabulatedItem text="News and Articles" />
         ) : (
-          <BlogItem url={i.url} img={i.img} desc={i.desc} title={i.title} />
+          <ArticleCard url={i.url} img={i.img} desc={i.desc} title={i.title} />
         )
       )}
     </WrapperDesktop>

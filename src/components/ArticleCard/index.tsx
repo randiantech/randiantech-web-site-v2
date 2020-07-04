@@ -6,7 +6,7 @@ import { override, Styleable } from "../../utils";
 export const Wrapper = styled.a`
   display: grid;
   grid-template-rows: 1fr 200px;
-  padding-left: 50px;
+  padding-left: ${dist.defItemDistance};
   text-align: center;
   cursor: pointer;
   text-decoration: none;
@@ -22,8 +22,8 @@ export const Wrapper = styled.a`
 
     .title {
       display: grid;
-      color: var(--main-app-color);
-      font-size: 24px;
+      color: ${color.defAppColor};
+      font-size: ${size.titleFontSize};
       padding-bottom: 10px;
     }
 
@@ -50,7 +50,7 @@ export const Wrapper = styled.a`
   ${(props: any) => override(props)};
 `;
 
-interface BlogItemProps extends Styleable {
+interface ArticleCardProps extends Styleable {
   text?: string;
   to?: string;
   url?: string;
@@ -60,7 +60,7 @@ interface BlogItemProps extends Styleable {
   index?: string;
 }
 
-export const BlogItem = (props: BlogItemProps) => {
+export const ArticleCard = (props: ArticleCardProps) => {
   const { index, url, title, desc, img } = props;
   return (
     <Wrapper {...props} key={`bsi-${index}`} href={url} target="_blank">

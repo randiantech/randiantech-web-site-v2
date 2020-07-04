@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { size, color, dist } from "../../theme";
-import { Clickable, Styleable, override } from "../../utils";
+import { size, color } from "../../theme";
+import { Styleable, override } from "../../utils";
 
 export const WrapperDesktop = styled.div`
   display: grid;
@@ -16,27 +16,30 @@ export const WrapperDesktop = styled.div`
 
 export const WrapperMobile = styled.div`
   color: white;
-  font-size: 35px;
+  font-size: ${size.extraFontSize};
   opacity: 0.9;
   font-weight: bolder;
   text-align: center;
   ${(props: any) => override(props)};
 `;
 
-interface FirstBlogItemProps {}
+interface TabulatedItemProps extends Styleable {
+  text: string;
+}
 
-export const FirstBlogItem = (props: FirstBlogItemProps) => {
+export const TabulatedItem = (props: TabulatedItemProps) => {
   const isMobile = false;
+  const { text } = props;
   return (
     <WrapperDesktop
-      key="blog-setion-item-first"
+      key="tabulated-item"
       className={`${
         isMobile
           ? "rt-std-bottom-padding rt-std-top-padding rt-glow-effect rt-linear-grad-bg"
           : "rt-rounded"
       }`}
     >
-      News and Articles
+      {text}
     </WrapperDesktop>
   );
 };
