@@ -3,18 +3,26 @@ import styled from "styled-components";
 import { size, dist } from "../../theme";
 import { ABOUT_PAGE } from "../../data";
 
+export const Wrapper = styled.div`
+  background: white;
+`;
+
 export const Header = styled.div`
   display: grid;
-  grid-template-rows: 75px 75px 200px;
+  grid-template-rows: 60px 40px 10px;
   color: white;
+  color: black;
   padding: ${dist.defItemDistance};
   font-size: ${size.defFontSize};
 
   .title {
-    font-size: ${size.titleFontSize};
+    font-size: ${size.extraFontSize};
+    font-weight: bolder;
   }
 
   .subtitle {
+    font-style: italic;
+    font-weight: bold;
   }
 
   .description {
@@ -53,7 +61,7 @@ const AboutSection = () => {
   const { header, body, footer } = ABOUT_PAGE;
   const { items } = body.list;
   return (
-    <>
+    <Wrapper>
       <Header>
         <div className="title">{header.title}</div>
         <div className="subtitle">{header.subtitle}</div>
@@ -74,7 +82,7 @@ const AboutSection = () => {
       <Footer>
         <div>{footer.image}</div>
       </Footer>
-    </>
+    </Wrapper>
   );
 };
 

@@ -74,9 +74,9 @@ export const SERVICES_ITEMS = [
 
 export const ABOUT_PAGE = {
   header: {
-    title: "Company",
+    title: "This is Randiantech",
     subtitle: "Mastering the Art of crafting innovative software",
-    desc: "From Startups to ",
+    desc: "From early stage startups, ",
   },
   body: {
     title: "How We Can Help",
