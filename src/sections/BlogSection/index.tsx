@@ -6,14 +6,15 @@ import { BLOG_ITEMS } from "../../data";
 import { ArticleCard } from "../../components/ArticleCard";
 import { TabulatedItem } from "../../components/TabulatedItem";
 import { AppContext } from "../../AppContext";
+import { color, dist } from "../../theme";
 
 const WrapperDesktop = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  row-gap: var(--main-item-distance);
-  padding-top: var(--main-item-distance);
-  padding-right: var(--main-item-distance);
-  border: 10px solid var(--main-app-color);
+  row-gap: ${dist.defItemDistance};
+  padding-top: ${dist.defItemDistance};
+  padding-right: ${dist.defItemDistance};
+  border: 10px solid ${color.defAppColor};
   border-bottom: none;
   border-top: none;
   border-right: none;

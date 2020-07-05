@@ -9,6 +9,8 @@ export const BrandSection = React.memo(() => {
       imgFilenamePrefix="c"
       imageType="png"
       title="Trusting Us"
+      altText="Randiantech"
+      rows={1}
     />
   );
 });
