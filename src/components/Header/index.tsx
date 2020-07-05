@@ -3,7 +3,7 @@ import { LinkButton } from "../LinkButton";
 import styled from "styled-components";
 import { Logo } from "../Logo";
 import { AppContext } from "../../AppContext";
-import { size, color, dist } from "../../theme";
+import { color, dist } from "../../theme";
 import { HeaderDesktopItems } from "./HeaderDesktopItems";
 import { HeaderMobileItems } from "./HeaderMobileItems";
 
@@ -46,7 +46,7 @@ const HeaderWrapperMobile = styled.div`
 
 const LogoWrapper = styled.div`
   text-align: left;
-  padding-left: 50px;
+  padding-left: ${dist.defItemDistance};
 `;
 
 export const Header = (props: HeaderProps) => {

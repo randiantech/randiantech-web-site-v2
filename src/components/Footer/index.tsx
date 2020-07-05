@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { size, color, dist } from "../../theme";
-import { FOOTER_ITEMS, SOCIAL_NETWORKS } from "../../constants";
+import { FOOTER_ITEMS, SOCIAL_NETWORKS } from "../../data";
 import { Logo } from "../Logo";
 
 const Wrapper = styled.div`
@@ -11,7 +11,6 @@ const Wrapper = styled.div`
   height: 350px;
   align-items: center;
   background-color: var(--main-bg-color);
-  margin-top: var(--main-item-distance);
   border-top: 1px solid var(--main-app-color);
   border-left: 10px solid var(--main-app-color);
   border-right: 10px solid var(--main-app-color);

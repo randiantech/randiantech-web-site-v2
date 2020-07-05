@@ -1,36 +1,29 @@
-import React from 'react';
-import ReactCardFlip from 'react-card-flip';
+import React, { useState, SyntheticEvent } from "react";
+import ReactCardFlip from "react-card-flip";
+import { Styleable } from "../../utils";
 
-export default class FlipCard extends React.Component<any, any> {
-    constructor(props: any) {
-        super(props);
-        this.state = {
-            isFlipped: false
-        };
-        this.handleClick = this.handleClick.bind(this);
-    }
-
-    handleClick(e: any) {
-        e.preventDefault();
-        this.setState((prevState: any) => ({ isFlipped: !prevState.isFlipped }));
-    }
-
-    renderSide(component: any) {
-        return (
-            <div onClick={this.handleClick}>
-                {component}
-            </div>
-        )
-    }
-
-    render() {
-        const { isFlipped } = this.state;
-        const { front, back } = this.props;
-        return (
-            <ReactCardFlip isFlipped={isFlipped} flipDirection="vertical">
-                {this.renderSide(front)}
-                {this.renderSide(back)}
-            </ReactCardFlip>
-        )
-    }
+interface FlipCardProps extends Styleable {
+  front: any;
+  back: any;
 }
+
+export const FlipCard = (props: FlipCardProps) => {
+  const [isFlipped, setIsFlipped] = useState(false);
+  const { front, back } = props;
+
+  const handleClick = (e: SyntheticEvent) => {
+    e.preventDefault();
+    setIsFlipped(!isFlipped);
+  };
+
+  const renderSide = (component: any) => {
+    return <div onClick={handleClick}>{component}</div>;
+  };
+
+  return (
+    <ReactCardFlip isFlipped={isFlipped} flipDirection="vertical">
+      {renderSide(front)}
+      {renderSide(back)}
+    </ReactCardFlip>
+  );
+};

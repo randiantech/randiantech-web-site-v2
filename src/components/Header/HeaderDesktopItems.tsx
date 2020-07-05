@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import { MENU_ITEMS } from "../../constants";
+import { MENU_ITEMS } from "../../data";
 import { Styleable } from "../../utils";
 import { size, color, dist } from "../../theme";
 

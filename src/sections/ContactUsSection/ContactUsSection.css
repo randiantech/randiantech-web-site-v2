@@ -3,6 +3,7 @@
   grid-template-columns: 1fr 500px;
   padding-top: var(--main-item-distance);
   padding-right: var(--main-item-distance);
+  margin-bottom: var(--main-item-distance);
   border-left: 10px solid var(--main-app-color);
   border-bottom: none;
   border-top: none;

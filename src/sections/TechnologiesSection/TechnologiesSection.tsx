@@ -1,5 +1,5 @@
 import React from "react";
-import ImageGallery from "../../components/ImageGallery/ImageGallery";
+import { ImageGallery } from "../../components/ImageGallery";
 
 export default class TechnologiesSection extends React.Component<any, any> {
   render() {

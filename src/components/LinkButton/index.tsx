@@ -26,6 +26,7 @@ const Wrapper = styled.div`
 const LinkWrapper = styled(Link)`
   color: ${color.defAppColor};
   text-decoration: none;
+  ${(props: any) => override(props)};
 `;
 
 interface LinkProps extends Styleable {
