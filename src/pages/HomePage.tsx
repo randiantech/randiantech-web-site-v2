@@ -10,8 +10,8 @@ export const HomePage = React.memo(() => (
   <>
     <FrontImageSection />
     <ServicesSection />
-    <BrandSection />
     <TechnologiesSection />
+    <BrandSection />
     <BlogSection />
     <ContactUsSection />
   </>

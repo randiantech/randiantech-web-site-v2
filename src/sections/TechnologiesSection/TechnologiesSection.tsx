@@ -10,12 +10,12 @@ export default class TechnologiesSection extends React.Component<any, any> {
           2,
           3,
           4,
-          5,
           6,
+          10,
           7,
           8,
           9,
-          10,
+          5,
           11,
           12,
           13,
@@ -23,9 +23,9 @@ export default class TechnologiesSection extends React.Component<any, any> {
           15,
           16,
           17,
-          18,
-          19,
           20,
+          19,
+          18,
         ]}
         path="/images/technologies"
         imgFilenamePrefix="t"

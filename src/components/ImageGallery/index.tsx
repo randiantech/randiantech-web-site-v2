@@ -23,12 +23,10 @@ const WrapperDesktop = styled.div`
   border-bottom: none;
   border-top: none;
   border-right: none;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: ${dist.defItemDistance};
 
   .left-pane {
     display: grid;
-    height: 100%;
     background: ${color.defSecAppColor};
     color: ${color.defAppColor};
     font-size: 35px;
@@ -48,9 +46,7 @@ const WrapperDesktop = styled.div`
       font-size: 18px;
 
       .img {
-        width: 80%;
-        max-width: ${(props: ImageGalleryProps) =>
-          `repeat(${props.itemWidth}, 1fr)`};
+        width: 60%;
         display: block;
         margin-left: auto;
         margin-right: auto;

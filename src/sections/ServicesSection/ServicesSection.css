@@ -18,7 +18,7 @@
 }
 
 .services-section-item-img {
-  width: 100px;
+  width: 130px;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -33,12 +33,11 @@
 .services-section-container-desktop {
   display: grid;
   grid-template-columns: 300px 1fr;
-  width: 100%;
 }
 
 .services-section-container-left-desktop {
   display: grid;
-  height: 300px;
+  height: 100%;
   background: var(--main-sec-app-color);
   color: var(--main-app-color);
   font-size: 35px;
