@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { size, dist } from "../../theme";
 import { ABOUT_PAGE } from "../../data";
+import { ImageGallerySection } from "../ImageGallerySection";
 
 export const Wrapper = styled.div`
   background: white;
@@ -62,6 +63,7 @@ const AboutSection = () => {
   const { items } = body.list;
   return (
     <Wrapper>
+      <ImageGallerySection />
       <Header>
         <div className="title">{header.title}</div>
         <div className="subtitle">{header.subtitle}</div>

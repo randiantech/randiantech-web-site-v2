@@ -52,12 +52,10 @@ const WrapperDesktop = styled.div`
         margin-right: auto;
         transition: transform 200ms ease-in-out;
         transform-origin: center;
-        filter: ${(props) => props.itemGreyscale && "grayscale(100%)"};
       }
 
       .img:hover {
         transform: scale(1.2);
-        filter: none;
       }
     }
   }

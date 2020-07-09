@@ -42,8 +42,8 @@ body {
   background: linear-gradient(
     135deg,
     #7b4da5,
-    var(--main-sec-app-color) 60%,
-    grey
+    var(--main-sec-app-color) 0%,
+    white
   );
   max-width: 100%;
   overflow-x: hidden;
