@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import { size, dist } from "../../theme";
 import { ABOUT_PAGE } from "../../data";

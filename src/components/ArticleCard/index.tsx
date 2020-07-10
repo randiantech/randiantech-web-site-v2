@@ -22,7 +22,8 @@ export const Wrapper = styled.a`
 
     .title {
       display: grid;
-      color: ${color.defAppColor};
+      color: white;
+      font-weight: bolder;
       font-size: ${size.titleFontSize};
       padding-bottom: 10px;
     }

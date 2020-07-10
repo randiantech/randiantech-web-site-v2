@@ -46,7 +46,7 @@ const WrapperDesktop = styled.div`
       font-size: 18px;
 
       .img {
-        width: 60%;
+        width: 80%;
         display: block;
         margin-left: auto;
         margin-right: auto;
@@ -75,9 +75,7 @@ const WrapperMobile = styled.div`
 
   .right-pane {
     display: grid;
-    grid-template-columns: 1fr;
     grid-row-gap: 20px;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
     padding-top: ${dist.defItemDistance};
 
     .item {
@@ -86,7 +84,7 @@ const WrapperMobile = styled.div`
       font-size: 18px;
 
       .img {
-        width: 80%;
+        width: 100%;
         display: block;
         margin-left: auto;
         margin-right: auto;
