@@ -14,7 +14,7 @@
 }
 
 .services-section-item:hover {
-  color: var(--main-app-color);
+  text-decoration: underline;
 }
 
 .services-section-item-img {

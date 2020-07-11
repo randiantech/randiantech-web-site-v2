@@ -77,7 +77,7 @@ export const ABOUT_PAGE = {
     title: "This is Randiantech",
     subtitle: "Mastering the Art of crafting innovative software since 2016",
     desc:
-      "Founded by experienced IT professionals, RT embodies a comprehensive approach on how to successfully craft and deliver mission critical products and services. Our view encompasses an all-in-one methodology that gets the best for our clients from our outstanding engineering teams.",
+      "Founded by experienced IT professionals, Randiantech embodies a comprehensive approach on how to successfully craft and deliver mission-critical products and services. Our view encompasses an all-in-one methodology that gets the best for our clients from our outstanding engineering teams.",
   },
   body: {
     title: "How We Can Help",

@@ -5,30 +5,16 @@ import { Logo } from "../../components/Logo";
 import { isMobileWidth } from "../../utils";
 import "./FrontImageSection.css";
 
-interface FrontImageState {
+interface FrontImageProps {
   isMobile: boolean;
 }
 
 export default class FrontImageSection extends React.Component<
-  any,
-  FrontImageState
+  FrontImageProps,
+  any
 > {
-  constructor(props: any) {
-    super(props);
-    this.state = { isMobile: isMobileWidth() };
-  }
-
-  componentDidMount() {
-    window.addEventListener("resize", this.resize.bind(this));
-    this.resize();
-  }
-
-  resize() {
-    this.setState({ isMobile: isMobileWidth() });
-  }
-
   renderContent() {
-    const { isMobile } = this.state;
+    const { isMobile } = this.props;
     return (
       <div
         className={`${
@@ -53,7 +39,7 @@ export default class FrontImageSection extends React.Component<
   }
 
   render() {
-    const { isMobile } = this.state;
+    const { isMobile } = this.props;
     return (
       <div className="front-image-section-container">
         <img
@@ -65,13 +51,6 @@ export default class FrontImageSection extends React.Component<
           }
         />
         {this.renderContent()}
-        {false && (
-          <div className="front-image-section-right-panel-container">
-            <div className="front-image-section-right-panel-container-item">
-              HOLA
-            </div>
-          </div>
-        )}
       </div>
     );
   }

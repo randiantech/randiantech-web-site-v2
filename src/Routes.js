@@ -12,9 +12,9 @@ import { RTSPage } from "./pages/RTSPage";
 import { AppContextProvider } from "./AppContext";
 
 const Routes = () => (
-  <App>
-    <Switch>
-      <AppContextProvider>
+  <AppContextProvider>
+    <App>
+      <Switch>
         <Route exact path="/" component={HomePage} />
         <Route exact path="/about" component={AboutPage} />
         <Route exact path="/services" component={ServicesPage} />
@@ -23,9 +23,9 @@ const Routes = () => (
         <Route exact path="/clients" component={ClientsPage} />
         <Route exact path="/contact" component={ContactPage} />
         <Route exact path="/rts/login" component={RTSPage} />
-      </AppContextProvider>
-    </Switch>
-  </App>
+      </Switch>
+    </App>
+  </AppContextProvider>
 );
 
 export default Routes;

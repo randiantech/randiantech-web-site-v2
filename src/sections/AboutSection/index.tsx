@@ -6,6 +6,7 @@ import { ImageGallerySection } from "../ImageGallerySection";
 
 export const Wrapper = styled.div`
   background: white;
+  border-left: 10px solid var(--main-app-color);
 `;
 
 export const Header = styled.div`
@@ -61,30 +62,38 @@ export const Footer = styled.div`
 const AboutSection = () => {
   const { header, body, footer } = ABOUT_PAGE;
   const { items } = body.list;
+
+  useEffect(() => {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }, []);
+
   return (
-    <Wrapper>
+    <>
       <ImageGallerySection />
-      <Header>
-        <div className="title">{header.title}</div>
-        <div className="subtitle">{header.subtitle}</div>
-        <div className="description">{header.desc}</div>
-      </Header>
-      <Body>
-        <div className="title">{body.title}</div>
-        <div className="description">{body.desc}</div>
-        <div className="list-title">{body.list.title}</div>
-        <div className="list-item-container">
-          {items.map((item, idx) => (
-            <div className="item" key={`rt-page-item-${idx}`}>
-              {item}
-            </div>
-          ))}
-        </div>
-      </Body>
-      <Footer>
-        <div>{footer.image}</div>
-      </Footer>
-    </Wrapper>
+      <Wrapper>
+        <Header>
+          <div className="title">{header.title}</div>
+          <div className="subtitle">{header.subtitle}</div>
+          <div className="description">{header.desc}</div>
+        </Header>
+        <Body>
+          <div className="title">{body.title}</div>
+          <div className="description">{body.desc}</div>
+          <div className="list-title">{body.list.title}</div>
+          <div className="list-item-container">
+            {items.map((item, idx) => (
+              <div className="item" key={`rt-page-item-${idx}`}>
+                {item}
+              </div>
+            ))}
+          </div>
+        </Body>
+        <Footer>
+          <div>{footer.image}</div>
+        </Footer>
+      </Wrapper>
+    </>
   );
 };
 

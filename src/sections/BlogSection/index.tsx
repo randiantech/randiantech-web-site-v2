@@ -8,9 +8,10 @@ import { TabulatedItem } from "../../components/TabulatedItem";
 import { AppContext } from "../../AppContext";
 import { color, dist } from "../../theme";
 
-const WrapperDesktop = styled.div`
+const Wrapper = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: ${(props: any) =>
+    `${props.isMoble ? "1fr" : "1fr 1fr 1fr"}`};
   row-gap: ${dist.defItemDistance};
   padding-top: ${dist.defItemDistance};
   padding-right: ${dist.defItemDistance};
@@ -25,7 +26,7 @@ export const BlogSection = React.memo(() => {
   const { isMobile } = state;
 
   return (
-    <WrapperDesktop>
+    <Wrapper {...state}>
       {BLOG_ITEMS.map((i, idx) =>
         idx === 0 ? (
           <TabulatedItem text="News and Articles" />
@@ -33,6 +34,6 @@ export const BlogSection = React.memo(() => {
           <ArticleCard url={i.url} img={i.img} desc={i.desc} title={i.title} />
         )
       )}
-    </WrapperDesktop>
+    </Wrapper>
   );
 });
