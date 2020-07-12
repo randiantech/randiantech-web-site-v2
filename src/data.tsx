@@ -75,16 +75,27 @@ export const SERVICES_ITEMS = [
 export const ABOUT_PAGE = {
   header: {
     title: "This is Randiantech",
-    subtitle: "Mastering the Art of crafting innovative software since 2016",
+    subtitle: "Mastering the Art of crafting software since 2016",
     desc:
-      "Founded by experienced IT professionals, Randiantech embodies a comprehensive approach on how to successfully craft and deliver mission-critical products and services. Our view encompasses an all-in-one methodology that gets the best for our clients from our outstanding engineering teams.",
+      "Founded by experienced IT professionals, Randiantech embodies a comprehensive approach on how to <b class='underline'>successfully craft and deliver mission-critical products and services</b>. Our view encompasses an all-in-one methodology that gets the best for our clients from our outstanding engineering teams.",
+    desc2:
+      "Our mission is to provide <b class='underline'>carefully crafted digital solutions</b> prepared to unleash the potential of your products and services.",
+    desc3:
+      "<b class='underline'>Randiantech</b> breaths software engineering. Our obsession is to craft innovative, escalable and reliable software to enable your company to move to the next level.",
   },
   body: {
     title: "How We Can Help",
-    desc: "BODY DESC COMPLETE",
+    desc:
+      "Randiantech is ready to provide <b class='underline'>fully-fledged, world class, highly autonomous development teams.</b> <br /><br /> Our teams have <b class='underline'>vast experience working for highly challenging projects for US-based companies</b>, from startups to large enterprises. <br /><br /> Randiantech technical fellows can provide architectural guidelines to help your development teams to take best approaches and/or train them on required technologies and platforms.",
     list: {
-      title: "BODY LIST TITLE COMPLETE",
-      items: ["item1", "item2", "item3"],
+      title: "Randiantech facts:",
+      items: [
+        "• Founded in 2016",
+        "• Headquarters at Ciudad de Buenos Aires (Downtown)",
+        "• Working offices at Vicente Lopez (Argentina) and San Pedro Sula (Honduras)",
+        "• Commercial office at Miami, FL",
+        "• 25+ software developers and designers working on US timezones (East and West).",
+      ],
     },
   },
   footer: {

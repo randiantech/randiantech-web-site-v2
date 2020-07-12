@@ -3,30 +3,25 @@ import styled from "styled-components";
 import "react-image-gallery/styles/css/image-gallery.css";
 import ImageGallery from "react-image-gallery";
 
-const images = [
-  {
-    original: "/images/about-1.png",
-  },
-];
-
 const Wrapper = styled.div`
-  padding: 50px;
+  padding: ${(props: any) => (props.padding ? props.padding : "50px")};
   padding-top: 0;
   padding-left: 0;
   padding-bottom: 0;
   padding-right: 0;
 `;
 
-export const ImageGallerySection = React.memo(() => {
+export const ImageGallerySection = React.memo((props: any) => {
   return (
-    <Wrapper>
+    <Wrapper {...props}>
       <ImageGallery
-        items={images}
+        items={props.images}
         showFullscreenButton={false}
         showPlayButton={false}
         showThumbnails={false}
         slideInterval={5000}
         showNav={false}
+        autoPlay={true}
       />
     </Wrapper>
   );
