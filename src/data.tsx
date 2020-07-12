@@ -86,7 +86,7 @@ export const ABOUT_PAGE = {
   body: {
     title: "How We Can Help",
     desc:
-      "Randiantech is ready to provide <b class='underline'>fully-fledged, world class, highly autonomous development teams.</b> <br /><br /> Our teams have <b class='underline'>vast experience working for highly challenging projects for US-based companies</b>, from startups to large enterprises. <br /><br /> Randiantech technical fellows can provide architectural guidelines to help your development teams to take best approaches and/or train them on required technologies and platforms.",
+      "Randiantech is ready to provide <b class='underline'>fully-fledged, world class, highly autonomous development teams.</b> <br /><br /> Our teams have <b class='underline'>vast experience working for highly challenging projects for US-based companies</b>, from startups to large enterprises. <br /><br /> Randiantech technical mentors can provide architectural guidelines to help your development teams to take best approaches and/or train them on required technologies and platforms.",
     list: {
       title: "Randiantech facts:",
       items: [
