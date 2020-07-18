@@ -53,7 +53,6 @@ export const Header = (props: HeaderProps) => {
   const { state } = useContext(AppContext);
   const { isMobile } = state;
   const [hoveredItem, setHoveredItem] = useState("");
-  console.log("IS GGG Mobile ? ", isMobile);
   const Items = isMobile ? HeaderMobileItems : HeaderDesktopItems;
   const Wrapper = isMobile ? HeaderWrapperMobile : HeaderWrapperDesktop;
   const { linkBtnText, linkBtnPath } = props;

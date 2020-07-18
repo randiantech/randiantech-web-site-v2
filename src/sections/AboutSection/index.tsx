@@ -75,7 +75,7 @@ export const Header = styled.div`
     align-items: center;
 
     .text {
-      padding-top: ${dist.defItemDistance};
+      padding-top: 25px;
       padding-bottom: 25px;
       padding-right: 80px;
       text-align: justify;
@@ -128,12 +128,34 @@ export const Body = styled.div`
   }
 `;
 
-export const Footer = styled.div`
-  display: grid;
+export const Label = styled.div`
+  position: relative;
+  left: calc(50% - 300px);
+  width: 300px;
+  margin-left: ${dist.defItemDistance};
+  color: white;
+  font-weight: bolder;
+  background: var(--main-app-color);
   padding: ${dist.defItemDistance};
-  padding-left: 0;
-  padding-right: 0;
-  padding-bottom: 0;
+  border-radius: 50px;
+  border-bottom-left-radius: 0;
+  cursor: pointer;
+  z-index: 1;
+
+  .label {
+    font-size: 25px;
+    text-align: center;
+  }
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 20px 20px 60px var(--main-deg-app-color),
+      -20px -20px 60px var(--main-app-color);
+  }
+`;
+
+export const Footer = styled.div`
+  padding: 0;
   font-size: ${size.defFontSize};
 `;
 
@@ -202,6 +224,9 @@ const AboutSection = () => {
           </div>
         </Body>
         <Footer>
+          <Label>
+            <div className="label">Contact Us</div>
+          </Label>
           <ImageGallerySection images={bottomImages} />
         </Footer>
       </Wrapper>

@@ -75,13 +75,13 @@ export const SERVICES_ITEMS = [
 export const ABOUT_PAGE = {
   header: {
     title: "This is Randiantech",
-    subtitle: "Mastering the Art of crafting software since 2016",
+    subtitle: "Mastering the Art of Crafting Software since 2016",
     desc:
-      "Founded by experienced IT professionals, Randiantech embodies a comprehensive approach on how to <b class='underline'>successfully craft and deliver mission-critical products and services</b>. Our view encompasses an all-in-one methodology that gets the best for our clients from our outstanding engineering teams.",
+      "Founded by experienced IT professionals, Randiantech embodies a comprehensive approach on how to <b class='underline'>successfully architect, implement and deliver mission-critical products and services</b>. Our view encompasses an all-in-one methodology that gets the best for our clients from our outstanding engineering teams.",
     desc2:
-      "Our mission is to provide <b class='underline'>carefully crafted digital solutions</b> prepared to unleash the potential of your products and services.",
+      "Our mission is to provide <b class='underline'>carefully crafted digital solutions</b> prepared to unleash the potential of your organization.",
     desc3:
-      "<b class='underline'>Randiantech</b> breaths software engineering. Our obsession is to craft innovative, escalable and reliable software to enable your company to move to the next level.",
+      "<b class='underline'>Randiantech</b> breaths software engineering. Our obsession is to craft world-class, escalable and reliable software to enable your company to move to the next level.",
   },
   body: {
     title: "How We Can Help",
