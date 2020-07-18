@@ -181,7 +181,7 @@ export class ContactUsSection extends React.Component<any, any> {
   render() {
     const { isMobile, isLoading } = this.state;
     return (
-      <>
+      <div id="contact-us-section">
         {isLoading && (
           <div className="rts-page-loading">
             <ReactLoading type="spin" color="#ff4970" />
@@ -197,7 +197,7 @@ export class ContactUsSection extends React.Component<any, any> {
           {this.renderContactUsLabel()}
           {this.renderFormItems()}
         </div>
-      </>
+      </div>
     );
   }
 }
