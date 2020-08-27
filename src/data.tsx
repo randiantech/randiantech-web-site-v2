@@ -39,6 +39,27 @@ export const BLOG_ITEMS = [
   },
 ];
 
+export const TEAM_MEMBERS = [
+  {
+    title: "Juan Carlos Cancela",
+    desc: `Motivated, action-oriented technology enthusiast with experience on multiple industries designing cutting-edge Web API-centric applications.`,
+    img: "/images/members/1.png",
+    url: "http://juancancela.work/",
+  },
+  {
+    title: "Juan Carlos Cancela",
+    desc: `Description`,
+    img: "/images/members/1.png",
+    url: "http://juancancela.work/",
+  },
+  {
+    title: "Juan Carlos Cancela",
+    desc: `Description`,
+    img: "/images/members/1.png",
+    url: "http://juancancela.work/",
+  },
+];
+
 export const SERVICES_ITEMS = [
   {
     img: "/images/technologies-groups/tg-staff-augmentation.svg",
