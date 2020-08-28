@@ -4,8 +4,7 @@ export const BLOG_ITEMS = [
     title: "Using BPF to Transform SSH Sessions into Structured Events",
     desc: `Teleport 4.2 introduced a new feature called Enhanced Session Recording that takes an unstructured SSH session and outputs a stream of structured events. It’s the next step in Teleport’s evolution that uses new technology (eBPF or now simply known as BPF) to close some gaps in Teleport’s audit abilities. Below you can see an illustration of this feature and if you keep reading, we’ll get into some of the technical details.`,
     img: "/images/blog/img1.jpg",
-    url:
-      "https://findwork.dev/blog/advanced-usage-python-requests-timeouts-retries-hooks/",
+    url: "https://findwork.dev/blog/advanced-usage-python-requests-timeouts-retries-hooks/",
   },
   {
     title: "Iranian Hackers Have Been ‘Password-Spraying’ the US Grid",
@@ -26,16 +25,14 @@ export const BLOG_ITEMS = [
     desc:
       "In seeking to understand the history of progress, I keep running across intriguing cases of “ideas behind their time”—inventions that seem to have come along much later than they could have, such as the cotton gin or the bicycle. I’ve started collecting a list here, and will update that page with new analyses as I find them.",
     img: "/images/blog/img4.jpg",
-    url:
-      "https://rootsofprogress.org/epistemic-standards-for-why-it-took-so-long",
+    url: "https://rootsofprogress.org/epistemic-standards-for-why-it-took-so-long",
   },
   {
     title: "Advanced usage of Python requests - timeouts, retries, hooks",
     desc:
       "The Python HTTP library requests is probably my favourite HTTP utility in all the languages I program in. Its simple, intuitive and ubiquitous in the Python community. Most of the programs that interface with HTTP use either requests or urllib3 from the standard library.",
     img: "/images/blog/img5.jpg",
-    url:
-      "https://findwork.dev/blog/advanced-usage-python-requests-timeouts-retries-hooks/",
+    url: "https://findwork.dev/blog/advanced-usage-python-requests-timeouts-retries-hooks/",
   },
 ];
 
@@ -58,33 +55,33 @@ export const TEAM_MEMBERS_LEADERSHIP = [
 export const TEAM_MEMBERS_STAFF = [
   {},
   {
-    title: "Juan Carlos Cancela - CEO",
-    desc: `Motivated, action-oriented technology enthusiast with experience on multiple industries designing cutting-edge Web API-centric applications.`,
-    img: "/images/members/1.png",
+    title: "Malcolm E. Mancuso - Full Stack Developer",
+    desc: `------> DESC <------`,
+    img: "images/members/mancu2.png",
     url: "http://juancancela.work/",
   },
   {
-    title: "Guillermo Ismael Mulvihill - CFO",
-    desc: `Description`,
-    img: "/images/members/1.png",
+    title: "Leonardo D. Palumbo - Full Stack Developer",
+    desc: `------> DESC <------`,
+    img: "/images/members/leo2.png",
     url: "http://juancancela.work/",
   },
   {
-    title: "Juan Carlos Cancela - CEO",
-    desc: `Motivated, action-oriented technology enthusiast with experience on multiple industries designing cutting-edge Web API-centric applications.`,
-    img: "/images/members/1.png",
+    title: "Martin Ruffa - Backend Developer
+    desc: `------> DESC <------`,
+    img: "/images/members/Ruffa2.png",
     url: "http://juancancela.work/",
   },
   {
-    title: "Guillermo Ismael Mulvihill - CFO",
-    desc: `Description`,
-    img: "/images/members/1.png",
+    title: "Florencia Jodor - QA Analyst",
+    desc: `------> DESC <------`,
+    img: "/images/members/flor2.png",
     url: "http://juancancela.work/",
   },
   {
-    title: "Juan Carlos Cancela - CEO",
-    desc: `Motivated, action-oriented technology enthusiast with experience on multiple industries designing cutting-edge Web API-centric applications.`,
-    img: "/images/members/1.png",
+    title: "Leandro Jodor - QA Automation Engineer",
+    desc: `------> DESC <------`,
+    img: "/images/members/lalo2.png",
     url: "http://juancancela.work/",
   },
   {
@@ -271,9 +268,7 @@ export const CONTACT_US_ITEMS = [
     initialValue: "",
     isRequired: true,
     isValid: (value: any) => {
-      const isValidEmail = new RegExp(
-        /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
-      );
+      const isValidEmail = new RegExp(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/);
       return isValidEmail.test(value);
     },
   },
@@ -284,9 +279,7 @@ export const CONTACT_US_ITEMS = [
     initialValue: "",
     isValid: (value: any) => {
       if (!value) return false;
-      const isValidPhone = new RegExp(
-        /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im
-      );
+      const isValidPhone = new RegExp(/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im);
       return isValidPhone.test(value);
     },
   },
