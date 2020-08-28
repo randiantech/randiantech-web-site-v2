@@ -56,31 +56,31 @@ export const TEAM_MEMBERS_STAFF = [
   {},
   {
     title: "Malcolm E. Mancuso - Full Stack Developer",
-    desc: `------> DESC <------`,
+    desc: `DESC`,
     img: "images/members/mancu2.png",
     url: "http://juancancela.work/",
   },
   {
     title: "Leonardo D. Palumbo - Full Stack Developer",
-    desc: `------> DESC <------`,
+    desc: `DESC`,
     img: "/images/members/leo2.png",
     url: "http://juancancela.work/",
   },
   {
     title: "Martin Ruffa - Backend Developer
-    desc: `------> DESC <------`,
+    desc: `DESC`,
     img: "/images/members/Ruffa2.png",
     url: "http://juancancela.work/",
   },
   {
     title: "Florencia Jodor - QA Analyst",
-    desc: `------> DESC <------`,
+    desc: `DESC`,
     img: "/images/members/flor2.png",
     url: "http://juancancela.work/",
   },
   {
     title: "Leandro Jodor - QA Automation Engineer",
-    desc: `------> DESC <------`,
+    desc: `DESC`,
     img: "/images/members/lalo2.png",
     url: "http://juancancela.work/",
   },
