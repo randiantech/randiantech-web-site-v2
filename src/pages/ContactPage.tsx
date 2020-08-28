@@ -16,7 +16,7 @@ const Image = styled.div`
 
 export const Label = styled.div`
   position: absolute;
-  top: 50%;
+  top: 150px;
   left: calc(100% - 500px);
   width: 300px;
   color: white;

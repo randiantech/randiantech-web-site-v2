@@ -39,21 +39,110 @@ export const BLOG_ITEMS = [
   },
 ];
 
-export const TEAM_MEMBERS = [
+export const TEAM_MEMBERS_LEADERSHIP = [
+  {},
   {
-    title: "Juan Carlos Cancela",
+    title: "Juan Carlos Cancela - CEO",
     desc: `Motivated, action-oriented technology enthusiast with experience on multiple industries designing cutting-edge Web API-centric applications.`,
     img: "/images/members/1.png",
     url: "http://juancancela.work/",
   },
   {
-    title: "Juan Carlos Cancela",
+    title: "Guillermo Ismael Mulvihill - CFO",
+    desc: `Description`,
+    img: "/images/members/1.png",
+    url: "http://juancancela.work/",
+  },
+];
+
+export const TEAM_MEMBERS_STAFF = [
+  {},
+  {
+    title: "Juan Carlos Cancela - CEO",
+    desc: `Motivated, action-oriented technology enthusiast with experience on multiple industries designing cutting-edge Web API-centric applications.`,
+    img: "/images/members/1.png",
+    url: "http://juancancela.work/",
+  },
+  {
+    title: "Guillermo Ismael Mulvihill - CFO",
     desc: `Description`,
     img: "/images/members/1.png",
     url: "http://juancancela.work/",
   },
   {
-    title: "Juan Carlos Cancela",
+    title: "Juan Carlos Cancela - CEO",
+    desc: `Motivated, action-oriented technology enthusiast with experience on multiple industries designing cutting-edge Web API-centric applications.`,
+    img: "/images/members/1.png",
+    url: "http://juancancela.work/",
+  },
+  {
+    title: "Guillermo Ismael Mulvihill - CFO",
+    desc: `Description`,
+    img: "/images/members/1.png",
+    url: "http://juancancela.work/",
+  },
+  {
+    title: "Juan Carlos Cancela - CEO",
+    desc: `Motivated, action-oriented technology enthusiast with experience on multiple industries designing cutting-edge Web API-centric applications.`,
+    img: "/images/members/1.png",
+    url: "http://juancancela.work/",
+  },
+  {
+    title: "Guillermo Ismael Mulvihill - CFO",
+    desc: `Description`,
+    img: "/images/members/1.png",
+    url: "http://juancancela.work/",
+  },
+  {
+    title: "Juan Carlos Cancela - CEO",
+    desc: `Motivated, action-oriented technology enthusiast with experience on multiple industries designing cutting-edge Web API-centric applications.`,
+    img: "/images/members/1.png",
+    url: "http://juancancela.work/",
+  },
+  {
+    title: "Guillermo Ismael Mulvihill - CFO",
+    desc: `Description`,
+    img: "/images/members/1.png",
+    url: "http://juancancela.work/",
+  },
+  {
+    title: "Juan Carlos Cancela - CEO",
+    desc: `Motivated, action-oriented technology enthusiast with experience on multiple industries designing cutting-edge Web API-centric applications.`,
+    img: "/images/members/1.png",
+    url: "http://juancancela.work/",
+  },
+  {
+    title: "Guillermo Ismael Mulvihill - CFO",
+    desc: `Description`,
+    img: "/images/members/1.png",
+    url: "http://juancancela.work/",
+  },
+  {
+    title: "Juan Carlos Cancela - CEO",
+    desc: `Motivated, action-oriented technology enthusiast with experience on multiple industries designing cutting-edge Web API-centric applications.`,
+    img: "/images/members/1.png",
+    url: "http://juancancela.work/",
+  },
+  {
+    title: "Guillermo Ismael Mulvihill - CFO",
+    desc: `Description`,
+    img: "/images/members/1.png",
+    url: "http://juancancela.work/",
+  },
+  {
+    title: "Guillermo Ismael Mulvihill - CFO",
+    desc: `Description`,
+    img: "/images/members/1.png",
+    url: "http://juancancela.work/",
+  },
+  {
+    title: "Juan Carlos Cancela - CEO",
+    desc: `Motivated, action-oriented technology enthusiast with experience on multiple industries designing cutting-edge Web API-centric applications.`,
+    img: "/images/members/1.png",
+    url: "http://juancancela.work/",
+  },
+  {
+    title: "Guillermo Ismael Mulvihill - CFO",
     desc: `Description`,
     img: "/images/members/1.png",
     url: "http://juancancela.work/",
@@ -124,7 +213,7 @@ export const ABOUT_PAGE = {
   },
 };
 
-export const MENU_ITEMS = ["ABOUT", "SERVICES", "TEAM", "CAREERS", "CONTACT"];
+export const MENU_ITEMS = ["ABOUT", "SERVICES", "TEAM", "CONTACT"];
 
 export const FOOTER_ITEMS = [
   {

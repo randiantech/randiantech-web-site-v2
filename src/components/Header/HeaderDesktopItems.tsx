@@ -14,7 +14,7 @@ const HeaderWrapper = styled.div`
   display: grid;
   color: white;
   font-weight: bolder;
-  grid-template-columns: repeat(6, 16.67%);
+  grid-template-columns: repeat(5, 20%);
 
   .item {
     color: white;

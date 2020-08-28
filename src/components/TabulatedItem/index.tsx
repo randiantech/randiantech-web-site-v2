@@ -25,6 +25,7 @@ export const WrapperMobile = styled.div`
 
 interface TabulatedItemProps extends Styleable {
   text: string;
+  height?: string;
 }
 
 export const TabulatedItem = (props: TabulatedItemProps) => {
@@ -38,6 +39,7 @@ export const TabulatedItem = (props: TabulatedItemProps) => {
           ? "rt-std-bottom-padding rt-std-top-padding rt-glow-effect rt-linear-grad-bg"
           : "rt-rounded"
       }`}
+      {...props}
     >
       {text}
     </WrapperDesktop>

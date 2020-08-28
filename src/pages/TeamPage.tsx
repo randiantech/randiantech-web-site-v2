@@ -4,7 +4,7 @@ import { color, dist } from "../theme";
 import { ImageGallerySection } from "../sections/ImageGallerySection";
 import { TabulatedItem } from "../components/TabulatedItem";
 import { ArticleCard } from "../components/ArticleCard";
-import { TEAM_MEMBERS } from "../data";
+import { TEAM_MEMBERS_LEADERSHIP, TEAM_MEMBERS_STAFF } from "../data";
 
 const headerImages = [
   {
@@ -18,7 +18,7 @@ const Image = styled.div`
 
 export const Label = styled.div`
   position: absolute;
-  top: 50%;
+  top: 150px;
   left: calc(100% - 500px);
   width: 300px;
   color: white;
@@ -47,7 +47,20 @@ const Wrapper = styled.div`
   grid-template-columns: ${(props: any) =>
     `${props.isMoble ? "1fr" : "1fr 1fr 1fr"}`};
   row-gap: ${dist.defItemDistance};
-  padding-top: 100px;
+  padding-top: ${dist.defItemDistance};
+  padding-right: ${dist.defItemDistance};
+  border: 10px solid ${color.defAppColor};
+  border-bottom: none;
+  border-top: none;
+  border-right: none;
+`;
+
+const WrapperStaff = styled.div`
+  display: grid;
+  grid-template-columns: ${(props: any) =>
+    `${props.isMoble ? "1fr" : "1fr 1fr 1fr 1fr 1fr 1fr"}`};
+  row-gap: ${dist.defItemDistance};
+  padding-top: ${dist.defItemDistance};
   padding-right: ${dist.defItemDistance};
   border: 10px solid ${color.defAppColor};
   border-bottom: none;
@@ -57,16 +70,27 @@ const Wrapper = styled.div`
 
 export const TeamPage = React.memo(() => (
   <div>
-    <Image>
-      <Label>
-        <div className="label">Meet The Randiantech Team.</div>
-      </Label>
-      <ImageGallerySection images={headerImages} />
-      <Wrapper>
-        {TEAM_MEMBERS.map((i, idx) => (
+    <Label>
+      <div className="label">Meet The Randiantech Team.</div>
+    </Label>
+    <ImageGallerySection images={headerImages} />
+    <Wrapper>
+      {TEAM_MEMBERS_LEADERSHIP.map((i, idx) =>
+        idx === 0 ? (
+          <TabulatedItem text="Leadership" height="95%" />
+        ) : (
           <ArticleCard url={i.url} img={i.img} desc={i.desc} title={i.title} />
-        ))}
-      </Wrapper>
-    </Image>
+        )
+      )}
+    </Wrapper>
+    <WrapperStaff>
+      {TEAM_MEMBERS_STAFF.map((i, idx) =>
+        idx === 0 ? (
+          <TabulatedItem text="Team" height="95%" />
+        ) : (
+          <ArticleCard url={i.url} img={i.img} desc={i.desc} title={i.title} />
+        )
+      )}
+    </WrapperStaff>
   </div>
 ));
