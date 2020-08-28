@@ -5,7 +5,7 @@ import { override, Styleable } from "../../utils";
 
 export const Wrapper = styled.a`
   display: grid;
-  grid-template-rows: 1fr 200px;
+  grid-template-rows: 1fr 120px;
   padding-left: ${dist.defItemDistance};
   text-align: center;
   cursor: pointer;
@@ -16,11 +16,18 @@ export const Wrapper = styled.a`
   .details {
     display: grid;
     width: 95%;
-    align-self: center;
+    text-align: ${(props: any) => (props.detailsAlign ? props.detailsAlign : "center")};
     margin: auto;
     margin-top: 0;
 
     .title {
+      display: grid;
+      color: white;
+      font-weight: bolder;
+      font-size: ${size.titleFontSize};
+    }
+
+    .position {
       display: grid;
       color: white;
       font-weight: bolder;
@@ -32,7 +39,6 @@ export const Wrapper = styled.a`
       color: white;
       overflow: hidden;
       text-overflow: ellipsis;
-      text-align: justify;
       overflow: hidden;
       display: -webkit-box;
       -webkit-line-clamp: 5;
@@ -59,10 +65,12 @@ interface ArticleCardProps extends Styleable {
   desc?: string;
   img?: string;
   index?: string;
+  detailsAlign?: string;
+  position?: string;
 }
 
 export const ArticleCard = (props: ArticleCardProps) => {
-  const { index, url, title, desc, img } = props;
+  const { index, url, title, desc, img, position } = props;
   return (
     <Wrapper {...props} key={`bsi-${index}`} href={url} target="_blank">
       <div>
@@ -70,6 +78,7 @@ export const ArticleCard = (props: ArticleCardProps) => {
       </div>
       <div className="details">
         <div className="title">{title}</div>
+        <div className="position">{position}</div>
         <div className="desc">{desc}</div>
       </div>
     </Wrapper>

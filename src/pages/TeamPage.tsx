@@ -8,7 +8,7 @@ import { TEAM_MEMBERS_LEADERSHIP, TEAM_MEMBERS_STAFF } from "../data";
 
 const headerImages = [
   {
-    original: "/images/contact-us-3.png",
+    original: "/images/team.png",
   },
 ];
 
@@ -37,15 +37,13 @@ export const Label = styled.div`
 
   &:hover {
     transform: scale(1.05);
-    box-shadow: 20px 20px 60px var(--main-deg-app-color),
-      -20px -20px 60px var(--main-app-color);
+    box-shadow: 20px 20px 60px var(--main-deg-app-color), -20px -20px 60px var(--main-app-color);
   }
 `;
 
 const Wrapper = styled.div`
   display: grid;
-  grid-template-columns: ${(props: any) =>
-    `${props.isMoble ? "1fr" : "1fr 1fr 1fr"}`};
+  grid-template-columns: ${(props: any) => `${props.isMoble ? "1fr" : "1fr 1fr 1fr"}`};
   row-gap: ${dist.defItemDistance};
   padding-top: ${dist.defItemDistance};
   padding-right: ${dist.defItemDistance};
@@ -57,8 +55,7 @@ const Wrapper = styled.div`
 
 const WrapperStaff = styled.div`
   display: grid;
-  grid-template-columns: ${(props: any) =>
-    `${props.isMoble ? "1fr" : "1fr 1fr 1fr 1fr 1fr 1fr"}`};
+  grid-template-columns: ${(props: any) => `${props.isMoble ? "1.5fr" : "1.5fr 1.5fr 1.5fr 1.5fr"}`};
   row-gap: ${dist.defItemDistance};
   padding-top: ${dist.defItemDistance};
   padding-right: ${dist.defItemDistance};
@@ -70,16 +67,18 @@ const WrapperStaff = styled.div`
 
 export const TeamPage = React.memo(() => (
   <div>
-    <Label>
-      <div className="label">Meet The Randiantech Team.</div>
-    </Label>
-    <ImageGallerySection images={headerImages} />
+    <Image>
+      <Label>
+        <div className="label">Meet The Randiantech Team.</div>
+      </Label>
+      <ImageGallerySection images={headerImages} />
+    </Image>
     <Wrapper>
       {TEAM_MEMBERS_LEADERSHIP.map((i, idx) =>
         idx === 0 ? (
           <TabulatedItem text="Leadership" height="95%" />
         ) : (
-          <ArticleCard url={i.url} img={i.img} desc={i.desc} title={i.title} />
+          <ArticleCard url={i.url} img={i.img} desc={i.desc} title={i.title} position={i.position} />
         )
       )}
     </Wrapper>
@@ -88,7 +87,14 @@ export const TeamPage = React.memo(() => (
         idx === 0 ? (
           <TabulatedItem text="Team" height="95%" />
         ) : (
-          <ArticleCard url={i.url} img={i.img} desc={i.desc} title={i.title} />
+          <ArticleCard
+            url={i.url}
+            img={i.img}
+            desc={i.desc}
+            title={i.title}
+            position={i.position}
+            detailsAlign="left"
+          />
         )
       )}
     </WrapperStaff>
