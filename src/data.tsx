@@ -66,7 +66,7 @@ export const TEAM_MEMBERS_STAFF = [
   {
     title: "Lucas Campana",
     position: "Full Stack Developer",
-    desc: `Tech Stack: Python, React, Javascript, NodeJS, MongoDB, Java.`,
+    desc: `Tech Stack: Python, React, Javascript, NodeJS, ExpressJS, MongoDB, Java.`,
     img: "/images/members/1.png",
     url: "https://www.linkedin.com/in/lukebelll/",
   },
@@ -125,6 +125,46 @@ export const TEAM_MEMBERS_STAFF = [
     desc: `Tech Stack: Functional testing, API testing (Postman, SoapUI), SQL, HTML, CSS.`,
     img: "/images/members/pablin2.png",
     url: "https://www.linkedin.com/in/pablo-carnelli-12333812/",
+  },
+];
+
+export const OPEN_POSITIONS_ITEMS = [
+  {},
+  {
+    title: "FullStack Developer",
+    desc: "Tech Stack: React, Javascript, NodeJS, MongoDB, Heroku.",
+    img: "images/positions/fstack.png",
+    url: "https://www.google.com",
+  },
+  {
+    title: "Frontend Developer",
+    desc: `Tech Stack: Python, React, Javascript, NodeJS, ExpressJS, MongoDB, Java.`,
+    img: "images/positions/fend.png",
+    url: "https://www.google.com",
+  },
+  {
+    title: "Backend Developer",
+    desc: `Tech Stack: ReactJS, NodeJS, ExpressJS, MongoDB. GraphQL using Apollo Server and Apollo Client.`,
+    img: "images/positions/bend.png",
+    url: "https://www.google.com",
+  },
+  {
+    title: "QA Automation Engineer",
+    desc: `Selenium webdriver with Java, Cypress, WebdriverIO.`,
+    img: "images/positions/qauto.png",
+    url: "https://www.google.com",
+  },
+  {
+    title: "QA Manual",
+    desc: `Functional, Non functional, SQL, API testing.`,
+    img: "images/positions/qam.png",
+    url: "https://www.google.com",
+  },
+  {
+    title: "Sales Manager",
+    desc: `Client bag.`,
+    img: "images/positions/sm.png",
+    url: "https://www.google.com",
   },
 ];
 

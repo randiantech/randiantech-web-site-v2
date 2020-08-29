@@ -5,7 +5,7 @@ import { override, Styleable } from "../../utils";
 
 export const Wrapper = styled.a`
   display: grid;
-  grid-template-rows: 1fr 120px;
+  grid-template-rows: 1fr 150px;
   padding-left: ${dist.defItemDistance};
   text-align: center;
   cursor: pointer;
@@ -31,7 +31,7 @@ export const Wrapper = styled.a`
       display: grid;
       color: white;
       font-weight: bolder;
-      font-size: ${size.titleFontSize};
+      font-size: 20px;
       padding-bottom: 10px;
     }
 
