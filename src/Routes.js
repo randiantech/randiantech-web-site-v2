@@ -8,6 +8,7 @@ import { TeamPage } from "./pages/TeamPage";
 import { CareersPage } from "./pages/CareersPage";
 import { ClientsPage } from "./pages/ClientsPage";
 import { ContactPage } from "./pages/ContactPage";
+import { FrontendPage } from "./pages/FrontendPage";
 import { RTSPage } from "./pages/RTSPage";
 import { AppContextProvider } from "./AppContext";
 
@@ -28,6 +29,7 @@ const Routes = () => {
           <Route exact path="/careers" component={CareersPage} />
           <Route exact path="/clients" component={ClientsPage} />
           <Route exact path="/contact" component={ContactPage} />
+          <Route exact path="/careers/frontend" component={FrontendPage} />
           <Route exact path="/rts/login" component={RTSPage} />
         </Switch>
       </App>

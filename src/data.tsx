@@ -140,7 +140,7 @@ export const OPEN_POSITIONS_ITEMS = [
     title: "Frontend Developer",
     desc: `Tech Stack: Python, React, Javascript, NodeJS, ExpressJS, MongoDB, Java.`,
     img: "images/positions/fend.png",
-    url: "https://www.google.com",
+    url: "/careers/frontend",
   },
   {
     title: "Backend Developer",
@@ -232,7 +232,7 @@ export const ABOUT_PAGE = {
   },
 };
 
-export const MENU_ITEMS = ["ABOUT", "SERVICES", "TEAM", "CONTACT"];
+export const MENU_ITEMS = ["ABOUT", "SERVICES", "TEAM", "CAREERS", "CONTACT"];
 
 export const FOOTER_ITEMS = [
   {
@@ -309,6 +309,51 @@ export const CONTACT_US_ITEMS = [
     label: "Comments",
     id: "comments",
     isRequired: true,
+    initialValue: "",
+    style: "free-text",
+  },
+];
+
+export const CONTACT_CAREERS_ITEMS = [
+  {
+    label: "First Name",
+    id: "firstName",
+    initialValue: "",
+    isRequired: true,
+    isValid: (value: string) => value.length > 1,
+  },
+  {
+    label: "Last Name",
+    id: "lastName",
+    initialValue: "",
+    isRequired: true,
+    isValid: (value: any) => value.length > 1,
+  },
+  {
+    label: "Email",
+    id: "email",
+    initialValue: "",
+    isRequired: true,
+    isValid: (value: any) => {
+      const isValidEmail = new RegExp(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/);
+      return isValidEmail.test(value);
+    },
+  },
+  {
+    label: "Phone",
+    id: "phone",
+    isRequired: false,
+    initialValue: "",
+    isValid: (value: any) => {
+      if (!value) return false;
+      const isValidPhone = new RegExp(/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im);
+      return isValidPhone.test(value);
+    },
+  },
+  {
+    label: "Tell us about your experience",
+    id: "experience",
+    isRequired: false,
     initialValue: "",
     style: "free-text",
   },

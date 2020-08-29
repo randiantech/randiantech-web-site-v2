@@ -8,7 +8,7 @@ import { OPEN_POSITIONS_ITEMS } from "../data";
 
 const headerImages = [
   {
-    original: "/images/team.png",
+    original: "/images/hiring2.png",
   },
 ];
 
