@@ -67,14 +67,14 @@ export const TEAM_MEMBERS_STAFF = [
     title: "Lucas Campana",
     position: "Full Stack Developer",
     desc: `Tech Stack: Python, React, Javascript, NodeJS, ExpressJS, MongoDB, Java.`,
-    img: "/images/members/1.png",
+    img: "/images/members/juan2.png",
     url: "https://www.linkedin.com/in/lukebelll/",
   },
   {
     title: "Nancy Figueroa",
     position: "Full Stack Developer",
     desc: `Tech Stack: ReactJS, NodeJS, ExpressJS, MongoDB. GraphQL using Apollo Server and Apollo Client.`,
-    img: "/images/members/1.png",
+    img: "/images/members/juan2.png",
     url: "https://www.linkedin.com/in/nancy-figueroa-0a763725/",
   },
   {
