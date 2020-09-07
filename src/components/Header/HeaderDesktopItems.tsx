@@ -42,7 +42,7 @@ export const HeaderDesktopItems = ({
   return (
     <HeaderWrapper className="rt-std-right-padding">
       {MENU_ITEMS.map((item) => (
-        <Link key={item} className="item" to={item.toLowerCase()}>
+        <Link key={item} className="item" to={`/${item.toLowerCase()}`}>
           <div
             className={`${hoveredItem === item ? "selected" : ""}`}
             onMouseOver={() => setHoveredItem(item)}

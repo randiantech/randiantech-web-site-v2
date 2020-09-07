@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { color, size, dist } from "../../theme";
 import { ABOUT_PAGE } from "../../data";
 import { ImageGallerySection } from "../ImageGallerySection";
+import { Link } from "react-router-dom";
 
 const headerImages = [
   {
@@ -128,9 +129,9 @@ export const Body = styled.div`
   }
 `;
 
-export const Label = styled.div`
+export const Label = styled(Link)`
   position: relative;
-  left: calc(50% - 300px);
+  margin-left: auto;
   width: 300px;
   margin-left: ${dist.defItemDistance};
   color: white;
@@ -141,11 +142,10 @@ export const Label = styled.div`
   border-bottom-left-radius: 0;
   cursor: pointer;
   z-index: 1;
-
-  .label {
-    font-size: 25px;
-    text-align: center;
-  }
+  font-size: 25px;
+  text-align: center;
+  color: white;
+  text-decoration: none;
 
   &:hover {
     transform: scale(1.05);
@@ -156,11 +156,12 @@ export const Label = styled.div`
 
 export const Footer = styled.div`
   padding: 0;
+  padding-top: ${dist.defItemDistance};
   font-size: ${size.defFontSize};
 `;
 
 const AboutSection = () => {
-  const { header, body, footer } = ABOUT_PAGE;
+  const { header, body } = ABOUT_PAGE;
   const { items } = body.list;
 
   useEffect(() => {
@@ -224,9 +225,7 @@ const AboutSection = () => {
           </div>
         </Body>
         <Footer>
-          <Label>
-            <div className="label">Contact Us</div>
-          </Label>
+          <Label to="/contact">Contact Us</Label>
           <ImageGallerySection images={bottomImages} />
         </Footer>
       </Wrapper>

@@ -9,6 +9,8 @@ import { CareersPage } from "./pages/CareersPage";
 import { ClientsPage } from "./pages/ClientsPage";
 import { ContactPage } from "./pages/ContactPage";
 import { FrontendPage } from "./pages/FrontendPage";
+import { PrivacyPage } from "./pages/PrivacyPage";
+import { TermsOfServicePage } from "./pages/TermsOfServicePage";
 import { RTSPage } from "./pages/RTSPage";
 import { AppContextProvider } from "./AppContext";
 
@@ -23,6 +25,8 @@ const Routes = () => {
       <App>
         <Switch>
           <Route exact path="/" component={HomePage} />
+          <Route exact path="/privacy" component={PrivacyPage} />
+          <Route exact path="/tos" component={TermsOfServicePage} />
           <Route exact path="/about" component={AboutPage} />
           <Route exact path="/services" component={ServicesPage} />
           <Route exact path="/team" component={TeamPage} />

@@ -8,7 +8,7 @@ import { OPEN_POSITIONS_ITEMS } from "../data";
 
 const headerImages = [
   {
-    original: "/images/hiring2.png",
+    original: "/images/hiring3.png",
   },
 ];
 
@@ -37,25 +37,15 @@ export const Label = styled.div`
 
   &:hover {
     transform: scale(1.05);
-    box-shadow: 20px 20px 60px var(--main-deg-app-color), -20px -20px 60px var(--main-app-color);
+    box-shadow: 20px 20px 60px var(--main-deg-app-color),
+      -20px -20px 60px var(--main-app-color);
   }
-`;
-
-const Wrapper = styled.div`
-  display: grid;
-  grid-template-columns: ${(props: any) => `${props.isMoble ? "1fr" : "1fr 1fr 1fr"}`};
-  row-gap: ${dist.defItemDistance};
-  padding-top: ${dist.defItemDistance};
-  padding-right: ${dist.defItemDistance};
-  border: 10px solid ${color.defAppColor};
-  border-bottom: none;
-  border-top: none;
-  border-right: none;
 `;
 
 const WrapperStaff = styled.div`
   display: grid;
-  grid-template-columns: ${(props: any) => `${props.isMoble ? "1.5fr" : "1.5fr 1.5fr 1.5fr 1.5fr"}`};
+  grid-template-columns: ${(props: any) =>
+    `${props.isMoble ? "1.5fr" : "1.5fr 1.5fr 1.5fr 1.5fr"}`};
   row-gap: ${dist.defItemDistance};
   padding-top: ${dist.defItemDistance};
   padding-right: ${dist.defItemDistance};
@@ -64,22 +54,36 @@ const WrapperStaff = styled.div`
   border-top: none;
   border-right: none;
 `;
+
+const sendEmail = () => {
+  window.location.href =
+    "mailto:info@randiantech.com?subject=I'm interested to join the team!";
+};
 
 export const CareersPage = React.memo(() => (
   <div>
     <Image>
       <Label>
-        <div className="label">Do you want to work with us?</div>
+        <div className="label">Come work with us!</div>
       </Label>
       <ImageGallerySection images={headerImages} />
     </Image>
 
-    <WrapperStaff>
+    <WrapperStaff
+      onClick={() => {
+        return sendEmail();
+      }}
+    >
       {OPEN_POSITIONS_ITEMS.map((i, idx) =>
         idx === 0 ? (
           <TabulatedItem text="Open Positions" height="95%" />
         ) : (
-          <ArticleCard url={i.url} img={i.img} desc={i.desc} title={i.title} detailsAlign="left" />
+          <ArticleCard
+            img={i.img}
+            desc={i.desc}
+            title={i.title}
+            detailsAlign="left"
+          />
         )
       )}
     </WrapperStaff>

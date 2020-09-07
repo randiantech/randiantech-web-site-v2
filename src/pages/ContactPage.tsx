@@ -1,12 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
-import { color, size, dist } from "../theme";
+import { color, dist } from "../theme";
 import { ContactUsSection } from "../sections/ContactUsSection/ContactUsSection";
 import { ImageGallerySection } from "../sections/ImageGallerySection";
 
 const headerImages = [
   {
-    original: "/images/contact-us-3.png",
+    original: "/images/contact-us-4.png",
   },
 ];
 
@@ -40,14 +40,21 @@ export const Label = styled.div`
   }
 `;
 
-export const ContactPage = React.memo(() => (
-  <div>
-    <Image>
-      <Label>
-        <div className="label">We are Ready.</div>
-      </Label>
-      <ImageGallerySection images={headerImages} />
-    </Image>
-    <ContactUsSection isMobile={false} />
-  </div>
-));
+export const ContactPage = React.memo(() => {
+  useEffect(() => {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }, []);
+
+  return (
+    <div>
+      <Image>
+        <Label>
+          <div className="label">We are Ready.</div>
+        </Label>
+        <ImageGallerySection images={headerImages} />
+      </Image>
+      <ContactUsSection isMobile={false} />
+    </div>
+  );
+});
