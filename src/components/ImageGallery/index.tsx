@@ -66,6 +66,7 @@ const WrapperMobile = styled.div`
   display: grid;
   grid-template-rows: 1fr;
   border-left: 10px solid #ff4970;
+  padding-bottom: 50px;
 
   .left-pane {
     color: white;
