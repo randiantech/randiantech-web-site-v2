@@ -11,6 +11,17 @@
   border-right: 5px solid var(--main-app-color);
 }
 
+.front-image-section-container-mobile {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  height: calc(100vh - 100px);
+  background-color: var(--main-bg-color);
+  overflow: hidden;
+}
+
 .front-image-section-img {
   height: 100%;
   min-width: 100%;
@@ -50,7 +61,7 @@
 
 .front-image-section-content-mobile {
   position: absolute;
-  bottom: 250px;
+  bottom: 0px;
   width: 100%;
   color: black;
   opacity: 0.9;

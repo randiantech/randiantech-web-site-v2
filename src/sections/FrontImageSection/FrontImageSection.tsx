@@ -41,7 +41,13 @@ export default class FrontImageSection extends React.Component<
   render() {
     const { isMobile } = this.props;
     return (
-      <div className="front-image-section-container">
+      <div
+        className={`${
+          isMobile
+            ? "front-image-section-container-mobile"
+            : "front-image-section-container"
+        }`}
+      >
         <img
           className="front-image-section-img"
           src={

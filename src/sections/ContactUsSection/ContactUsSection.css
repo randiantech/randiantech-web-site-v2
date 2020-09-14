@@ -15,6 +15,7 @@
   grid-template-rows: fit-content(200px) 1fr;
   padding-top: 40px;
   padding-bottom: 30px;
+  border-left: 10px solid #ff4970;
 }
 
 .contact-us-section-container-title-desktop {
@@ -90,11 +91,25 @@
   width: 100%;
 }
 
+.contact-us-section-item-input-mobile {
+  font-size: 20px;
+  margin-top: 10px;
+  height: 30px;
+  width: 95%;
+}
+
 .contact-us-section-item-input-free-text {
   font-size: 20px;
   margin-top: 10px;
   height: 200px;
   width: 100%;
+}
+
+.contact-us-section-item-input-free-text-mobile {
+  font-size: 20px;
+  margin-top: 10px;
+  height: 200px;
+  width: 95%;
 }
 
 .contact-us-section-send-btn-container {
@@ -160,4 +175,5 @@
   left: 50%;
   top: 50%;
   height: 100%;
+  margin-left: calc(50% - 32px);
 }

@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { size, color, dist } from "../../theme";
 import { FOOTER_ITEMS, SOCIAL_NETWORKS } from "../../data";
 import { Logo } from "../Logo";
+import { AppContext } from "../../AppContext";
 
 const Wrapper = styled.div`
   display: grid;
@@ -79,6 +80,9 @@ const Wrapper = styled.div`
 `;
 
 const Footer = () => {
+  const { state } = useContext(AppContext);
+  const { isMobile } = state;
+  if (isMobile) return <div className="no-footer" />;
   return (
     <Wrapper>
       <div className="left-pane-container">

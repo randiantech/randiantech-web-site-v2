@@ -45,7 +45,7 @@ body {
     var(--main-sec-app-color) 0%,
     white
   );
-  max-width: 100%;
+  max-width: 100% !important;
   overflow-x: hidden;
   scrollbar-color: var(--main-app-color);
 }
@@ -76,11 +76,19 @@ body {
     var(--main-app-color)
   );
 }
+
+.rt-linear-bg {
+  background: var(--main-app-color);
+}
 /* End of Shared Styles */
 
 /* Start of Spacing */
 .rt-std-left-padding {
   padding-left: var(--main-item-distance);
+}
+
+.rt-std-left-padding-5perc {
+  padding-left: 5%;
 }
 
 .rt-std-right-padding {
@@ -140,5 +148,10 @@ code {
 
 .app-container {
   padding-top: 100px;
+}
+
+.no-footer {
+  padding-bottom: 100px;
+  border-left: 10px solid #ff4970;
 }
 /* End of Workarounds */

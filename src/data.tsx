@@ -175,32 +175,32 @@ export const SERVICES_ITEMS = [
   {
     img: "/images/technologies-groups/tg-staff-augmentation.svg",
     text: "Staff Augmentation",
-    link: "/services#staff-augmentation",
+    link: "/",
   },
   {
     img: "/images/technologies-groups/tg-fixed-price-project.svg",
     text: "Fixed Price Projects",
-    link: "/services#fixed-price",
+    link: "/",
   },
   {
     img: "/images/technologies-groups/tg-managed-agile-teams.svg",
     text: "Managed Agile Teams",
-    link: "/services#managed-agile-teams",
+    link: "/",
   },
   {
     img: "/images/technologies-groups/tg-field-agent-management.png",
     text: "Field Agent Management",
-    link: "/services#field-agent-management",
+    link: "/",
   },
   {
     img: "/images/technologies-groups/tg-technical-mentoring.png",
     text: "Technical Mentoring",
-    link: "/services#technical-mentoring",
+    link: "/",
   },
   {
     img: "/images/technologies-groups/tg-on-site-training.svg",
     text: "On Site Training",
-    link: "/services#on-site-training",
+    link: "/",
   },
 ];
 

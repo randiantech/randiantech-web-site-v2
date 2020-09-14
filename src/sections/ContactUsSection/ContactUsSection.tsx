@@ -90,9 +90,13 @@ export class ContactUsSection extends React.Component<any, any> {
     );
   }
 
-  renderSendButton() {
+  renderSendButton(isMobile: Boolean) {
     return (
-      <div className="contact-us-section-send-btn-container rt-std-left-padding">
+      <div
+        className={`contact-us-section-send-btn-container ${
+          isMobile ? "rt-std-left-padding-5perc" : "rt-std-left-padding"
+        }`}
+      >
         <SimpleButton text="Submit" onClick={(e) => this.submitMessage(e)} />
       </div>
     );
@@ -138,7 +142,11 @@ export class ContactUsSection extends React.Component<any, any> {
             return (
               <div
                 key={`randiantech-key-${item.label}`}
-                className="contact-us-section-item rt-std-left-padding"
+                className={`contact-us-section-item ${
+                  !isMobile
+                    ? "rt-std-left-padding"
+                    : "rt-std-left-padding-5perc"
+                }`}
               >
                 <div className="contact-us-section-item-label">
                   <div>{item.label}</div>
@@ -146,7 +154,11 @@ export class ContactUsSection extends React.Component<any, any> {
                 </div>
                 {item.style === "free-text" ? (
                   <textarea
-                    className="contact-us-section-item-input-free-text"
+                    className={`${
+                      isMobile
+                        ? "contact-us-section-item-input-free-text-mobile"
+                        : "contact-us-section-item-input-free-text"
+                    }`}
                     name={`randiantech-${item.id}`}
                     onChange={(e) => {
                       this.setState({ [item.id]: e.target.value });
@@ -158,7 +170,11 @@ export class ContactUsSection extends React.Component<any, any> {
                 ) : (
                   <input
                     id={item.id}
-                    className="contact-us-section-item-input"
+                    className={`${
+                      isMobile
+                        ? "contact-us-section-item-input-mobile"
+                        : "contact-us-section-item-input"
+                    }`}
                     type="text"
                     name={`randiantech-${item.id}`}
                     onChange={(e) => {
@@ -173,7 +189,7 @@ export class ContactUsSection extends React.Component<any, any> {
             );
           })}
         </div>
-        <div>{this.renderSendButton()}</div>
+        <div>{this.renderSendButton(isMobile)}</div>
       </div>
     );
   }
@@ -182,11 +198,6 @@ export class ContactUsSection extends React.Component<any, any> {
     const { isMobile, isLoading } = this.state;
     return (
       <div id="contact-us-section">
-        {isLoading && (
-          <div className="rts-page-loading">
-            <ReactLoading type="spin" color="#ff4970" />
-          </div>
-        )}
         <div
           className={`${
             isMobile
@@ -194,7 +205,12 @@ export class ContactUsSection extends React.Component<any, any> {
               : "contact-us-section-container-desktop"
           }`}
         >
-          {this.renderContactUsLabel()}
+          {isLoading && (
+            <span className="rts-page-loading">
+              <ReactLoading type="spin" color="#ff4970" />
+            </span>
+          )}
+          {!isMobile && this.renderContactUsLabel()}
           {this.renderFormItems()}
         </div>
       </div>

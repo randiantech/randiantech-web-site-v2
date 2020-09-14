@@ -65,12 +65,14 @@ const WrapperMobile = styled.div`
   position: relative;
   display: grid;
   grid-template-rows: 1fr;
+  border-left: 10px solid #ff4970;
 
   .left-pane {
     color: white;
     font-size: 35px;
     opacity: 0.9;
     font-weight: bolder;
+    padding: 50px;
   }
 
   .right-pane {
@@ -84,18 +86,14 @@ const WrapperMobile = styled.div`
       font-size: 18px;
 
       .img {
-        width: 100%;
+        width: 50%;
         display: block;
         margin-left: auto;
         margin-right: auto;
-        transition: transform 200ms ease-in-out;
-        transform-origin: center;
-        filter: blur(20px) grayscale(20%);
       }
 
       .img:hover {
         transform: scale(1.05);
-        filter: none;
       }
     }
   }
@@ -117,7 +115,7 @@ export const ImageGallery = (props: ImageGalleryProps) => {
       <div
         className={`left-pane ${
           isMobile
-            ? "rt-centered-txt rt-glow-effect rt-linear-grad-bg"
+            ? "rt-centered-txt rt-linear-bg"
             : "rt-rounded rt-centered-txt"
         }`}
       >
