@@ -19,15 +19,21 @@ export default class FrontImageSection extends React.Component<
       <div
         className={`${
           isMobile
-            ? "front-image-section-content-mobile rt-std-top-padding rt-std-bottom-padding rt-linear-grad-bg rt-linear-grad-bg"
+            ? "front-image-section-content-mobile rt-std-top-padding rt-std-bottom-padding"
             : "front-image-section-content-desktop rt-linear-grad-bg"
         }`}
       >
         <span>
           <Logo />
-          <span className="front-image-section-content-text">
+          <span
+            className={`${
+              isMobile
+                ? "front-image-section-content-text-mobile"
+                : "front-image-section-content-text-desktop"
+            }`}
+          >
             {" "}
-            is your partner <br /> to craft{" "}
+          {isMobile ? <br /> : ''} is your partner <br /> to craft {isMobile ? <br /> : ' '}
             <span className="front-image-section-instantly-loved-text">
               INSTANTLY LOVED
             </span>{" "}

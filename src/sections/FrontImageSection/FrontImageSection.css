@@ -66,11 +66,20 @@
   color: black;
   opacity: 0.9;
   text-align: center;
+  padding-top: 20px;
+  background-color: var(--main-bg-color);
 }
 
-.front-image-section-content-text {
+.front-image-section-content-text-desktop {
   font-size: 35px;
   color: white;
+}
+
+.front-image-section-content-text-mobile {
+  font-size: 35px;
+  color: var(--main-sec-app-color);
+  font-weight: bolder;
+  line-height: 40px;
 }
 
 .front-image-section-instantly-loved-text {

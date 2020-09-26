@@ -180,5 +180,6 @@
   font-size: 35px;
   opacity: 0.9;
   font-weight: bolder;
-  padding: 50px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }

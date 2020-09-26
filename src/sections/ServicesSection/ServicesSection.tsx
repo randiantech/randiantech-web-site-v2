@@ -33,7 +33,7 @@ export default class ServicesSection extends React.Component<
   render() {
     const { isMobile }: ServicesSectionState = this.state;
     return (
-      <div className="services-section-wrapper rt-std-top-padding">
+      <div className="services-section-wrapper">
         <div
           className={`services-section-container-${
             isMobile ? "mobile" : "desktop"
@@ -42,7 +42,7 @@ export default class ServicesSection extends React.Component<
           <div
             className={`services-section-container-left-${
               isMobile
-                ? "mobile rt-std-top-padding"
+                ? "mobile"
                 : "desktop rt-rounded rt-centered-txt"
             }`}
           >

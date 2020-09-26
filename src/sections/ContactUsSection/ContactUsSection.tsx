@@ -198,15 +198,11 @@ export class ContactUsSection extends React.Component<any, any> {
     const { isMobile, isLoading } = this.state;
     return (
       <div id="contact-us-section">
-        <div
-          className={`left-pane ${
-            isMobile
-              ? "rt-centered-txt rt-linear-bg"
-              : "rt-rounded rt-centered-txt"
-          }`}
-        >
-          Contact Us
-        </div>
+        {isMobile && (
+          <div className={`left-pane rt-centered-txt rt-linear-bg`}>
+            Contact Us
+          </div>
+        )}
         <div
           className={`${
             isMobile

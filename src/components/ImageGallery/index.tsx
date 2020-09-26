@@ -84,6 +84,7 @@ const WrapperMobile = styled.div`
     .item {
       display: grid;
       grid-template-rows: 1fr;
+      min-height: 100px;
       font-size: 18px;
 
       .img {

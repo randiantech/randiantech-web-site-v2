@@ -226,7 +226,7 @@ export const ABOUT_PAGE = {
         "• Headquarters at Ciudad de Buenos Aires (Downtown)",
         "• Working offices at Vicente Lopez (Argentina) and San Pedro Sula (Honduras)",
         "• Commercial office at Miami, FL",
-        "• 25+ software developers and designers working on US timezones (East and West).",
+        "• All Software Developers and Designers working on US timezones (East and West).",
       ],
     },
   },

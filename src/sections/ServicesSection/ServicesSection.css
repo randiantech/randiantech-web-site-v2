@@ -60,7 +60,10 @@
   color: white;
   font-size: 35px;
   transform-origin: center;
-  opacity: 0.9;
+  background: var(--main-app-color);
+  font-weight: bolder;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .services-section-container-right-mobile {
