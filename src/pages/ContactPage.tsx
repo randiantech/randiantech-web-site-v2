@@ -1,8 +1,9 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useContext } from "react";
 import styled from "styled-components";
 import { color, dist } from "../theme";
 import { ContactUsSection } from "../sections/ContactUsSection/ContactUsSection";
 import { ImageGallerySection } from "../sections/ImageGallerySection";
+import { AppContext } from "../AppContext";
 
 const headerImages = [
   {
@@ -46,12 +47,17 @@ export const ContactPage = React.memo(() => {
     document.documentElement.scrollTop = 0;
   }, []);
 
+  const { state } = useContext(AppContext);
+  const { isMobile } = state;
+
   return (
     <div>
       <Image>
-        <Label>
-          <div className="label">We are Ready.</div>
-        </Label>
+        {!isMobile && (
+          <Label>
+            <div className="label">We are Ready.</div>
+          </Label>
+        )}
         <ImageGallerySection images={headerImages} />
       </Image>
       <ContactUsSection isMobile={false} />

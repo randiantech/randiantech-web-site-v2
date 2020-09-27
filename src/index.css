@@ -42,7 +42,7 @@ body {
   background: linear-gradient(
     135deg,
     #7b4da5,
-    var(--main-sec-app-color) 0%,
+    var(--main-sec-app-color) 20%,
     white
   );
   max-width: 100% !important;
@@ -150,8 +150,4 @@ code {
   padding-top: 100px;
 }
 
-.no-footer {
-  padding-bottom: 100px;
-  border-left: 10px solid #ff4970;
-}
 /* End of Workarounds */

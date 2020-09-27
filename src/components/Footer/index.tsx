@@ -82,7 +82,7 @@ const Wrapper = styled.div`
 const Footer = () => {
   const { state } = useContext(AppContext);
   const { isMobile } = state;
-  if (isMobile) return <div className="no-footer" />;
+  if (isMobile) return null;
   return (
     <Wrapper>
       <div className="left-pane-container">

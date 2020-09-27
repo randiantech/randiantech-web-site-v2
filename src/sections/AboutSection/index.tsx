@@ -1,9 +1,10 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useContext } from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 import { color, size, dist } from "../../theme";
 import { ABOUT_PAGE } from "../../data";
 import { ImageGallerySection } from "../ImageGallerySection";
-import { Link } from "react-router-dom";
+import { AppContext } from "../../AppContext";
 
 const headerImages = [
   {
@@ -33,8 +34,8 @@ export const Wrapper = styled.div`
   background: linear-gradient(
     135deg,
     #7b4da5,
-    var(--main-sec-app-color) 0%,
-    white
+    var(--main-sec-app-color) 20%,
+    grey
   );
   border-left: 10px solid ${color.defAppColor};
   color: white;
@@ -49,7 +50,7 @@ export const Wrapper = styled.div`
   }
 `;
 
-export const Header = styled.div`
+export const HeaderDesktop = styled.div`
   display: grid;
   grid-template-rows: fit-min-content fit-min-content fit-min-content;
   padding: ${dist.defItemDistance};
@@ -89,11 +90,12 @@ export const Header = styled.div`
   }
 `;
 
-export const Body = styled.div`
+export const HeaderMobile = styled.div`
   display: grid;
+  grid-template-rows: fit-min-content fit-min-content fit-min-content;
   padding: ${dist.defItemDistance};
-  padding-top: 0;
   font-size: ${size.defFontSize};
+  padding-bottom : 100px;
 
   .title {
     font-size: ${size.extraFontSize};
@@ -101,30 +103,39 @@ export const Body = styled.div`
     border-bottom: 10px solid ${color.defAppColor};
     margin-bottom: 25px;
     width: fit-content;
+    text-align: center;
   }
 
-  .description-wrapper {
-    display: grid;
-    grid-template-columns: 2fr 3fr;
-    align-items: center;
-    .description {
-      font-size: 24px;
-    }
-  }
-
-  .list-title {
-    margin-top: 30px;
-    font-size: 24px;
-    border-bottom: 3px solid ${color.defAppColor};
+  .subtitle {
+    font-style: italic;
+    font-weight: bold;
+    font-size: ${size.titleFontSize};
     margin-bottom: 25px;
-    font-weight: bolder;
-    width: fit-content;
+    padding-top: 30px;
+    text-align: center;
   }
 
-  .list-item-container {
-    .item {
+  .description {
+    display: grid;
+    grid-template-rows: fit-min-content fit-min-content;
+    align-items: center;
+
+    .text {
+      padding-top: 25px;
+      padding-bottom: 25px;
+      text-align: center;
       font-size: 24px;
-      padding-bottom: 20px;
+
+      .item {
+        padding-bottom: 30px;
+      }
+
+      .list-title {
+        background-color: var(--main-app-color);
+        border-radius: 5px;
+        font-weight: bolder;
+        padding: 25px;
+      }
     }
   }
 `;
@@ -146,6 +157,7 @@ export const Label = styled(Link)`
   text-align: center;
   color: white;
   text-decoration: none;
+  bottom: 75px;
 
   &:hover {
     transform: scale(1.05);
@@ -163,6 +175,8 @@ export const Footer = styled.div`
 const AboutSection = () => {
   const { header, body } = ABOUT_PAGE;
   const { items } = body.list;
+  const { state } = useContext(AppContext);
+  const { isMobile } = state;
 
   useEffect(() => {
     document.body.scrollTop = 0;
@@ -172,8 +186,9 @@ const AboutSection = () => {
   const desc1Text = header.desc;
   const desc2Text = header.desc2;
   const desc3Text = header.desc3;
-
   const descBody = body.desc;
+
+  const Header = isMobile ? HeaderMobile : HeaderDesktop;
 
   return (
     <>
@@ -204,29 +219,26 @@ const AboutSection = () => {
             </div>
           </div>
         </Header>
-        <Body>
+        <Header>
           <div className="title">
             <div>{body.title}</div>
           </div>
-          <div className="description-wrapper">
-            <ImageGallerySection images={descBodyImages} />
-            <div
-              className="description"
-              dangerouslySetInnerHTML={{ __html: descBody }}
-            />
+          <div className="subtitle">{header.subtitle}</div>
+          <div className="description">
+            <div className="text">
+              <div
+                className="item"
+                dangerouslySetInnerHTML={{ __html: descBody }}
+              ></div>
+            </div>
+            <div className="desc-img-1">
+              <ImageGallerySection images={descBodyImages} />
+            </div>
           </div>
-          <div className="list-title">{body.list.title}</div>
-          <div className="list-item-container">
-            {items.map((item, idx) => (
-              <div className="item" key={`rt-page-item-${idx}`}>
-                {item}
-              </div>
-            ))}
-          </div>
-        </Body>
+        </Header>
         <Footer>
           <Label to="/contact">Contact Us</Label>
-          <ImageGallerySection images={bottomImages} />
+          {!isMobile ? <ImageGallerySection images={bottomImages} /> : <span />}
         </Footer>
       </Wrapper>
     </>

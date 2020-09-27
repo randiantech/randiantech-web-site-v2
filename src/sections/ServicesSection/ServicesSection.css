@@ -33,6 +33,7 @@
 .services-section-container-desktop {
   display: grid;
   grid-template-columns: 300px 1fr;
+  padding-top: 50px;
 }
 
 .services-section-container-left-desktop {
