@@ -70,14 +70,14 @@ export const TEAM_MEMBERS_STAFF = [
     title: "Lucas Campana",
     position: "Full Stack Developer",
     desc: `Tech Stack: Python, React, Javascript, NodeJS, ExpressJS, MongoDB, Java.`,
-    img: "/images/members/juan2.png",
+    img: "/images/members/lucas.jpg",
     url: "https://www.linkedin.com/in/lukebelll/",
   },
   {
     title: "Nancy Figueroa",
     position: "Full Stack Developer",
     desc: `Tech Stack: ReactJS, NodeJS, ExpressJS, MongoDB. GraphQL using Apollo Server and Apollo Client.`,
-    img: "/images/members/juan2.png",
+    img: "/images/members/gis.jpg",
     url: "https://www.linkedin.com/in/nancy-figueroa-0a763725/",
   },
   {
@@ -236,16 +236,12 @@ export const ABOUT_PAGE = {
   },
 };
 
-export const MENU_ITEMS = ["ABOUT", "SERVICES", "TEAM", "CAREERS", "CONTACT"];
+export const MENU_ITEMS = ["ABOUT", "TEAM", "CAREERS", "CONTACT"];
 
 export const FOOTER_ITEMS = [
   {
     name: "About",
     url: "/about",
-  },
-  {
-    name: "Services",
-    url: "/services",
   },
   {
     name: "Careers",

@@ -95,7 +95,6 @@ export const HeaderMobile = styled.div`
   grid-template-rows: fit-min-content fit-min-content fit-min-content;
   padding: ${dist.defItemDistance};
   font-size: ${size.defFontSize};
-  padding-bottom : 100px;
 
   .title {
     font-size: ${size.extraFontSize};
@@ -200,6 +199,11 @@ const AboutSection = () => {
           </div>
           <div className="subtitle">{header.subtitle}</div>
           <div className="description">
+            {isMobile && (
+              <div className="desc-img-1">
+                <ImageGallerySection images={descImages} />
+              </div>
+            )}
             <div className="text">
               <div
                 className="item"
@@ -214,9 +218,11 @@ const AboutSection = () => {
                 dangerouslySetInnerHTML={{ __html: desc3Text }}
               />
             </div>
-            <div className="desc-img-1">
-              <ImageGallerySection images={descImages} />
-            </div>
+            {!isMobile && (
+              <div className="desc-img-1">
+                <ImageGallerySection images={descImages} />
+              </div>
+            )}
           </div>
         </Header>
         <Header>
@@ -225,15 +231,22 @@ const AboutSection = () => {
           </div>
           <div className="subtitle">{header.subtitle}</div>
           <div className="description">
+            {isMobile && (
+              <div className="desc-img-1">
+                <ImageGallerySection images={descBodyImages} />
+              </div>
+            )}
             <div className="text">
               <div
                 className="item"
                 dangerouslySetInnerHTML={{ __html: descBody }}
               ></div>
             </div>
-            <div className="desc-img-1">
-              <ImageGallerySection images={descBodyImages} />
-            </div>
+            {!isMobile && (
+              <div className="desc-img-1">
+                <ImageGallerySection images={descBodyImages} />
+              </div>
+            )}
           </div>
         </Header>
         <Footer>
