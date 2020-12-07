@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import { MENU_ITEMS } from "../../data";
+import { DESKTOP_MENU_ITEMS } from "../../data";
 import { Styleable } from "../../utils";
 import { size, color, dist } from "../../theme";
 
@@ -41,7 +41,7 @@ export const HeaderDesktopItems = ({
 }: HeaderDesktopProps) => {
   return (
     <HeaderWrapper className="rt-std-right-padding">
-      {MENU_ITEMS.map((item) => (
+      {DESKTOP_MENU_ITEMS.map((item) => (
         <Link key={item} className="item" to={`/${item.toLowerCase()}`}>
           <div
             className={`${hoveredItem === item ? "selected" : ""}`}

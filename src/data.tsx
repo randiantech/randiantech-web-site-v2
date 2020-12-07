@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 export const BLOG_ITEMS = [
   {},
   {
@@ -209,9 +211,9 @@ export const ABOUT_PAGE = {
     title: "This is Randiantech",
     subtitle: "Mastering the Art of Crafting Software since 2016",
     desc:
-      "Founded by experienced IT professionals, Randiantech embodies a comprehensive approach on how to <b class='underline'>successfully architect, implement and deliver mission-critical products and services</b>. Our view encompasses an all-in-one methodology that gets the best for our clients from our outstanding engineering teams.",
+      "Founded by experienced IT professionals, Randiantech embodies a comprehensive approach on how to <b class='underline'>successfully architect, implement and deliver mission-critical products and services</b>. Our view encompasses an all-in-one methodology that gets the best for our clients from our outstanding engineering team.",
     desc2:
-      "Our mission is to provide <b class='underline'>carefully crafted digital solutions</b> prepared to unleash the potential of your organization.",
+      "Our mission is to provide the talents to <b class='underline'>carefully craft digital solutions</b> prepared to unleash the potential of your organization.",
     desc3:
       "<b class='underline'>Randiantech</b> breaths software engineering. Our obsession is to craft world-class, scalable and reliable software to enable your company to move to the next level.",
   },
@@ -236,7 +238,9 @@ export const ABOUT_PAGE = {
   },
 };
 
-export const MENU_ITEMS = ["ABOUT", "TEAM", "CAREERS", "CONTACT"];
+export const DESKTOP_MENU_ITEMS = ["ABOUT", "TEAM", "CAREERS", "CONTACT"];
+
+export const MOBILE_MENU_ITEMS = ["ABOUT", "CONTACT"];
 
 export const FOOTER_ITEMS = [
   {

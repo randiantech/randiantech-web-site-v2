@@ -3,8 +3,8 @@ import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
-import { MENU_ITEMS } from "../../data";
-import { size, color, dist } from "../../theme";
+import { MOBILE_MENU_ITEMS } from "../../data";
+import { color} from "../../theme";
 
 const MenuWrapper = styled.div`
   position: absolute;
@@ -54,7 +54,7 @@ export const HeaderMobileItems = ({ hoveredItem, setHoveredItem }: any) => {
   const MobileMenu = () => {
     return (
       <MenuWrapper>
-        {MENU_ITEMS.map((item) => (
+        {MOBILE_MENU_ITEMS.map((item) => (
           <Link
             key={item}
             className={`item ${item === "CONTACT" && "is-contact"}`}

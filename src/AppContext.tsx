@@ -6,17 +6,14 @@ const AppContext = createContext({
     isMobile: isMobileWidth(),
   },
 });
+
 const AppContextProvider = ({ children }: any) => {
   let [state, setState] = useState({
     isMobile: isMobileWidth(),
   });
 
-  const handleOnResize = () => {
-    setIsMobile(isMobileWidth());
-  };
-
   useEffect(
-    () => window.addEventListener("resize", () => handleOnResize()),
+    () => window.addEventListener("resize", () => setIsMobile(isMobileWidth())),
     []
   );
 

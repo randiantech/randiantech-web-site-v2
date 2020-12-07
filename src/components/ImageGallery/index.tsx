@@ -1,8 +1,8 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
 import { AppContext } from "../../AppContext";
 import { Styleable } from "../../utils";
-import { size, color, dist } from "../../theme";
+import { color, dist } from "../../theme";
 
 interface ImageGalleryProps extends Styleable {
   items?: any;

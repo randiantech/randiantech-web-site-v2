@@ -99,9 +99,9 @@ const Footer = () => {
         <div className="list">
           {SOCIAL_NETWORKS.map((i) => {
             return (
-              <a href={i.url} className="item">
+              <a key={`footer-${i.name}`} href={i.url} className="item">
                 <div className="img">
-                  <img width="30px" src={i.img} />
+                  <img width="30px" src={i.img} alt="randiantech.com" />
                 </div>
                 <div key={`footer-item-sn-${i.name}`} className="link">
                   {i.name}

@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { size, color, dist } from "../../theme";
+import { size, dist } from "../../theme";
 import { override, Styleable } from "../../utils";
 
 export const Wrapper = styled.a`
@@ -74,7 +74,7 @@ export const ArticleCard = (props: ArticleCardProps) => {
   return (
     <Wrapper {...props} key={`bsi-${index}`} href={url} target="_blank">
       <div>
-        <img src={img} className="img rt-rounded" />
+        <img src={img} className="img rt-rounded" alt="randiantech.com" />
       </div>
       <div className="details">
         <div className="title">{title}</div>

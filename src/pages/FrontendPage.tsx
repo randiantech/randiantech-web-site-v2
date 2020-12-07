@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { color, size, dist } from "../theme";
+import { color, dist } from "../theme";
 import { PositionsSection } from "../sections/PositionsSection/PositionsSection";
 import { ImageGallerySection } from "../sections/ImageGallerySection";
 

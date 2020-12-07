@@ -71,6 +71,15 @@ export class ContactUsSection extends React.Component<any, any> {
           comments: "",
           isLoading: false,
         });
+      }).catch(() => {
+        this.setState({
+          firstName: "",
+          lastName: "",
+          email: "",
+          phone: "",
+          comments: "",
+          isLoading: false,
+        });
       });
     }
   }

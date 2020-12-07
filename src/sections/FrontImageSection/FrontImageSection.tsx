@@ -2,7 +2,6 @@
 
 import React from "react";
 import { Logo } from "../../components/Logo";
-import { isMobileWidth } from "../../utils";
 import "./FrontImageSection.css";
 
 interface FrontImageProps {

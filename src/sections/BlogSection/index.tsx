@@ -23,15 +23,14 @@ const Wrapper = styled.div`
 
 export const BlogSection = React.memo(() => {
   const { state } = useContext(AppContext);
-  const { isMobile } = state;
 
   return (
     <Wrapper {...state}>
       {BLOG_ITEMS.map((i, idx) =>
         idx === 0 ? (
-          <TabulatedItem text="News and Articles" />
+          <TabulatedItem key={`tab-data-${idx}`} text="News and Articles" />
         ) : (
-          <ArticleCard url={i.url} img={i.img} desc={i.desc} title={i.title} />
+          <ArticleCard key={`tab-data-${idx}`} url={i.url} img={i.img} desc={i.desc} title={i.title} />
         )
       )}
     </Wrapper>

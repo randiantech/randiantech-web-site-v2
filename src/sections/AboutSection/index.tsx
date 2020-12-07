@@ -173,7 +173,6 @@ export const Footer = styled.div`
 
 const AboutSection = () => {
   const { header, body } = ABOUT_PAGE;
-  const { items } = body.list;
   const { state } = useContext(AppContext);
   const { isMobile } = state;
 

@@ -21,8 +21,8 @@ export const HomePage = React.memo(() => {
       <FrontImageSection isMobile={isMobile} />
       <ServicesSection isMobile={isMobile} />
       <BrandSection />
-      {!isMobile && <BlogSection />}
       <TechnologiesSection isMobile={isMobile} />
+      {!isMobile && <BlogSection />}
       <ContactUsSection isMobile={isMobile} />
     </>
   );
