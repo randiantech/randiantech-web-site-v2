@@ -40,12 +40,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: rgb(195,205,205);
-  background: linear-gradient(
-    135deg,
-    #7b4da5,
-    var(--main-deg-app-color) 20%,
-    grey
-  );
+  background: linear-gradient(90deg, rgba(195,205,205,0.15870098039215685) 0%, rgba(2,0,36,1) 0%, rgba(0,212,255,1) 100%);
   max-width: 100% !important;
   overflow-x: hidden;
   scrollbar-color: var(--main-app-color);
