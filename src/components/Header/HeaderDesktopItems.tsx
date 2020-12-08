@@ -17,13 +17,13 @@ const HeaderWrapper = styled.div`
   grid-template-columns: repeat(5, 20%);
 
   .item {
-    color: white;
+    color: var(--main-app-color);
     text-decoration: none;
     line-height: ${dist.defItemDistance};
     cursor: pointer;
 
     &:hover {
-      background-color: ${color.defAppColor};
+      background-color: var(--main-deg-app-color);
       border-radius: ${size.defRadius};
     }
 

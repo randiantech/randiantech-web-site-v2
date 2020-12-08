@@ -34,7 +34,7 @@ export const Wrapper = styled.div`
   background: linear-gradient(
     135deg,
     #7b4da5,
-    var(--main-sec-app-color) 20%,
+    var(--main-deg-app-color) 20%,
     grey
   );
   border-left: 10px solid ${color.defAppColor};
@@ -144,7 +144,7 @@ export const Label = styled(Link)`
   margin-left: auto;
   width: 300px;
   margin-left: ${dist.defItemDistance};
-  color: white;
+  color: var(--main-deg-app-color);
   font-weight: bolder;
   background: var(--main-app-color);
   padding: ${dist.defItemDistance};
@@ -154,13 +154,12 @@ export const Label = styled(Link)`
   z-index: 1;
   font-size: 25px;
   text-align: center;
-  color: white;
   text-decoration: none;
   bottom: 75px;
 
   &:hover {
     transform: scale(1.05);
-    box-shadow: 20px 20px 60px var(--main-deg-app-color),
+    box-shadow: 20px 20px 60px var(--main-app-color),
       -20px -20px 60px var(--main-app-color);
   }
 `;

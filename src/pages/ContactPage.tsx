@@ -20,7 +20,7 @@ export const Label = styled.div`
   top: 150px;
   left: calc(100% - 500px);
   width: 300px;
-  color: white;
+  color: var(--main-deg-app-color);
   font-weight: bolder;
   background: var(--main-app-color);
   padding: ${dist.defItemDistance};
@@ -36,7 +36,7 @@ export const Label = styled.div`
 
   &:hover {
     transform: scale(1.05);
-    box-shadow: 20px 20px 60px var(--main-deg-app-color),
+    box-shadow: 20px 20px 60px var(--main-app-color),
       -20px -20px 60px var(--main-app-color);
   }
 `;

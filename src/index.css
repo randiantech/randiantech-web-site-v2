@@ -22,7 +22,7 @@
 
 * {
   --main-bg-color: #414042;
-  --main-app-color: #ff4970;
+  --main-app-color: white;
   --main-deg-app-color: #ff3970;
   --main-sec-app-color: #110819;
   --main-item-distance: 50px;
@@ -39,11 +39,12 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: rgb(195,205,205);
   background: linear-gradient(
     135deg,
     #7b4da5,
-    var(--main-sec-app-color) 20%,
-    white
+    var(--main-deg-app-color) 20%,
+    grey
   );
   max-width: 100% !important;
   overflow-x: hidden;

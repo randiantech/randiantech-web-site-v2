@@ -19,11 +19,11 @@ export default class FrontImageSection extends React.Component<
         className={`${
           isMobile
             ? "front-image-section-content-mobile rt-std-top-padding rt-std-bottom-padding"
-            : "front-image-section-content-desktop rt-linear-grad-bg"
+            : "front-image-section-content-desktop"
         }`}
       >
         <span>
-          <Logo />
+          <Logo color="var(--main-deg-app-color);"/>
           <span
             className={`${
               isMobile

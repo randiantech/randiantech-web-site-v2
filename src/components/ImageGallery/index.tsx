@@ -28,7 +28,7 @@ const WrapperDesktop = styled.div`
   .left-pane {
     display: grid;
     background: ${color.defSecAppColor};
-    color: ${color.defAppColor};
+    color: var(--main-app-color);
     font-size: 35px;
     font-weight: bolder;
   }
@@ -65,11 +65,10 @@ const WrapperMobile = styled.div`
   position: relative;
   display: grid;
   grid-template-rows: 1fr;
-  border-left: 10px solid #ff4970;
   padding-bottom: 50px;
 
   .left-pane {
-    color: white;
+    color: var(--main-app-deg-color);
     font-size: 35px;
     opacity: 0.9;
     font-weight: bolder;

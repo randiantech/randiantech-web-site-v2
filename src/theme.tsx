@@ -2,7 +2,7 @@
 
 const color = {
   defAltColor: "#7b4da5",
-  defAppColor: "#ff4970", //--main-app-color: #ff4970;
+  defAppColor: "white", //--main-app-color: #ff4970;
   defBgColor: "#414042", //--main-bg-color: #414042;
   defSecAppColor: "#110819", //--main-sec-app-color: #110819;
 };

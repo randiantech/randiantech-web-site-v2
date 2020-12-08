@@ -59,7 +59,7 @@ export const Header = (props: HeaderProps) => {
   return (
     <Wrapper>
       <LogoWrapper className="rt-std-left-padding">
-        <Logo />
+        <Logo color="white" />
       </LogoWrapper>
       <Items hoveredItem={hoveredItem} setHoveredItem={setHoveredItem} />
       {!isMobile && <LinkButton text={linkBtnText} to={linkBtnPath} />}

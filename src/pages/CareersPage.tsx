@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import { color, dist } from "../theme";
 import { ImageGallerySection } from "../sections/ImageGallerySection";
@@ -21,7 +21,7 @@ export const Label = styled.div`
   top: 150px;
   left: calc(100% - 500px);
   width: 300px;
-  color: white;
+  color: var(--main-deg-app-color);
   font-weight: bolder;
   background: var(--main-app-color);
   padding: ${dist.defItemDistance};
@@ -37,7 +37,7 @@ export const Label = styled.div`
 
   &:hover {
     transform: scale(1.05);
-    box-shadow: 20px 20px 60px var(--main-deg-app-color),
+    box-shadow: 20px 20px 60px var(--main-app-color),
       -20px -20px 60px var(--main-app-color);
   }
 `;
@@ -60,32 +60,39 @@ const sendEmail = () => {
     "mailto:info@randiantech.com?subject=I'm interested to join the team!";
 };
 
-export const CareersPage = React.memo(() => (
-  <div>
-    <Image>
-      <Label>
-        <div className="label">Come work with us!</div>
-      </Label>
-      <ImageGallerySection images={headerImages} />
-    </Image>
+export const CareersPage = React.memo(() => {
+  useEffect(() => {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }, []);
 
-    <WrapperStaff
-      onClick={() => {
-        return sendEmail();
-      }}
-    >
-      {OPEN_POSITIONS_ITEMS.map((i, idx) =>
-        idx === 0 ? (
-          <TabulatedItem text="Open Positions" height="95%" />
-        ) : (
-          <ArticleCard
-            img={i.img}
-            desc={i.desc}
-            title={i.title}
-            detailsAlign="left"
-          />
-        )
-      )}
-    </WrapperStaff>
-  </div>
-));
+  return (
+    <div>
+      <Image>
+        <Label>
+          <div className="label">Come work with us!</div>
+        </Label>
+        <ImageGallerySection images={headerImages} />
+      </Image>
+
+      <WrapperStaff
+        onClick={() => {
+          return sendEmail();
+        }}
+      >
+        {OPEN_POSITIONS_ITEMS.map((i, idx) =>
+          idx === 0 ? (
+            <TabulatedItem text="Open Positions" height="95%" />
+          ) : (
+            <ArticleCard
+              img={i.img}
+              desc={i.desc}
+              title={i.title}
+              detailsAlign="left"
+            />
+          )
+        )}
+      </WrapperStaff>
+    </div>
+  );
+});

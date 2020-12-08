@@ -4,6 +4,10 @@
   border-left: 10px solid var(--main-app-color);
 }
 
+.services-section-wrapper-mobile {
+  border-top: 2px solid var(--main-app-color);
+}
+
 .services-section-item {
   display: grid;
   grid-template-rows: 1fr 50px;
@@ -58,7 +62,7 @@
 
 /* Start of mobile styles */
 .services-section-container-left-mobile {
-  color: white;
+  color: var(--main-app-deg-color);
   font-size: 35px;
   transform-origin: center;
   background: var(--main-app-color);

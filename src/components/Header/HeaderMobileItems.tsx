@@ -28,7 +28,7 @@ const MenuWrapper = styled.div`
     .content {
       padding-top: 20px;
       padding-bottom: 20px;
-      color: white;
+      color: var(--main-deg-app-color);
     }
 
     .selected {
@@ -64,7 +64,7 @@ export const HeaderMobileItems = ({ hoveredItem, setHoveredItem }: any) => {
             <div
               className={`content ${
                 hoveredItem === item &&
-                "selected rt-glow-effect rt-linear-grad-bg"
+                "selected"
               }`}
               onMouseOver={() => setHoveredItem(item)}
               onMouseOut={() => setHoveredItem("")}

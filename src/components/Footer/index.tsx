@@ -86,7 +86,7 @@ const Footer = () => {
   return (
     <Wrapper>
       <div className="left-pane-container">
-        <Logo />
+        <Logo color="white" />
         <div className="list">
           {FOOTER_ITEMS.map((i) => (
             <Link key={`footer-item-${i.name}`} to={i.url} className="item">

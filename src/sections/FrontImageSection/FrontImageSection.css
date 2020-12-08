@@ -6,7 +6,7 @@
   position: relative;
   height: calc(100vh - 67px);
   width: 100%;
-  background-color: var(--main-bg-color);
+  background-color: var(--main-app-color);
   overflow: hidden;
   border-right: 5px solid var(--main-app-color);
 }
@@ -18,7 +18,7 @@
   background-size: cover;
   position: relative;
   height: calc(100vh - 100px);
-  background-color: var(--main-bg-color);
+  background-color: var(--main-app-color);
   overflow: hidden;
 }
 
@@ -51,11 +51,13 @@
   cursor: default;
   opacity: 0.9;
   text-align: center;
+  color: black;
+  background-color: var(--main-app-color);
 }
 
 .front-image-section-content-desktop:hover {
   transform: scale(1.05);
-  box-shadow: 20px 20px 60px var(--main-deg-app-color),
+  box-shadow: 20px 20px 60px var(--main-app-color),
     -20px -20px 60px var(--main-app-color);
 }
 
@@ -72,12 +74,12 @@
 
 .front-image-section-content-text-desktop {
   font-size: 35px;
-  color: white;
+  color: black;
 }
 
 .front-image-section-content-text-mobile {
   font-size: 35px;
-  color: var(--main-sec-app-color);
+  color: black;
   font-weight: bolder;
   line-height: 40px;
 }
@@ -97,7 +99,7 @@
   text-align: center;
   align-items: center;
   height: 50px;
-  background-color: red;
+  background-color: var(--main-app-color);
   padding: 10px;
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;

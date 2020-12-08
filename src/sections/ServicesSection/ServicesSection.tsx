@@ -33,7 +33,7 @@ export default class ServicesSection extends React.Component<
   render() {
     const { isMobile }: ServicesSectionState = this.state;
     return (
-      <div className="services-section-wrapper">
+      <div className={`${isMobile ? "services-section-wrapper-mobile" : "services-section-wrapper"}`}>
         <div
           className={`services-section-container-${
             isMobile ? "mobile" : "desktop"
@@ -56,14 +56,13 @@ export default class ServicesSection extends React.Component<
             }`}
           >
             {SERVICES_ITEMS.map((item) => (
-              <Link
-                to={`${item.link}`}
+              <div
                 key={item.text}
                 className="services-section-item"
               >
                 <img className="services-section-item-img" src={item.img} />
                 <div className="services-section-item-text">{item.text}</div>
-              </Link>
+              </div>
             ))}
           </div>
         </div>

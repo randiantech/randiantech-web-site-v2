@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import { color, dist } from "../theme";
 import { ImageGallerySection } from "../sections/ImageGallerySection";
@@ -21,7 +21,7 @@ export const Label = styled.div`
   top: 150px;
   left: calc(100% - 500px);
   width: 300px;
-  color: white;
+  color: var(--main-deg-app-color);
   font-weight: bolder;
   background: var(--main-app-color);
   padding: ${dist.defItemDistance};
@@ -37,7 +37,7 @@ export const Label = styled.div`
 
   &:hover {
     transform: scale(1.05);
-    box-shadow: 20px 20px 60px var(--main-deg-app-color),
+    box-shadow: 20px 20px 60px var(--main-app-color),
       -20px -20px 60px var(--main-app-color);
   }
 `;
@@ -68,44 +68,50 @@ const WrapperStaff = styled.div`
   border-right: none;
 `;
 
-export const TeamPage = React.memo(() => (
-  <div>
-    <Image>
-      <Label>
-        <div className="label">Meet The RT Team.</div>
-      </Label>
-      <ImageGallerySection images={headerImages} />
-    </Image>
-    <Wrapper>
-      {TEAM_MEMBERS_LEADERSHIP.map((i, idx) =>
-        idx === 0 ? (
-          <TabulatedItem text="Leadership" height="95%" />
-        ) : (
-          <ArticleCard
-            url={i.url}
-            img={i.img}
-            desc={i.desc}
-            title={i.title}
-            position={i.position}
-          />
-        )
-      )}
-    </Wrapper>
-    <WrapperStaff>
-      {TEAM_MEMBERS_STAFF.map((i, idx) =>
-        idx === 0 ? (
-          <TabulatedItem text="Team" height="95%" />
-        ) : (
-          <ArticleCard
-            url={i.url}
-            img={i.img}
-            desc={i.desc}
-            title={i.title}
-            position={i.position}
-            detailsAlign="left"
-          />
-        )
-      )}
-    </WrapperStaff>
-  </div>
-));
+export const TeamPage = React.memo(() => {
+  useEffect(() => {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }, []);
+  return (
+    <div>
+      <Image>
+        <Label>
+          <div className="label">Meet The RT Team.</div>
+        </Label>
+        <ImageGallerySection images={headerImages} />
+      </Image>
+      <Wrapper>
+        {TEAM_MEMBERS_LEADERSHIP.map((i, idx) =>
+          idx === 0 ? (
+            <TabulatedItem text="Leadership" height="95%" />
+          ) : (
+            <ArticleCard
+              url={i.url}
+              img={i.img}
+              desc={i.desc}
+              title={i.title}
+              position={i.position}
+            />
+          )
+        )}
+      </Wrapper>
+      <WrapperStaff>
+        {TEAM_MEMBERS_STAFF.map((i, idx) =>
+          idx === 0 ? (
+            <TabulatedItem text="Team" height="95%" />
+          ) : (
+            <ArticleCard
+              url={i.url}
+              img={i.img}
+              desc={i.desc}
+              title={i.title}
+              position={i.position}
+              detailsAlign="left"
+            />
+          )
+        )}
+      </WrapperStaff>
+    </div>
+  );
+});

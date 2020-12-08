@@ -7,13 +7,13 @@
   border-left: 10px solid var(--main-app-color);
   border-bottom: none;
   border-top: none;
-  color: white;
+  color: var(--main-deg-app-color);
 }
 
 .contact-us-section-container-mobile {
   display: grid;
   grid-template-rows: fit-content(200px) 1fr;
-  border-left: 10px solid #ff4970;
+  border-left: 10px solid var(--main-deg-app-color);
 }
 
 .contact-us-section-container-title-desktop {
@@ -155,7 +155,7 @@
   position: absolute;
   left: var(--main-item-distance);
   bottom: var(--main-item-distance);
-  color: white;
+  color: var(--main-deg-app-color);
   background: var(--main-app-color);
   padding: 50px;
   border-radius: 50px;
@@ -164,7 +164,7 @@
 
 .contact-us-section-container-title-inner-message:hover {
   transform: scale(1.05);
-  box-shadow: 20px 20px 60px var(--main-deg-app-color),
+  box-shadow: 20px 20px 60px var(--main-app-color),
     -20px -20px 60px var(--main-app-color);
 }
 
@@ -176,7 +176,7 @@
   margin-left: calc(50% - 32px);
 }
 .left-pane {
-  color: white;
+  color: var(--main-deg-app-color);
   font-size: 35px;
   opacity: 0.9;
   font-weight: bolder;
