@@ -23,7 +23,7 @@ export default class FrontImageSection extends React.Component<
         }`}
       >
         <span>
-          <Logo color="var(--main-deg-app-color);"/>
+          <Logo color="#00CDF8"/>
           <span
             className={`${
               isMobile
