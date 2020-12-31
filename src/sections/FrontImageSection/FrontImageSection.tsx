@@ -23,7 +23,7 @@ export default class FrontImageSection extends React.Component<
         }`}
       >
         <span>
-          <Logo color="#00CDF8"/>
+          <Logo color="#FF3970"/>
           <span
             className={`${
               isMobile
@@ -34,7 +34,7 @@ export default class FrontImageSection extends React.Component<
             {" "}
           {isMobile ? <br /> : ''} is your partner <br /> to craft {isMobile ? <br /> : ' '}
             <span className="front-image-section-instantly-loved-text">
-              INSTANTLY LOVED
+              SUPERB
             </span>{" "}
             software.
           </span>

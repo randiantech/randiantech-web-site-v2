@@ -34,7 +34,7 @@ const HeaderWrapperMobile = styled.div`
   position: fixed;
   top: 0;
   z-index: 9999;
-  max-width: 100vw;
+  width: 100%;
   height: 100px;
   align-items: center;
   text-align: center;

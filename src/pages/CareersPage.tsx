@@ -27,7 +27,7 @@ export const Label = styled.div`
   padding: ${dist.defItemDistance};
   border-radius: 50px;
   border-bottom-left-radius: 0;
-  cursor: pointer;
+  cursor: none;
   z-index: 1;
 
   .label {

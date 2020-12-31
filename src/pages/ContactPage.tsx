@@ -7,7 +7,7 @@ import { AppContext } from "../AppContext";
 
 const headerImages = [
   {
-    original: "/images/contact-us-6.png",
+    original: "/images/contact-us-4.png",
   },
 ];
 
