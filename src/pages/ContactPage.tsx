@@ -1,8 +1,8 @@
 import React, { useEffect, useContext } from "react";
 import styled from "styled-components";
 import { color, dist } from "../theme";
-import { ContactUsSection } from "../sections/ContactUsSection/ContactUsSection";
-import { ImageGallerySection } from "../sections/ImageGallerySection";
+import ContactUs from "../sections/ContactUs";
+import ImageGallery from "../sections/ImageGallery";
 import { AppContext } from "../AppContext";
 
 const headerImages = [
@@ -58,9 +58,9 @@ export const ContactPage = React.memo(() => {
             <div className="label">We are Ready.</div>
           </Label>
         )}
-        <ImageGallerySection images={headerImages} />
+        <ImageGallery images={headerImages} />
       </Image>
-      <ContactUsSection isMobile={false} />
+      <ContactUs isMobile={false} />
     </div>
   );
 });

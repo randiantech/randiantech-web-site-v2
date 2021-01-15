@@ -1,10 +1,10 @@
 import React, { useContext, useEffect } from "react";
-import FrontImageSection from "../sections/FrontImageSection/FrontImageSection";
-import ServicesSection from "../sections/ServicesSection/ServicesSection";
-import { BrandSection } from "../sections/BrandSection";
-import { BlogSection } from "../sections/BlogSection";
-import { ContactUsSection } from "../sections/ContactUsSection/ContactUsSection";
-import TechnologiesSection from "../sections/TechnologiesSection/TechnologiesSection";
+import FrontImageSection from "../sections/FrontImage";
+import ServicesSection from "../sections/Services";
+import Brand from "../sections/Brand";
+import Blog from "../sections/Blog";
+import ContactUs from "../sections/ContactUs";
+import TechnologiesSection from "../sections/Technologies";
 import { AppContext } from "../AppContext";
 
 export const HomePage = React.memo(() => {
@@ -20,10 +20,10 @@ export const HomePage = React.memo(() => {
     <>
       <FrontImageSection isMobile={isMobile} />
       <ServicesSection isMobile={isMobile} />
-      <BrandSection />
+      <Brand />
       <TechnologiesSection isMobile={isMobile} />
-      {!isMobile && <BlogSection />}
-      <ContactUsSection isMobile={isMobile} />
+      {!isMobile && <Blog />}
+      <ContactUs isMobile={isMobile} />
     </>
   );
 });

@@ -1,7 +1,7 @@
 /*eslint-disable jsx-a11y/alt-text*/
 
 import React from "react";
-import { Logo } from "../../components/Logo";
+import { Logo } from "../components/Logo";
 import "./FrontImageSection.css";
 
 
@@ -9,7 +9,7 @@ interface FrontImageProps {
   isMobile: boolean;
 }
 
-export default class FrontImageSection extends React.Component<
+class FrontImage extends React.Component<
   FrontImageProps,
   any
 > {
@@ -67,3 +67,5 @@ export default class FrontImageSection extends React.Component<
     );
   }
 }
+
+export default FrontImage;

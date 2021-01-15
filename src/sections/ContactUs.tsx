@@ -1,14 +1,14 @@
 import React from "react";
-import { isMobileWidth } from "../../utils";
-import { CONTACT_US_ITEMS } from "../../data";
+import { isMobileWidth } from "../utils";
+import { CONTACT_US_ITEMS } from "../data";
 import "./ContactUsSection.css";
 import ReactLoading from "react-loading";
-import { SimpleButton } from "../../components/SimpleButton";
+import { SimpleButton } from "../components/SimpleButton";
 
 const itemErrorKey = (id: string) =>
   `error${id.charAt(0).toUpperCase() + id.substring(1)}`;
 
-export class ContactUsSection extends React.Component<any, any> {
+class ContactUs extends React.Component<any, any> {
   constructor(props: any) {
     super(props);
     let initialState: any = {
@@ -231,3 +231,5 @@ export class ContactUsSection extends React.Component<any, any> {
     );
   }
 }
+
+export default ContactUs;

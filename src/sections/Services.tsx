@@ -2,9 +2,9 @@
 
 import React from "react";
 import styled from "styled-components";
-import { SimpleItem } from "../../components/SimpleItem";
-import { isMobileWidth } from "../../utils";
-import { SERVICES_ITEMS } from "../../data";
+import { SimpleItem } from "../components/SimpleItem";
+import { isMobileWidth } from "../utils";
+import { SERVICES_ITEMS } from "../data";
 
 const WrapperDesktop = styled.div`
   border-top: 2px solid var(--main-app-color);
@@ -67,7 +67,7 @@ interface ServicesSectionState {
   isMobile: boolean;
 }
 
-export default class ServicesSection extends React.Component<
+export default class Services extends React.Component<
   any,
   ServicesSectionState
 > {

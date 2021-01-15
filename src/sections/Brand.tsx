@@ -1,7 +1,7 @@
 import React from "react";
-import { ImageGallery } from "../../components/ImageGallery";
+import { ImageGallery } from "../components/ImageGallery";
 
-export const BrandSection = React.memo((isMobile) => {
+const Brand = React.memo((isMobile) => {
   return (
     <ImageGallery
       items={[1, 2, 3, 5, 10]}
@@ -14,3 +14,5 @@ export const BrandSection = React.memo((isMobile) => {
     />
   );
 });
+
+export default Brand;

@@ -1,4 +1,4 @@
 import React from "react";
-import AboutSection from "../sections/AboutSection";
+import About from "../sections/About";
 
-export const AboutPage = React.memo(() => <AboutSection />);
+export const AboutPage = React.memo(() => <About />);

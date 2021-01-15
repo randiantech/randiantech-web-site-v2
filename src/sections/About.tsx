@@ -1,10 +1,10 @@
 import React, { useEffect, useContext } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import { color, size, dist } from "../../theme";
-import { ABOUT_PAGE } from "../../data";
-import { ImageGallerySection } from "../ImageGallerySection";
-import { AppContext } from "../../AppContext";
+import { color, size, dist } from "../theme";
+import { ABOUT_PAGE } from "../data";
+import ImageGallery from "./ImageGallery";
+import { AppContext } from "../AppContext";
 
 const headerImages = [
   {
@@ -170,7 +170,7 @@ export const Footer = styled.div`
   font-size: ${size.defFontSize};
 `;
 
-const AboutSection = () => {
+const About = () => {
   const { header, body } = ABOUT_PAGE;
   const { state } = useContext(AppContext);
   const { isMobile } = state;
@@ -189,7 +189,7 @@ const AboutSection = () => {
 
   return (
     <>
-      <ImageGallerySection images={headerImages} />
+      <ImageGallery images={headerImages} />
       <Wrapper>
         <Header>
           <div className="title">
@@ -199,7 +199,7 @@ const AboutSection = () => {
           <div className="description">
             {isMobile && (
               <div className="desc-img-1">
-                <ImageGallerySection images={descImages} />
+                <ImageGallery images={descImages} />
               </div>
             )}
             <div className="text">
@@ -218,7 +218,7 @@ const AboutSection = () => {
             </div>
             {!isMobile && (
               <div className="desc-img-1">
-                <ImageGallerySection images={descImages} />
+                <ImageGallery images={descImages} />
               </div>
             )}
           </div>
@@ -231,7 +231,7 @@ const AboutSection = () => {
           <div className="description">
             {isMobile && (
               <div className="desc-img-1">
-                <ImageGallerySection images={descBodyImages} />
+                <ImageGallery images={descBodyImages} />
               </div>
             )}
             <div className="text">
@@ -242,18 +242,18 @@ const AboutSection = () => {
             </div>
             {!isMobile && (
               <div className="desc-img-1">
-                <ImageGallerySection images={descBodyImages} />
+                <ImageGallery images={descBodyImages} />
               </div>
             )}
           </div>
         </Header>
         <Footer>
           <Label to="/contact">Contact Us</Label>
-          {!isMobile ? <ImageGallerySection images={bottomImages} /> : <span />}
+          {!isMobile ? <ImageGallery images={bottomImages} /> : <span />}
         </Footer>
       </Wrapper>
     </>
   );
 };
 
-export default AboutSection;
+export default About;

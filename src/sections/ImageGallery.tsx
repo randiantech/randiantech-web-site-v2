@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import "react-image-gallery/styles/css/image-gallery.css";
-import ImageGallery from "react-image-gallery";
+import ReactImageGallery from "react-image-gallery";
 
 const Wrapper = styled.div`
   padding: ${(props: any) => (props.padding ? props.padding : "50px")};
@@ -11,10 +11,10 @@ const Wrapper = styled.div`
   padding-right: 0;
 `;
 
-export const ImageGallerySection = React.memo((props: any) => {
+const ImageGallery = React.memo((props: any) => {
   return (
     <Wrapper {...props}>
-      <ImageGallery
+      <ReactImageGallery
         items={props.images}
         showFullscreenButton={false}
         showPlayButton={false}
@@ -26,3 +26,6 @@ export const ImageGallerySection = React.memo((props: any) => {
     </Wrapper>
   );
 });
+
+export default ImageGallery;
+

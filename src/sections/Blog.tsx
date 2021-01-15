@@ -2,11 +2,11 @@
 
 import React, { useContext } from "react";
 import styled from "styled-components";
-import { BLOG_ITEMS } from "../../data";
-import { ArticleCard } from "../../components/ArticleCard";
-import { TabulatedItem } from "../../components/TabulatedItem";
-import { AppContext } from "../../AppContext";
-import { color, dist } from "../../theme";
+import { BLOG_ITEMS } from "../data";
+import { ArticleCard } from "../components/ArticleCard";
+import { TabulatedItem } from "../components/TabulatedItem";
+import { AppContext } from "../AppContext";
+import { color, dist } from "../theme";
 
 const Wrapper = styled.div`
   display: grid;
@@ -21,7 +21,7 @@ const Wrapper = styled.div`
   border-right: none;
 `;
 
-export const BlogSection = React.memo(() => {
+const Blog = React.memo(() => {
   const { state } = useContext(AppContext);
 
   return (
@@ -36,3 +36,5 @@ export const BlogSection = React.memo(() => {
     </Wrapper>
   );
 });
+
+export default Blog;

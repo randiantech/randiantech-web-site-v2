@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
 import { color, dist } from "../theme";
-import { ImageGallerySection } from "../sections/ImageGallerySection";
+import ImageGallery from "../sections/ImageGallery";
 import { TabulatedItem } from "../components/TabulatedItem";
 import { ArticleCard } from "../components/ArticleCard";
 import { TEAM_MEMBERS_LEADERSHIP, TEAM_MEMBERS_STAFF } from "../data";
@@ -80,7 +80,7 @@ export const TeamPage = React.memo(() => {
         <Label>
           <div className="label">Meet The RT Team.</div>
         </Label>
-        <ImageGallerySection images={headerImages} />
+        <ImageGallery images={headerImages} />
       </Image>
       <Wrapper>
         {TEAM_MEMBERS_LEADERSHIP.map((i, idx) =>

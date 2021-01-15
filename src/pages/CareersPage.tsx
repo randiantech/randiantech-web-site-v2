@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
 import { color, dist } from "../theme";
-import { ImageGallerySection } from "../sections/ImageGallerySection";
+import ImageGallery from "../sections/ImageGallery";
 import { TabulatedItem } from "../components/TabulatedItem";
 import { ArticleCard } from "../components/ArticleCard";
 import { OPEN_POSITIONS_ITEMS } from "../data";
@@ -72,7 +72,7 @@ export const CareersPage = React.memo(() => {
         <Label>
           <div className="label">Come work with us!</div>
         </Label>
-        <ImageGallerySection images={headerImages} />
+        <ImageGallery images={headerImages} />
       </Image>
 
       <WrapperStaff

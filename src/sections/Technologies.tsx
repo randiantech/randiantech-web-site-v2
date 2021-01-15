@@ -1,8 +1,8 @@
 import React from "react";
-import { ImageGallery } from "../../components/ImageGallery";
-import { isMobileWidth } from "../../utils";
+import { ImageGallery } from "../components/ImageGallery";
+import { isMobileWidth } from "../utils";
 
-export default class TechnologiesSection extends React.Component<any, any> {
+class Technologies extends React.Component<any, any> {
   constructor(props: any) {
     super(props);
     this.state = {
@@ -52,3 +52,5 @@ export default class TechnologiesSection extends React.Component<any, any> {
     );
   }
 }
+
+export default Technologies;
