@@ -1,10 +1,67 @@
 /*eslint-disable jsx-a11y/alt-text*/
 
 import React from "react";
-import { Link } from "react-router-dom";
+import styled from "styled-components";
+import { SimpleItem } from "../../components/SimpleItem";
 import { isMobileWidth } from "../../utils";
 import { SERVICES_ITEMS } from "../../data";
-import "./ServicesSection.css";
+
+const WrapperDesktop = styled.div`
+  border-top: 2px solid var(--main-app-color);
+  border-left: 10px solid var(--main-app-color);
+
+  .container {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    padding-top: 50px;
+
+    .left {
+      display: grid;
+      height: 100%;
+      background: var(--main-sec-app-color);
+      color: var(--main-app-color);
+      font-size: 35px;
+      transition: transform 100ms ease-in-out;
+      transform-origin: center;
+      font-weight: bolder;
+    }
+
+    .right {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-row-gap: 20px;
+      grid-template-rows: 1fr 1fr;
+      padding-left: 100px;
+    }
+  }
+`;
+
+const WrapperMobile = styled.div`
+  border-top: 2px solid var(--main-app-color);
+
+  .container {
+    position: relative;
+    display: grid;
+    grid-template-rows: 1fr;
+
+    .left {
+      color: var(--main-app-deg-color);
+      font-size: 35px;
+      transform-origin: center;
+      background: var(--main-app-color);
+      font-weight: bolder;
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+
+    .right {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-row-gap: 20px;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+  }
+`;
 
 interface ServicesSectionState {
   isMobile: boolean;
@@ -32,41 +89,27 @@ export default class ServicesSection extends React.Component<
 
   render() {
     const { isMobile }: ServicesSectionState = this.state;
+    const Wrapper = isMobile ? WrapperMobile : WrapperDesktop;
     return (
-      <div className={`${isMobile ? "services-section-wrapper-mobile" : "services-section-wrapper"}`}>
-        <div
-          className={`services-section-container-${
-            isMobile ? "mobile" : "desktop"
-          } rt-centered-txt`}
-        >
+      <Wrapper>
+        <div className="container rt-centered-txt">
+          <div className="left rt-rounded rt-centered-txt">Our Services</div>
           <div
-            className={`services-section-container-left-${
-              isMobile
-                ? "mobile"
-                : "desktop rt-rounded rt-centered-txt"
-            }`}
-          >
-            Our Services
-          </div>
-          <div
-            className={`services-section-container-right-${
-              isMobile
-                ? "mobile rt-std-top-padding rt-std-bottom-padding"
-                : "desktop"
+            className={`right ${
+              isMobile ? "rt-std-top-padding rt-std-bottom-padding" : ""
             }`}
           >
             {SERVICES_ITEMS.map((item) => (
-              <div
+              <SimpleItem
                 key={item.text}
-                className="services-section-item"
-              >
-                <img className="services-section-item-img" src={item.img} />
-                <div className="services-section-item-text">{item.text}</div>
-              </div>
+                img={item.img}
+                txt={item.text}
+                onClick={e => e}
+              ></SimpleItem>
             ))}
           </div>
         </div>
-      </div>
+      </Wrapper>
     );
   }
 }

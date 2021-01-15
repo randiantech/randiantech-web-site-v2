@@ -4,6 +4,7 @@ import React from "react";
 import { Logo } from "../../components/Logo";
 import "./FrontImageSection.css";
 
+
 interface FrontImageProps {
   isMobile: boolean;
 }
