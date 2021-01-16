@@ -7,7 +7,7 @@ import ContactUs from "../sections/ContactUs";
 import TechnologiesSection from "../sections/Technologies";
 import { AppContext } from "../AppContext";
 
-export const HomePage = React.memo(() => {
+const Home = React.memo(() => {
   const { state } = useContext(AppContext);
   const { isMobile } = state;
 
@@ -27,3 +27,5 @@ export const HomePage = React.memo(() => {
     </>
   );
 });
+
+export default Home;

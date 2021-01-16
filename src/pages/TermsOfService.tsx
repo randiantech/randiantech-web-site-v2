@@ -13,7 +13,7 @@ const WrapperText = styled.div`
   width: 90%;
 `;
 
-export const TermsOfServicePage = React.memo(() => {
+const TermsOfService = React.memo(() => {
   useEffect(() => {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
@@ -551,3 +551,5 @@ export const TermsOfServicePage = React.memo(() => {
     </Wrapper>
   );
 });
+
+export default TermsOfService;

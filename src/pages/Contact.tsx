@@ -41,7 +41,7 @@ export const Label = styled.div`
   }
 `;
 
-export const ContactPage = React.memo(() => {
+const Contact = React.memo(() => {
   useEffect(() => {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
@@ -64,3 +64,5 @@ export const ContactPage = React.memo(() => {
     </div>
   );
 });
+
+export default Contact;

@@ -1,16 +1,16 @@
 import React, { useEffect } from "react";
 import { Route, Switch } from "react-router-dom";
 import App from "./App";
-import { HomePage } from "./pages/HomePage";
-import { AboutPage } from "./pages/AboutPage";
-import { ServicesPage } from "./pages/ServicesPage";
-import { TeamPage } from "./pages/TeamPage";
-import { CareersPage } from "./pages/CareersPage";
-import { ClientsPage } from "./pages/ClientsPage";
-import { ContactPage } from "./pages/ContactPage";
-import { PrivacyPage } from "./pages/PrivacyPage";
-import { TermsOfServicePage } from "./pages/TermsOfServicePage";
-import { RTSPage } from "./pages/RTSPage";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Services from "./pages/Services";
+import Team from "./pages/Team";
+import Careers from "./pages/Careers";
+import Clients from "./pages/Clients";
+import Contact from "./pages/Contact";
+import Privacy from "./pages/Privacy";
+import TermsOfService from "./pages/TermsOfService";
+import RTS from "./pages/RTS";
 import { AppContextProvider } from "./AppContext";
 
 const Routes = () => {
@@ -23,16 +23,16 @@ const Routes = () => {
     <AppContextProvider>
       <App>
         <Switch>
-          <Route exact path="/" component={HomePage} />
-          <Route exact path="/privacy" component={PrivacyPage} />
-          <Route exact path="/tos" component={TermsOfServicePage} />
-          <Route exact path="/about" component={AboutPage} />
-          <Route exact path="/services" component={ServicesPage} />
-          <Route exact path="/team" component={TeamPage} />
-          <Route exact path="/careers" component={CareersPage} />
-          <Route exact path="/clients" component={ClientsPage} />
-          <Route exact path="/contact" component={ContactPage} />
-          <Route exact path="/rts/login" component={RTSPage} />
+          <Route exact path="/" component={Home} />
+          <Route exact path="/privacy" component={Privacy} />
+          <Route exact path="/tos" component={TermsOfService} />
+          <Route exact path="/about" component={About} />
+          <Route exact path="/services" component={Services} />
+          <Route exact path="/team" component={Team} />
+          <Route exact path="/careers" component={Careers} />
+          <Route exact path="/clients" component={Clients} />
+          <Route exact path="/contact" component={Contact} />
+          <Route exact path="/rts/login" component={RTS} />
         </Switch>
       </App>
     </AppContextProvider>

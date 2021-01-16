@@ -4,11 +4,11 @@ import { color, dist } from "../theme";
 import ImageGallery from "../sections/ImageGallery";
 import { TabulatedItem } from "../components/TabulatedItem";
 import { ArticleCard } from "../components/ArticleCard";
-import { OPEN_POSITIONS_ITEMS } from "../data";
+import { TEAM_MEMBERS_LEADERSHIP, TEAM_MEMBERS_STAFF } from "../data";
 
 const headerImages = [
   {
-    original: "/images/hiring3.png",
+    original: "/images/team1.png",
   },
 ];
 
@@ -27,7 +27,7 @@ export const Label = styled.div`
   padding: ${dist.defItemDistance};
   border-radius: 50px;
   border-bottom-left-radius: 0;
-  cursor: none;
+  cursor: pointer;
   z-index: 1;
 
   .label {
@@ -40,6 +40,19 @@ export const Label = styled.div`
     box-shadow: 20px 20px 60px var(--main-app-color),
       -20px -20px 60px var(--main-app-color);
   }
+`;
+
+const Wrapper = styled.div`
+  display: grid;
+  grid-template-columns: ${(props: any) =>
+    `${props.isMoble ? "1fr" : "1fr 1fr 1fr"}`};
+  row-gap: ${dist.defItemDistance};
+  padding-top: ${dist.defItemDistance};
+  padding-right: ${dist.defItemDistance};
+  border: 10px solid ${color.defAppColor};
+  border-bottom: none;
+  border-top: none;
+  border-right: none;
 `;
 
 const WrapperStaff = styled.div`
@@ -55,39 +68,46 @@ const WrapperStaff = styled.div`
   border-right: none;
 `;
 
-const sendEmail = () => {
-  window.location.href =
-    "mailto:info@randiantech.com?subject=I'm interested to join the team!";
-};
-
-export const CareersPage = React.memo(() => {
+const Team = React.memo(() => {
   useEffect(() => {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
   }, []);
-
+  
   return (
     <div>
       <Image>
         <Label>
-          <div className="label">Come work with us!</div>
+          <div className="label">Meet The RT Team.</div>
         </Label>
         <ImageGallery images={headerImages} />
       </Image>
-
-      <WrapperStaff
-        onClick={() => {
-          return sendEmail();
-        }}
-      >
-        {OPEN_POSITIONS_ITEMS.map((i, idx) =>
+      <Wrapper>
+        {TEAM_MEMBERS_LEADERSHIP.map((i, idx) =>
           idx === 0 ? (
-            <TabulatedItem text="Open Positions" height="95%" />
+            <TabulatedItem text="Leadership" height="95%" />
           ) : (
             <ArticleCard
+              url={i.url}
               img={i.img}
               desc={i.desc}
               title={i.title}
+              position={i.position}
+            />
+          )
+        )}
+      </Wrapper>
+      <WrapperStaff>
+        {TEAM_MEMBERS_STAFF.map((i, idx) =>
+          idx === 0 ? (
+            <TabulatedItem text="Team" height="95%" />
+          ) : (
+            <ArticleCard
+              url={i.url}
+              img={i.img}
+              desc={i.desc}
+              title={i.title}
+              position={i.position}
               detailsAlign="left"
             />
           )
@@ -96,3 +116,5 @@ export const CareersPage = React.memo(() => {
     </div>
   );
 });
+
+export default Team;

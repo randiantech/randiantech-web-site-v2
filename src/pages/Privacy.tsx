@@ -13,7 +13,7 @@ const WrapperText = styled.div`
   width: 90%;
 `;
 
-export const PrivacyPage = React.memo(() => (
+const Privacy = React.memo(() => (
   <Wrapper>
     <h1>Privacy Policy</h1>
     <p>Last updated: December 08, 2020</p>
@@ -495,3 +495,5 @@ export const PrivacyPage = React.memo(() => (
     </WrapperText>
   </Wrapper>
 ));
+
+export default Privacy;

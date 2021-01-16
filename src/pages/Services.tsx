@@ -1,7 +1,9 @@
 import React from "react";
 
-export const ServicesPage = React.memo(() => (
+const Services = React.memo(() => (
   <div>
     <div>Services</div>
   </div>
 ));
+
+export default Services;
