@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import { size, dist } from "../../theme";
+import { size } from "../../theme";
 import { FOOTER_ITEMS, SOCIAL_NETWORKS } from "../../data";
 import { Logo } from "../Logo";
 import { AppContext } from "../../AppContext";
@@ -18,7 +18,7 @@ const Wrapper = styled.div`
 
   .left-pane-container {
     display: grid;
-    padding: ${dist.defItemDistance};
+    padding: var(--main-item-distance);
     grid-template-rows: 100px 1fr;
 
     .list {

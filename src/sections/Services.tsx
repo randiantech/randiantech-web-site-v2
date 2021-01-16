@@ -5,7 +5,6 @@ import styled from "styled-components";
 import { SimpleItem } from "../components/SimpleItem";
 import { isMobileWidth } from "../utils";
 import { SERVICES_ITEMS } from "../data";
-import {dist} from "../theme";
 
 const WrapperDesktop = styled.div`
   border-top: 2px solid var(--main-app-color);
@@ -14,7 +13,7 @@ const WrapperDesktop = styled.div`
   .container {
     display: grid;
     grid-template-columns: 300px 1fr;
-    padding-top: ${dist.defItemDistance};
+    padding-top: var(--main-item-distance);
 
     .left {
       display: grid;

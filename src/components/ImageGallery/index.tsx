@@ -2,7 +2,6 @@ import React, { useContext } from "react";
 import styled from "styled-components";
 import { AppContext } from "../../AppContext";
 import { Styleable } from "../../utils";
-import { dist } from "../../theme";
 
 interface ImageGalleryProps extends Styleable {
   items?: any;
@@ -19,12 +18,12 @@ interface ImageGalleryProps extends Styleable {
 
 const WrapperDesktop = styled.div`
   display: grid;
-  grid-template-columns: 300px 1fr ${dist.defItemDistance};
+  grid-template-columns: 300px 1fr var(--main-item-distance);
   border: 10px solid var(--main-app-color);
   border-bottom: none;
   border-top: none;
   border-right: none;
-  padding-top: ${dist.defItemDistance};
+  padding-top: var(--main-item-distance);
 
   .left-pane {
     display: grid;
@@ -80,7 +79,7 @@ const WrapperMobile = styled.div`
   .right-pane {
     display: grid;
     grid-row-gap: 20px;
-    padding-top: ${dist.defItemDistance};
+    padding-top: var(--main-item-distance);
 
     .item {
       display: grid;

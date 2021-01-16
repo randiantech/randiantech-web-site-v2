@@ -1,7 +1,7 @@
 import React, { useEffect, useContext } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import { size, dist } from "../theme";
+import { size } from "../theme";
 import { ABOUT_PAGE } from "../data";
 import ImageGallery from "./ImageGallery";
 import { AppContext } from "../AppContext";
@@ -53,7 +53,7 @@ export const Wrapper = styled.div`
 export const HeaderDesktop = styled.div`
   display: grid;
   grid-template-rows: fit-min-content fit-min-content fit-min-content;
-  padding: ${dist.defItemDistance};
+  padding: var(--main-item-distance);
   font-size: ${size.defFontSize};
 
   .title {
@@ -93,7 +93,7 @@ export const HeaderDesktop = styled.div`
 export const HeaderMobile = styled.div`
   display: grid;
   grid-template-rows: fit-min-content fit-min-content fit-min-content;
-  padding: ${dist.defItemDistance};
+  padding: var(--main-item-distance);
   font-size: ${size.defFontSize};
 
   .title {
@@ -143,11 +143,11 @@ export const Label = styled(Link)`
   position: relative;
   margin-left: auto;
   width: 300px;
-  margin-left: ${dist.defItemDistance};
+  margin-left: var(--main-item-distance);
   color: var(--main-deg-app-color);
   font-weight: bolder;
   background: var(--main-app-color);
-  padding: ${dist.defItemDistance};
+  padding: var(--main-item-distance);
   border-radius: 50px;
   border-bottom-left-radius: 0;
   cursor: pointer;
@@ -166,7 +166,7 @@ export const Label = styled(Link)`
 
 export const Footer = styled.div`
   padding: 0;
-  padding-top: ${dist.defItemDistance};
+  padding-top: var(--main-item-distance);
   font-size: ${size.defFontSize};
 `;
 

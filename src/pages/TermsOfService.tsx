@@ -1,11 +1,10 @@
 import React, {useEffect} from "react";
 import styled from "styled-components";
-import { dist } from "../theme";
 
 const Wrapper = styled.div`
   display: grid;
   width: 100%;
-  padding: ${dist.defItemDistance};
+  padding: var(--main-item-distance);
   background: white;
 `;
 

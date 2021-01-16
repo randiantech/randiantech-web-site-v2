@@ -6,15 +6,14 @@ import { BLOG_ITEMS } from "../data";
 import { ArticleCard } from "../components/ArticleCard";
 import { TabulatedItem } from "../components/TabulatedItem";
 import { AppContext } from "../AppContext";
-import { dist } from "../theme";
 
 const Wrapper = styled.div`
   display: grid;
   grid-template-columns: ${(props: any) =>
     `${props.isMoble ? "1fr" : "1fr 1fr 1fr"}`};
-  row-gap: ${dist.defItemDistance};
-  padding-top: ${dist.defItemDistance};
-  padding-right: ${dist.defItemDistance};
+  row-gap: var(--main-item-distance);
+  padding-top: var(--main-item-distance);
+  padding-right: var(--main-item-distance);
   border: 10px solid var(--main-app-color);
   border-bottom: none;
   border-top: none;

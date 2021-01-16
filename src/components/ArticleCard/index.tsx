@@ -1,12 +1,12 @@
 import React from "react";
 import styled from "styled-components";
-import { size, dist } from "../../theme";
+import { size } from "../../theme";
 import { override, Styleable } from "../../utils";
 
 export const Wrapper = styled.a`
   display: grid;
   grid-template-rows: 1fr 150px;
-  padding-left: ${dist.defItemDistance};
+  padding-left: var(--main-item-distance);
   text-align: center;
   cursor: pointer;
   text-decoration: none;

@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
-import { dist } from "../theme";
 import ImageGallery from "../sections/ImageGallery";
 import { TabulatedItem } from "../components/TabulatedItem";
 import { ArticleCard } from "../components/ArticleCard";
@@ -24,7 +23,7 @@ export const Label = styled.div`
   color: var(--main-deg-app-color);
   font-weight: bolder;
   background: var(--main-app-color);
-  padding: ${dist.defItemDistance};
+  padding: var(--main-item-distance);
   border-radius: 50px;
   border-bottom-left-radius: 0;
   cursor: none;
@@ -46,9 +45,9 @@ const WrapperStaff = styled.div`
   display: grid;
   grid-template-columns: ${(props: any) =>
     `${props.isMoble ? "1.5fr" : "1.5fr 1.5fr 1.5fr 1.5fr"}`};
-  row-gap: ${dist.defItemDistance};
-  padding-top: ${dist.defItemDistance};
-  padding-right: ${dist.defItemDistance};
+  row-gap: var(--main-item-distance);
+  padding-top: var(--main-item-distance);
+  padding-right: var(--main-item-distance);
   border: 10px solid var(--main-app-color);
   border-bottom: none;
   border-top: none;

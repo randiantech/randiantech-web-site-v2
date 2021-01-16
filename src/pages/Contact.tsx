@@ -1,6 +1,5 @@
 import React, { useEffect, useContext } from "react";
 import styled from "styled-components";
-import { dist } from "../theme";
 import ContactUs from "../sections/ContactUs";
 import ImageGallery from "../sections/ImageGallery";
 import { AppContext } from "../AppContext";
@@ -23,7 +22,7 @@ export const Label = styled.div`
   color: var(--main-deg-app-color);
   font-weight: bolder;
   background: var(--main-app-color);
-  padding: ${dist.defItemDistance};
+  padding: var(--main-item-distance);
   border-radius: 50px;
   border-bottom-left-radius: 0;
   cursor: pointer;
