@@ -8,7 +8,7 @@ export const Wrapper = styled.div`
   display: grid;
   cursor: pointer;
   font-weight: bolder;
-  height: var(--main-item-distance);
+  height: 50px;
   align-items: center;
   width: fit-content;
   color: var(--main-app-color);

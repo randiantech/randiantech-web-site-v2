@@ -13,12 +13,11 @@ const Wrapper = styled.div`
   align-items: center;
   background-color: var(--main-bg-color);
   border-top: 1px solid var(--main-app-color);
-  border-left: 10px solid var(--main-app-color);
-  border-right: 10px solid var(--main-app-color);
 
   .left-pane-container {
     display: grid;
-    padding: var(--main-item-distance);
+    padding-left: var(--main-item-distance);
+    padding-right: var(--main-item-distance);
     grid-template-rows: 100px 1fr;
 
     .list {
@@ -29,7 +28,7 @@ const Wrapper = styled.div`
 
       .item {
         text-decoration: none;
-        color: white;
+        color: var(--main-app-color);
         font-size: ${size.defFontSize};
         font-weight: bold;
 
@@ -111,7 +110,7 @@ const Footer = () => {
           })}
         </div>
         <div className="disclaimer">
-          2020 Copyright Randiantech LLC. All rights reserved.
+          2021 Copyright Global Understanding IT LLC. All rights reserved.
         </div>
       </div>
     </Wrapper>

@@ -53,7 +53,7 @@ export const Wrapper = styled.div`
 export const HeaderDesktop = styled.div`
   display: grid;
   grid-template-rows: fit-min-content fit-min-content fit-min-content;
-  padding: var(--main-item-distance);
+  padding: 50px;
   font-size: ${size.defFontSize};
 
   .title {
