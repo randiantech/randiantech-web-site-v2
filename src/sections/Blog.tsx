@@ -6,7 +6,7 @@ import { BLOG_ITEMS } from "../data";
 import { ArticleCard } from "../components/ArticleCard";
 import { TabulatedItem } from "../components/TabulatedItem";
 import { AppContext } from "../AppContext";
-import { color, dist } from "../theme";
+import { dist } from "../theme";
 
 const Wrapper = styled.div`
   display: grid;
@@ -15,7 +15,7 @@ const Wrapper = styled.div`
   row-gap: ${dist.defItemDistance};
   padding-top: ${dist.defItemDistance};
   padding-right: ${dist.defItemDistance};
-  border: 10px solid ${color.defAppColor};
+  border: 10px solid var(--main-app-color);
   border-bottom: none;
   border-top: none;
   border-right: none;

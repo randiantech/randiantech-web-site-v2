@@ -1,6 +1,6 @@
 import React, { useEffect, useContext } from "react";
 import styled from "styled-components";
-import { color, dist } from "../theme";
+import { dist } from "../theme";
 import ContactUs from "../sections/ContactUs";
 import ImageGallery from "../sections/ImageGallery";
 import { AppContext } from "../AppContext";
@@ -12,7 +12,7 @@ const headerImages = [
 ];
 
 const Image = styled.div`
-  border-bottom: 1px solid ${color.defAppColor};
+  border-bottom: 1px solid var(--main-app-color);
 `;
 
 export const Label = styled.div`

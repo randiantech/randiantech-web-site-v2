@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { DESKTOP_MENU_ITEMS } from "../../data";
 import { Styleable } from "../../utils";
-import { size, color, dist } from "../../theme";
+import { size } from "../../theme";
 
 interface HeaderDesktopProps extends Styleable {
   hoveredItem: any;

@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { size, color, dist } from "../../theme";
+import { size, dist } from "../../theme";
 import { override } from "../../utils";
 import { Clickable, Styleable } from "../../utils";
 
@@ -11,13 +11,13 @@ export const Wrapper = styled.div`
   height: ${dist.defItemDistance};
   align-items: center;
   width: fit-content;
-  color: ${color.defAppColor};
+  color: var(--main-app-color);
   padding-left: ${dist.defTextPaddingLeft};
   padding-right: ${dist.defTextPaddingRight};
   border-top-right-radius: ${size.defRadius};
   border-bottom-right-radius: ${size.defRadius};
   border: ${size.defBorder};
-  background-color: ${color.defSecAppColor};
+  background-color: var(--main-sec-app-color);
   font-size: ${size.defFontSize};
   ${(props: any) => override(props)};
 `;

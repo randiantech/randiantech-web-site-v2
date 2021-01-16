@@ -1,7 +1,7 @@
 import React, { useEffect, useContext } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import { color, size, dist } from "../theme";
+import { size, dist } from "../theme";
 import { ABOUT_PAGE } from "../data";
 import ImageGallery from "./ImageGallery";
 import { AppContext } from "../AppContext";
@@ -37,7 +37,7 @@ export const Wrapper = styled.div`
     var(--main-deg-app-color) 20%,
     grey
   );
-  border-left: 10px solid ${color.defAppColor};
+  border-left: 10px solid var(--main-app-color);
   color: white;
 
   .desc-img-1 {
@@ -46,7 +46,7 @@ export const Wrapper = styled.div`
   }
 
   .underline {
-    border-bottom: 2px solid ${color.defAppColor};
+    border-bottom: 2px solid var(--main-app-color);
   }
 `;
 
@@ -59,7 +59,7 @@ export const HeaderDesktop = styled.div`
   .title {
     font-size: ${size.extraFontSize};
     font-weight: bolder;
-    border-bottom: 10px solid ${color.defAppColor};
+    border-bottom: 10px solid var(--main-app-color);
     width: fit-content;
   }
 
@@ -99,7 +99,7 @@ export const HeaderMobile = styled.div`
   .title {
     font-size: ${size.extraFontSize};
     font-weight: bolder;
-    border-bottom: 10px solid ${color.defAppColor};
+    border-bottom: 10px solid var(--main-app-color);
     margin-bottom: 25px;
     width: fit-content;
     text-align: center;

@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { size, color } from "../../theme";
+import { size } from "../../theme";
 import { Styleable, override } from "../../utils";
 
 export const WrapperDesktop = styled.div`
@@ -8,8 +8,8 @@ export const WrapperDesktop = styled.div`
   text-align: center;
   align-items: center;
   font-size: 40px;
-  background-color: ${color.defSecAppColor};
-  color: ${color.defAppColor};
+  background-color: var(--main-sec-app-color);
+  color: var(--main-app-color);
   font-weight: bolder;
   ${(props: any) => override(props)};
 `;

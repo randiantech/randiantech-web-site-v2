@@ -22,21 +22,21 @@ export const Wrapper = styled.a`
 
     .title {
       display: grid;
-      color: #110819;
+      color: var(--main-sec-app-color);
       font-weight: bolder;
       font-size: ${size.titleFontSize};
     }
 
     .position {
       display: grid;
-      color: #110819;
+      color: var(--main-sec-app-color);
       font-weight: bolder;
       font-size: 20px;
       padding-bottom: 10px;
     }
 
     .desc {
-      color: #110819;
+      color: var(--main-sec-app-color);
       overflow: hidden;
       text-overflow: ellipsis;
       overflow: hidden;

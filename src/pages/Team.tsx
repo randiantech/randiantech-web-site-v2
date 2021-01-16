@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
-import { color, dist } from "../theme";
+import { dist } from "../theme";
 import ImageGallery from "../sections/ImageGallery";
 import { TabulatedItem } from "../components/TabulatedItem";
 import { ArticleCard } from "../components/ArticleCard";
@@ -13,7 +13,7 @@ const headerImages = [
 ];
 
 const Image = styled.div`
-  border-bottom: 1px solid ${color.defAppColor};
+  border-bottom: 1px solid var(--main-app-color);
 `;
 
 export const Label = styled.div`
@@ -49,7 +49,7 @@ const Wrapper = styled.div`
   row-gap: ${dist.defItemDistance};
   padding-top: ${dist.defItemDistance};
   padding-right: ${dist.defItemDistance};
-  border: 10px solid ${color.defAppColor};
+  border: 10px solid var(--main-app-color);
   border-bottom: none;
   border-top: none;
   border-right: none;
@@ -62,7 +62,7 @@ const WrapperStaff = styled.div`
   row-gap: ${dist.defItemDistance};
   padding-top: ${dist.defItemDistance};
   padding-right: ${dist.defItemDistance};
-  border: 10px solid ${color.defAppColor};
+  border: 10px solid var(--main-app-color);
   border-bottom: none;
   border-top: none;
   border-right: none;

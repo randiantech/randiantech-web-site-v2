@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import { size, color, dist } from "../../theme";
+import { size, dist } from "../../theme";
 import { FOOTER_ITEMS, SOCIAL_NETWORKS } from "../../data";
 import { Logo } from "../Logo";
 import { AppContext } from "../../AppContext";
@@ -34,7 +34,7 @@ const Wrapper = styled.div`
         font-weight: bold;
 
         &:hover {
-          color: ${color.defAppColor};
+          color: var(--main-app-color);
         }
       }
     }

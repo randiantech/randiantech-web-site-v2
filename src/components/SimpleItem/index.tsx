@@ -8,7 +8,7 @@ const Wrapper = styled.div`
   font-size: 18px;
   font-weight: bold;
   text-decoration: none;
-  color: #110819;
+  color: var(--main-sec-app-color);
 
   .image {
     width: 130px;
