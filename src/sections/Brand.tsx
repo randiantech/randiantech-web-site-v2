@@ -11,6 +11,7 @@ const Brand = React.memo((isMobile) => {
       title="Partners"
       altText="Randiantech"
       rows={1}
+      filter="grayscale(100%)"
     />
   );
 });

@@ -9,7 +9,7 @@ const Wrapper = styled.div`
   display: grid;
   cursor: pointer;
   font-weight: bolder;
-  height: ${dist.defItemDistance};
+  height: 50px;
   align-items: center;
   width: fit-content;
   color: ${color.defAppColor};

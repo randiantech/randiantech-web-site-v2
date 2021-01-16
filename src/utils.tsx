@@ -26,4 +26,5 @@ export interface Styleable {
   "margin-left"?: string;
   "margin-top"?: string;
   "margin-bottom"?: string;
+  "filter"?: string;
 }

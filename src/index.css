@@ -25,7 +25,7 @@
   --main-app-color: white;
   --main-deg-app-color: #ff3970;
   --main-sec-app-color: #110819;
-  --main-item-distance: 50px;
+  --main-item-distance: 100px;
 }
 /* End of Fonts */
 
@@ -39,12 +39,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: linear-gradient(
-    135deg,
-    #7b4da5,
-    var(--main-deg-app-color) 10%,
-    lightblue
-  );
+  background: white;
   max-width: 100% !important;
   overflow-x: hidden;
   scrollbar-color: var(--main-app-color);

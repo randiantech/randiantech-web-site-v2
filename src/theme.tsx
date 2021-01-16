@@ -8,7 +8,7 @@ const color = {
 };
 
 const dist = {
-  defItemDistance: "50px", //--main-item-distance: 50px;
+  defItemDistance: "100px", //--main-item-distance: 50px;
   defTextPaddingLeft: "20px",
   defTextPaddingRight: "20px",
 };

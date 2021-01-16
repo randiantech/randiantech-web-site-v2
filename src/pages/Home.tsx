@@ -21,8 +21,8 @@ const Home = React.memo(() => {
       <FrontImageSection isMobile={isMobile} />
       <ServicesSection isMobile={isMobile} />
       <Brand />
-      <TechnologiesSection isMobile={isMobile} />
       {!isMobile && <Blog />}
+      <TechnologiesSection isMobile={isMobile} />
       <ContactUs isMobile={isMobile} />
     </>
   );

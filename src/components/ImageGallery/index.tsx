@@ -14,6 +14,7 @@ interface ImageGalleryProps extends Styleable {
   altText?: string;
   itemWidth?: string;
   itemGreyscale?: boolean;
+  filter?: string;
 }
 
 const WrapperDesktop = styled.div`
@@ -52,6 +53,7 @@ const WrapperDesktop = styled.div`
         margin-right: auto;
         transition: transform 200ms ease-in-out;
         transform-origin: center;
+        filter: ${(props: ImageGalleryProps) => `${props.filter}`};
       }
 
       .img:hover {
@@ -91,6 +93,7 @@ const WrapperMobile = styled.div`
         display: block;
         margin-left: auto;
         margin-right: auto;
+        filter: ${(props: ImageGalleryProps) => `${props.filter}`};
       }
 
       .img:hover {
@@ -110,6 +113,8 @@ export const ImageGallery = (props: ImageGalleryProps) => {
   const { state } = useContext(AppContext);
   const { isMobile } = state;
   const Wrapper = isMobile ? WrapperMobile : WrapperDesktop;
+
+  console.log("filter => ", props.filter);
 
   return (
     <Wrapper className={`${isMobile && "rt-centered-txt"}`} {...props}>

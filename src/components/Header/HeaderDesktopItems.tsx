@@ -19,7 +19,7 @@ const HeaderWrapper = styled.div`
   .item {
     color: var(--main-app-color);
     text-decoration: none;
-    line-height: ${dist.defItemDistance};
+    line-height: 50px;
     cursor: pointer;
 
     &:hover {

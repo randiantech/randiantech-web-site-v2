@@ -8,7 +8,7 @@ const Wrapper = styled.div`
   font-size: 18px;
   font-weight: bold;
   text-decoration: none;
-  color: white;
+  color: #110819;
 
   .image {
     width: 130px;
