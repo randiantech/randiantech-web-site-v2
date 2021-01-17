@@ -8,7 +8,7 @@ import { SERVICES_ITEMS } from "../data";
 
 const WrapperDesktop = styled.div`
   border-top: 2px solid var(--main-app-color);
-  border-left: 10px solid var(--main-app-color);
+  border-left: 50px solid var(--main-app-color);
 
   .container {
     display: grid;
@@ -20,10 +20,12 @@ const WrapperDesktop = styled.div`
       height: 100%;
       background: var(--main-sec-app-color);
       color: var(--main-app-color);
-      font-size: 35px;
-      transition: transform 100ms ease-in-out;
-      transform-origin: center;
       font-weight: bolder;
+      font-size: 35px;
+      box-shadow:  -20px 20px 60px var(--main-app-shadow-color), 20px -20px 60px var(--main-app-color);
+      border-bottom-right-radius: 50px;
+      border-top-left-radius: 50px;
+      border-top-right-radius: 50px;
     }
 
     .right {
@@ -93,7 +95,7 @@ export default class Services extends React.Component<
     return (
       <Wrapper>
         <div className="container rt-centered-txt">
-          <div className="left rt-rounded rt-centered-txt">Our Services</div>
+          <div className="left rt-centered-txt">Our Services</div>
           <div
             className={`right ${
               isMobile ? "rt-std-top-padding rt-std-bottom-padding" : ""
@@ -104,7 +106,7 @@ export default class Services extends React.Component<
                 key={item.text}
                 img={item.img}
                 txt={item.text}
-                onClick={e => e}
+                onClick={(e) => e}
               ></SimpleItem>
             ))}
           </div>

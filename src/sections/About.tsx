@@ -37,7 +37,7 @@ export const Wrapper = styled.div`
     var(--main-deg-app-color) 20%,
     grey
   );
-  border-left: 10px solid var(--main-app-color);
+  border-left: 50px solid var(--main-app-color);
   color: white;
 
   .desc-img-1 {

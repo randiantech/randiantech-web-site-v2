@@ -19,7 +19,7 @@ interface ImageGalleryProps extends Styleable {
 const WrapperDesktop = styled.div`
   display: grid;
   grid-template-columns: 300px 1fr var(--main-item-distance);
-  border: 10px solid var(--main-app-color);
+  border: 50px solid var(--main-app-color);
   border-bottom: none;
   border-top: none;
   border-right: none;
@@ -31,6 +31,10 @@ const WrapperDesktop = styled.div`
     color: var(--main-app-color);
     font-size: 35px;
     font-weight: bolder;
+    box-shadow: -20px 20px 60px var(--main-app-shadow-color), 20px -20px 60px var(--main-app-color);
+    border-top-right-radius: 45px;
+    border-bottom-right-radius: 45px;
+    border-top-left-radius: 45px;
   }
 
   .right-pane {
@@ -113,15 +117,13 @@ export const ImageGallery = (props: ImageGalleryProps) => {
   const { isMobile } = state;
   const Wrapper = isMobile ? WrapperMobile : WrapperDesktop;
 
-  console.log("filter => ", props.filter);
-
   return (
     <Wrapper className={`${isMobile && "rt-centered-txt"}`} {...props}>
       <div
         className={`left-pane ${
           isMobile
             ? "rt-centered-txt rt-linear-bg"
-            : "rt-rounded rt-centered-txt"
+            : "rt-centered-txt"
         }`}
       >
         {title}

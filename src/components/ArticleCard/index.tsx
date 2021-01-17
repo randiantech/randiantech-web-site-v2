@@ -6,7 +6,7 @@ import { override, Styleable } from "../../utils";
 export const Wrapper = styled.a`
   display: grid;
   grid-template-rows: 1fr 150px;
-  padding-left: var(--main-item-distance);
+  padding-left: 50px;
   text-align: center;
   cursor: pointer;
   text-decoration: none;

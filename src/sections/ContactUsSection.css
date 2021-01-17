@@ -8,6 +8,9 @@
   font-size: 24px;
   font-weight: bolder;
   text-align: center;
+  border-top-left-radius: 45px;
+  border-top-right-radius: 45px;
+  border-bottom-right-radius: 45px;
 }
 
 .contact-us-section-container-title-mobile {

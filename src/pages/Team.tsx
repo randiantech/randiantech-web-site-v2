@@ -48,7 +48,7 @@ const Wrapper = styled.div`
   row-gap: var(--main-item-distance);
   padding-top: var(--main-item-distance);
   padding-right: var(--main-item-distance);
-  border: 10px solid var(--main-app-color);
+  border: 50px solid var(--main-app-color);
   border-bottom: none;
   border-top: none;
   border-right: none;
@@ -61,7 +61,7 @@ const WrapperStaff = styled.div`
   row-gap: var(--main-item-distance);
   padding-top: var(--main-item-distance);
   padding-right: var(--main-item-distance);
-  border: 10px solid var(--main-app-color);
+  border: 50px solid var(--main-app-color);
   border-bottom: none;
   border-top: none;
   border-right: none;

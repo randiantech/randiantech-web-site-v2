@@ -13,7 +13,7 @@ const WrapperDesktop = styled.div`
     padding-top: var(--main-item-distance);
     padding-right: var(--main-item-distance);
     margin-bottom: var(--main-item-distance);
-    border-left: 10px solid var(--main-app-color);
+    border-left: 50px solid var(--main-app-color);
     border-bottom: none;
     border-top: none;
     color: var(--main-deg-app-color);
@@ -181,7 +181,7 @@ class ContactUs extends React.Component<any, any> {
         className={`${
           isMobile
             ? "contact-us-section-container-title-mobile rt-std-top-padding rt-std-bottom-padding rt-glow-effect rt-linear-grad-bg"
-            : "contact-us-section-container-title-desktop rt-rounded rt-std-right-padding"
+            : "contact-us-section-container-title-desktop rt-std-right-padding"
         }`}
       >
         <div className="contact-us-section-container-title-inner-message">
