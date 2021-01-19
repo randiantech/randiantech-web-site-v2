@@ -20,6 +20,10 @@ const WrapperDesktop = styled.div`
   overflow: hidden;
   border-right: 5px solid var(--main-app-color);
 
+  video {
+    filter:grayscale(100%);
+  }
+
   .image {
     height: 100%;
     min-width: 100%;
@@ -101,14 +105,20 @@ class FrontImage extends React.Component<FrontImageProps, any> {
     const Wrapper = isMobile ? WrapperMobile : WrapperDesktop;
     return (
       <Wrapper>
-        <img
-          className="image"
-          src={
-            isMobile
-              ? "/images/front/office-mobile.jpg"
-              : "/images/front/office-desktop.jpg"
-          }
-        />
+        {!isMobile ? (
+          <video autoPlay loop muted id="video">
+            <source src="/video.mp4" type="video/mp4" />
+          </video>
+        ) : (
+          <img
+            className="image"
+            src={
+              isMobile
+                ? "/images/front/office-mobile.jpg"
+                : "/images/front/office-desktop.jpg"
+            }
+          />
+        )}
         <div
           className={`fi-content${
             isMobile ? " rt-std-top-padding rt-std-bottom-padding" : ""

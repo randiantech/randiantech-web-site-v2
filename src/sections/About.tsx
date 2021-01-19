@@ -33,11 +33,10 @@ const bottomImages = [
 export const Wrapper = styled.div`
   background: linear-gradient(
     135deg,
-    #7b4da5,
+    var(--main-sec-app-color),
     var(--main-deg-app-color) 20%,
     grey
   );
-  border-left: 50px solid var(--main-app-color);
   color: white;
 
   .desc-img-1 {
@@ -227,7 +226,6 @@ const About = () => {
           <div className="title">
             <div>{body.title}</div>
           </div>
-          <div className="subtitle">{header.subtitle}</div>
           <div className="description">
             {isMobile && (
               <div className="desc-img-1">
