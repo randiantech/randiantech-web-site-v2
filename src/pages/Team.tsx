@@ -79,7 +79,7 @@ const Team = React.memo(() => {
         <Label>
           <div className="label">Meet The RT Team.</div>
         </Label>
-        <ImageGallery images={headerImages} />
+        <ImageGallery images={headerImages}/>
       </Image>
       <Wrapper>
         {TEAM_MEMBERS_LEADERSHIP.map((i, idx) =>

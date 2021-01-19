@@ -67,13 +67,6 @@ const Careers = React.memo(() => {
 
   return (
     <div>
-      <Image>
-        <Label>
-          <div className="label">Come work with us!</div>
-        </Label>
-        <ImageGallery images={headerImages} />
-      </Image>
-
       <WrapperStaff
         onClick={() => {
           return sendEmail();

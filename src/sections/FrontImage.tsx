@@ -18,10 +18,10 @@ const WrapperDesktop = styled.div`
   width: 100%;
   background-color: var(--main-app-color);
   overflow: hidden;
-  border-right: 5px solid var(--main-app-color);
 
   video {
     filter:grayscale(100%);
+    width: 100%;
   }
 
   .image {
